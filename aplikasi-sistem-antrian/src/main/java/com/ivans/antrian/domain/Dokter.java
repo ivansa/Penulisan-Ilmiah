@@ -32,7 +32,7 @@ public class Dokter {
     private String name;
     
     @ManyToOne
-    @JoinColumn(name = "id_dokter", nullable = false)
+    @JoinColumn(name = "id_poli", nullable = false)
     private Poli poli;
     
     @Column(name = "kuota_senin", nullable = false)

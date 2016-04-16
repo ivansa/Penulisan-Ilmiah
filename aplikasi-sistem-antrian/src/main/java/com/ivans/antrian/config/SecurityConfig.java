@@ -5,110 +5,50 @@
  */
 package com.ivans.antrian.config;
 
-import com.ivans.antrian.handler.RESTAuthenticationEntryPoint;
-import com.ivans.antrian.handler.SecurityLogoutHandler;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.session.SessionRegistry;
-import org.springframework.security.core.session.SessionRegistryImpl;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
 /**
  *
  * @author ivans
  */
 @Configuration
-@EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter{
-    @Autowired private DataSource dataSource;
-    @Autowired private SecurityLogoutHandler logoutHandler;
-    @Autowired private PasswordEncoder passwordEncoder;
-    
-    
-    @Autowired
-    private RESTAuthenticationEntryPoint authenticationEntryPoint;
-    
-    private static final String SQL_LOGIN
-        = "select u.username as username,p.user_password as password, active "
-        + "from c_security_user u "
-        + "inner join c_security_user_password p on p.id_user = u.id "
-        + "where username = ?";
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableResourceServer
+public class SecurityConfig extends ResourceServerConfigurerAdapter {
 
-    private static final String SQL_ROLE
-        = "select u.username, p.permission_value as authority "
-        + "from c_security_user u "
-        + "inner join c_security_role r on u.id_role = r.id "
-        + "inner join c_security_role_permission rp on rp.id_role = r.id "
-        + "inner join c_security_permission p on rp.id_permission = p.id "
-        + "where u.username = ?";
-
+    private static final String SERVER_RESOURCE_ID = "antrian-server";
 
     @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(daoAuthenticationProvider());
-    }
+    private DataSource dataSource;
 
-    @Bean
-    public AuthenticationProvider daoAuthenticationProvider(){
-        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-        provider.setPasswordEncoder(passwordEncoder);
-        provider.setUserDetailsService(userDetailsService());
-        return provider;
-    }
-
-    @Bean
     @Override
-    public UserDetailsService userDetailsService(){
-        JdbcDaoImpl userDetails = new JdbcDaoImpl();
-        userDetails.setDataSource(dataSource);
-        userDetails.setUsersByUsernameQuery(SQL_LOGIN);
-        userDetails.setAuthoritiesByUsernameQuery(SQL_ROLE);
-        return userDetails;
-    }
-    
-    @Bean 
-    public SessionRegistry sessionRegistry(){
-        return new SessionRegistryImpl();
+    public void configure(ResourceServerSecurityConfigurer resources) {
+        resources
+                .resourceId(SERVER_RESOURCE_ID)
+                .tokenStore(new JdbcTokenStore(dataSource));
     }
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .sessionManagement()
-                .maximumSessions(1)
-                .maxSessionsPreventsLogin(false)
-                .sessionRegistry(sessionRegistry());
-
-        http
-                .authorizeRequests()
-                    .antMatchers("/login").permitAll()
-                    .antMatchers("/logout").permitAll()
-                    .antMatchers("/styles/**").permitAll()
-                    .antMatchers("/favicon.ico").permitAll()
-                    .anyRequest().authenticated()
-            .and()
-                .csrf().disable()
-                .formLogin().loginPage("/login").permitAll()
-            .and()
-                .logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .invalidateHttpSession(true)
-                .logoutSuccessHandler(logoutHandler)
-            .and()
-                .exceptionHandling().authenticationEntryPoint(authenticationEntryPoint);
-        
+    public void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                //Management
+                .antMatchers("/api/system/**").hasRole("SYSTEM")
+                .antMatchers("/api/master/**").hasRole("MASTER")
+                
+                //Loket
+                .antMatchers("/api/loket/**").hasRole("LOKET")
+                
+                //Laporan
+                .antMatchers("/api/report/**").hasRole("REPORT")
+                
+                .anyRequest().authenticated();
     }
 }

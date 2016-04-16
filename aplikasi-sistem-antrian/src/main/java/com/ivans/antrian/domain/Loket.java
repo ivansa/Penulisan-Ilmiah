@@ -9,6 +9,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -23,8 +25,12 @@ public class Loket {
     @GenericGenerator(name = "system-uuid", strategy = "uuid2")
     private String id;
     
-    @Column(nullable = false)
-    private String nomorLoket
+    @Column(nullable = false, unique = true)
+    private int nomorLoket;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_category", nullable = false)
+    private KategoriAntrian kategori;
     
     
 }

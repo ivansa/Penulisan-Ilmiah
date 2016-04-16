@@ -62,8 +62,8 @@ public class User {
     @JoinColumn(name = "id_role", nullable = false)
     private Role role;
     
-    @ManyToOne
-    @JoinColumn(name = "id_company")
+    @OneToOne
+    @JoinColumn(name = "id_loket")
     private Loket loket;
 
     public String getPhone() {
