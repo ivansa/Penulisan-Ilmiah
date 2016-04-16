@@ -8,7 +8,9 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootswatch/paper/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootswatch/cosmo/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -22,7 +24,7 @@
 
     <!-- Add your site or application content here -->
     <div class="header" ng-controller="NavCtrl">
-      <div class="navbar navbar-default" role="navigation">
+      <div class="navbar navbar-inverse" role="navigation">
         <div class="container">
           <div class="navbar-header">
 
@@ -114,6 +116,8 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-ui-select/dist/select.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
     <script src="bower_components/bootbox/bootbox.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -134,6 +138,7 @@
         <script src="scripts/controllers/loket.js"></script>
         <script src="scripts/services/permissionservice.js"></script>
         <script src="scripts/services/roleservice.js"></script>
+        <script src="scripts/services/loketservice.js"></script>
         <!-- endbuild -->
 </body>
 </html>

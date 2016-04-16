@@ -1,0 +1,130 @@
+<div class="row">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><span style="color: orangered;">System</span></li>
+            <li class="active">Role</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <center>
+            <uib-alert type="{{typeAlert}}" ng-show="alert">{{messageAlert}}</uib-alert>
+        </center>
+    </div>
+</div>
+<div class="row">
+    <form name="formSearchRole" class="form-inline">
+        <div class="col-sm-4">
+            <div class="form-group" ng-class="{'has-error':formSearchRole.search.$invalid, 'has-success':formSearchRole.search.$valid}">
+                <input type="text" class="form-control" name="search" ng-model="searchRole" ng-enter="searchAction()" required>
+                <button class="btn btn-primary" ng-disabled="formSearchRole.search.$invalid" ng-click="searchAction()">Search</button>
+                <button class="btn" type="button" ng-click="refreshPage()" tooltip-placement="bottom" uib-tooltip="Reload Role"><i class="glyphicon glyphicon-refresh"></i></button>
+            </div>
+        </div>
+    </form>
+    <br/><br/><br/>
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <thead class="header-custom">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Total Permissions
+                    </th>
+                    <th class="col-sm-2 center">
+                        <button class="btn btn-success" ng-click="showModalInputRole()" tooltip-placement="bottom" uib-tooltip="Add New Role"><i class="glyphicon glyphicon-plus"></i></button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in roles">
+                    <td>{{x.name}}</td>
+                    <td>{{x.description}}</td>
+                    <td>{{x.permissionSet.length}}</td>
+                    <td class="col-xs-1 center">
+                        <a class="glyphicon glyphicon-edit" ng-click="edit(x)" tooltip-placement="bottom" uib-tooltip="Edit {{x.name}}"></a>
+                        <a class="glyphicon glyphicon-remove" ng-click="showDialogDelete(x)" tooltip-placement="bottom" uib-tooltip="Delete {{x.name}}"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div align="center">
+            <uib-pagination total-items="paging.totalItems" ng-model="paging.currentPage" max-size="paging.maxPage" class="pagination-sm" ng-change="reloadPage()"></uib-pagination>
+        </div>
+        <div align="center">
+            <pre>Page: {{paging.currentPage}} / {{paging.maxPage}}</pre>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add New Role -->
+<div class="modal fade bs-example-modal-sm" id="modalAddRole" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header header-custom">
+                <button type="button" class="close" ng-click="hideModalInputRole()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Form Input Role</h4>
+            </div>
+            <div class="modal-body">
+                <form name="formRole">
+                    <div class="form-horizontal">
+                        <div class="form-group" ng-class="{'has-error':formRole.name.$invalid, 'has-success':formRole.name.$valid}">
+                            <div class="col-sm-4">
+                                <label for="name" class="control-label">Name</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="name" type="text" class="form-control" ng-model="currentRole.name" required />
+                                <span style="float:right; color:white" class="help-block label label-danger" ng-show="validateName">Role Name Already Exist</span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formRole.description.$invalid, 'has-success':formRole.description.$valid}">
+                            <div class="col-sm-4">
+                                <label for="description" class="control-label">Description</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" ng-model="currentRole.description" rows="3" name="description" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <label for="permissions" class="control-label">Permissions</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <div ui-grid="gridOptions" ui-grid-selection class="gridStyle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" ng-click="hideModalInputRole()">Cancel</button>
+                <button class="btn btn-primary" ng-click="save()" ng-disabled="formRole.$invalid">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Confirm Delete -->
+<div class="modal fade bs-example-modal-sm" id="modalConfirmDelete" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header header-custom">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Confirm Delete [{{name}}]</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure ?
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">No</button>
+                <button class="btn btn-primary" ng-click="remove(idRole)">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>

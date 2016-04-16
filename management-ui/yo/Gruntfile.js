@@ -226,7 +226,7 @@ module.exports = function (grunt) {
                     {
                         name: 'bootstrap',
                         search: 'bower_components/bootstrap/dist/css/',
-                        replace: 'bower_components/bootswatch/paper/',
+                        replace: 'bower_components/bootswatch/cosmo/',
                         flags: 'g'
                     }
                 ]
