@@ -15,5 +15,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface PoliDao extends PagingAndSortingRepository<Poli, String>{
-    
+    Poli findByCode(String code);
 }
