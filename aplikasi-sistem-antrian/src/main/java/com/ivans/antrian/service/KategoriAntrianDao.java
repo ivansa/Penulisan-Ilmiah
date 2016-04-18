@@ -6,7 +6,6 @@
 package com.ivans.antrian.service;
 
 import com.ivans.antrian.domain.KategoriAntrian;
-import java.io.Serializable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,5 +15,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface KategoriAntrianDao extends PagingAndSortingRepository<KategoriAntrian, String>{
-    
+    KategoriAntrian findByCode(String code);
 }

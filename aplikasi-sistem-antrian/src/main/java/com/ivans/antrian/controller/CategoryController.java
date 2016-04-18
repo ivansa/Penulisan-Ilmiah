@@ -5,10 +5,9 @@
  */
 package com.ivans.antrian.controller;
 
-import com.ivans.antrian.domain.Poli;
+import com.ivans.antrian.domain.KategoriAntrian;
 import com.ivans.antrian.exception.AntrianServerException;
-import com.ivans.antrian.service.PoliDao;
-import java.util.List;
+import com.ivans.antrian.service.KategoriAntrianDao;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -24,7 +23,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -32,71 +30,71 @@ import org.springframework.web.bind.annotation.RestController;
  * @author ivans
  */
 @RestController
-@RequestMapping("/api/master/poli")
-public class PoliController {
+@RequestMapping("/api/master/category")
+public class CategoryController {
     
-    private final Logger LOGGER = LoggerFactory.getLogger(PoliController.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(CategoryController.class);
     @Autowired
-    private PoliDao poliDao;
+    private KategoriAntrianDao categoryDao;
     
     @RequestMapping(method = RequestMethod.GET)
-    public Page<Poli> allPoli(Pageable pageable, HttpSession session) {
+    public Page<KategoriAntrian> allCategory(Pageable pageable, HttpSession session) {
         PageRequest pr = new PageRequest(pageable.getPageNumber(), pageable.getPageSize(), Sort.Direction.ASC, "code");
-        Page<Poli> result = poliDao.findAll(pr);
+        Page<KategoriAntrian> result = categoryDao.findAll(pr);
         return result;
     }
     
     @RequestMapping(value = "/withoutPaging", method = RequestMethod.GET)
-    public Iterable<Poli> findAllWithoutPaging() {
-        return poliDao.findAll();
+    public Iterable<KategoriAntrian> findAllWithoutPaging() {
+        return categoryDao.findAll();
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Poli findPoliById(@PathVariable String id) {
-        Poli p = poliDao.findOne(id);
+    public KategoriAntrian findCategoryById(@PathVariable String id) {
+        KategoriAntrian ka = categoryDao.findOne(id);
 
-        if (p == null) {
-            throw new AntrianServerException("Poli Dengan ID : " + id + " Tidak Ditemukan");
+        if (ka == null) {
+            throw new AntrianServerException("Category Dengan ID : " + id + " Tidak Ditemukan");
         }
 
-        return p;
+        return ka;
     }
 
     @RequestMapping(value = "/byCode/{code}", method = RequestMethod.GET)
-    public Poli findByCode(@PathVariable String code) {
-        return poliDao.findByCode(code);
+    public KategoriAntrian findByCode(@PathVariable String code) {
+        return categoryDao.findByCode(code);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable String id) {
-        Poli p = poliDao.findOne(id);
-        if (p != null) {
-            poliDao.delete(id);
+        KategoriAntrian ka = categoryDao.findOne(id);
+        if (ka != null) {
+            categoryDao.delete(id);
         }else{
-            throw new AntrianServerException("Poli Dengan ID : " + id + " Tidak Ditemukan");
+            throw new AntrianServerException("Category Dengan ID : " + id + " Tidak Ditemukan");
         }
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void create(@RequestBody @Valid Poli poli, HttpServletRequest request, HttpServletResponse response) {
-        LOGGER.info("Save Poli : " + poli.getName() + " [ " + poli.getCode() + " ]");
-        poliDao.save(poli);
+    public void create(@RequestBody @Valid KategoriAntrian category, HttpServletRequest request, HttpServletResponse response) {
+        LOGGER.info("Save Category : " + category.getName() + " [ " + category.getCode() + " ]");
+        categoryDao.save(category);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public void update(@PathVariable String id, @RequestBody @Valid Poli poli) {
-        Poli p = poliDao.findOne(id);
-        if (p != null) {
-            poli.setId(p.getId());
-            poliDao.save(poli);
+    public void update(@PathVariable String id, @RequestBody @Valid KategoriAntrian category) {
+        KategoriAntrian ka = categoryDao.findOne(id);
+        if (ka != null) {
+            category.setId(ka.getId());
+            categoryDao.save(category);
         }else{
-            throw new AntrianServerException("Poli Dengan ID : " + id + " Tidak Ditemukan");
+            throw new AntrianServerException("Category Dengan ID : " + id + " Tidak Ditemukan");
         }
     }
     
     @RequestMapping(value="/count", method = RequestMethod.GET)
     public Long count(Pageable pageable){
-        return poliDao.count();
+        return categoryDao.count();
     }
     
 }

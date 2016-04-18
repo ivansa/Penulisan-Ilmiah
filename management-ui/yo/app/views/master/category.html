@@ -1,0 +1,127 @@
+<div class="row">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><span style="color: orangered;">Master</span></li>
+            <li class="active">Category Antrian</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <center>
+            <uib-alert type="{{typeAlert}}" ng-show="alert">{{messageAlert}}</uib-alert>
+        </center>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <thead class="header-custom">
+                <tr>
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th class="col-sm-2 center">
+                        <button class="btn btn-success" ng-click="showModalInputCategory()" tooltip-placement="bottom" uib-tooltip="Add New Category"><i class="glyphicon glyphicon-plus"></i></button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in listCategory">
+                    <td>{{x.code}}</td>
+                    <td>{{x.name}}</td>
+                    <td>{{x.title}}</td>
+                    <td class="col-xs-1 center">
+                        <a class="glyphicon glyphicon-edit" ng-click="edit(x)" tooltip-placement="bottom" uib-tooltip="Edit {{x.name}}"></a>
+                        <a class="glyphicon glyphicon-remove" ng-click="showDialogDelete(x)" tooltip-placement="bottom" uib-tooltip="Delete {{x.name}}"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div align="center">
+            <uib-pagination total-items="paging.totalItems" 
+                            ng-model="paging.currentPage" 
+                            max-size="paging.maxPage" 
+                            class="pagination-sm" 
+                            ng-change="reloadPage()" 
+                            boundary-links="true"
+                            items-per-page="paging.itemsPerPage">    
+            </uib-pagination>
+        </div>
+        <div align="center">
+            <pre>Page: {{paging.currentPage}} / {{paging.maxPage}}</pre>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add New Permission -->
+<div class="modal fade bs-example-modal-sm" id="modalAddCategory" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header header-custom">
+                <button type="button" class="close" ng-click="hideModalInputCategory()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Form Input Category</h4>
+            </div>
+            <div class="modal-body">
+                <form name="formCategory">
+                    <div class="form-horizontal">
+                        <div class="form-group" ng-class="{'has-error':formCategory.code.$invalid, 'has-success':formCategory.code.$valid}">
+                            <div class="col-sm-4">
+                                <label for="code" class="control-label">Code</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="code" type="text" class="form-control" ng-model="currentCategory.code" required />
+                                <span style="float:right; color:white" class="help-block label label-danger" ng-show="validateCode">Category Code Already Exist</span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formCategory.name.$invalid, 'has-success':formCategory.name.$valid}">
+                            <div class="col-sm-4">
+                                <label for="name" class="control-label">Name</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="name" type="text" class="form-control" ng-model="currentCategory.name" required />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formCategory.title.$invalid, 'has-success':formCategory.titlename.$valid}">
+                            <div class="col-sm-4">
+                                <label for="title" class="control-label">Title</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="title" type="text" class="form-control" ng-model="currentCategory.title" required />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" ng-click="hideModalInputCategory()">Cancel</button>
+                <button class="btn btn-primary" ng-click="save()" ng-disabled="formCategoryi.$invalid">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Confirm Delete -->
+<div class="modal fade bs-example-modal-sm" id="modalConfirmDelete" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header header-custom">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Confirm Delete [{{codeDelete}}]</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure ?
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">No</button>
+                <button class="btn btn-primary" ng-click="remove(idCategory)">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>

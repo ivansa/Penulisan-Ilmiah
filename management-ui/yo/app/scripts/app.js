@@ -70,6 +70,11 @@ angular
         controller: 'LoketCtrl',
         controllerAs: 'loket'
       })
+      .when('/master/category', {
+        templateUrl: 'views/master/category.html',
+        controller: 'CategoryCtrl',
+        controllerAs: 'category'
+      })
       .otherwise({
         redirectTo: '/'
       });
