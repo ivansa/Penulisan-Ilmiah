@@ -1,1 +1,184 @@
-<p>This is the dokter view.</p>
+<div class="row">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><span style="color: orangered;">Master</span></li>
+            <li class="active">Dokter</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <center>
+            <uib-alert type="{{typeAlert}}" ng-show="alert">{{messageAlert}}</uib-alert>
+        </center>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <thead class="header-custom">
+                <tr>
+                    <th>
+                        NIP
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Poli
+                    </th>
+                    <th class="col-sm-2 text-center">
+                        <button class="btn btn-success" ng-click="showModalInputDokter()" tooltip-placement="bottom" uib-tooltip="Add New Dokter"><i class="glyphicon glyphicon-plus"></i></button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in listDokter">
+                    <td>{{x.nip}}</td>
+                    <td>{{x.name}}</td>
+                    <td>{{x.poli.code}} - {{x.poli.name}}</td>
+                    <td class="col-sm-2 text-center">
+                        <a class="glyphicon glyphicon-edit" ng-click="edit(x)" tooltip-placement="bottom" uib-tooltip="Edit {{x.nama}}"></a>
+                        <a class="glyphicon glyphicon-remove" ng-click="showDialogDelete(x)" tooltip-placement="bottom" uib-tooltip="Delete {{x.nama}}"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div align="center">
+            <uib-pagination total-items="paging.totalItems" ng-model="paging.currentPage" max-size="paging.maxPage" class="pagination-sm"
+                ng-change="reloadPage()" boundary-links="true" items-per-page="paging.itemsPerPage">
+            </uib-pagination>
+        </div>
+        <div align="center">
+            <pre>Page: {{paging.currentPage}} / {{paging.maxPage}}</pre>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add New Permission -->
+<div class="modal fade bs-example-modal-sm" id="modalAddDokter" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header header-custom">
+                <button type="button" class="close" ng-click="hideModalInputDokter()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Form Input Dokter</h4>
+            </div>
+            <div class="modal-body">
+                <form name="formDokter">
+                    <div class="form-horizontal">
+                        <div class="form-group" ng-class="{'has-error':formDokter.nip.$invalid, 'has-success':formDokter.nip.$valid}">
+                            <div class="col-sm-4">
+                                <label for="nip" class="control-label">NIP</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="nip" type="text" class="form-control" ng-model="currentDokter.nip" required />
+                                <span style="float:right; color:white" class="help-block label label-danger" ng-show="validateNIP">NIP Already Exist</span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formDokter.name.$invalid, 'has-success':formDokter.name.$valid}">
+                            <div class="col-sm-4">
+                                <label for="name" class="control-label">Name</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="name" type="text" class="form-control" ng-model="currentDokter.name" required />
+                             </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formDokter.poli.$invalid, 'has-success':formDokter.poli.$valid}">
+                            <div class="col-sm-4">
+                                <label for="poli" class="control-label">Poli</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <ui-select tagging="tagTransform" name="poli" ng-model="currentDokter.poli" theme="bootstrap" title="Choose a Poli"
+                                    ng-required="true">
+                                    <ui-select-match class="ui-select-match" placeholder="Select Poli...">{{$select.selected.code}} - {{$select.selected.name}}</ui-select-match>
+                                    <ui-select-choices class="ui-select-choices" repeat="x in listPoli | propsFilter: {code: $select.search, name: $select.search}">
+                                        <div ng-bind-html="x.code + ' - ' +x.name | highlight: $select.search"></div>
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formDokter.kuotaSenin.$invalid, 'has-success':formDokter.kuotaSenin.$valid}">
+                            <div class="col-sm-4">
+                                <label for="kuotaSenin" class="control-label">Kuota Senin</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="kuotaSenin" type="number" class="form-control" ng-model="currentDokter.kuotaSenin" required />
+                             </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formDokter.kuotaSelasa.$invalid, 'has-success':formDokter.kuotaSelasa.$valid}">
+                            <div class="col-sm-4">
+                                <label for="kuotaSelasa" class="control-label">Kuota Selasa</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="kuotaSelasa" type="number" class="form-control" ng-model="currentDokter.kuotaSelasa" required />
+                             </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formDokter.kuotaRabu.$invalid, 'has-success':formDokter.kuotaRabu.$valid}">
+                            <div class="col-sm-4">
+                                <label for="kuotaRabu" class="control-label">Kuota Rabu</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="kuotaRabu" type="number" class="form-control" ng-model="currentDokter.kuotaRabu" required />
+                             </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formDokter.kuotaKamis.$invalid, 'has-success':formDokter.kuotaKamis.$valid}">
+                            <div class="col-sm-4">
+                                <label for="kuotaKamis" class="control-label">Kuota Kamis</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="kuotaKamis" type="number" class="form-control" ng-model="currentDokter.kuotaKamis" required />
+                             </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formDokter.kuotaJumat.$invalid, 'has-success':formDokter.kuotaJumat.$valid}">
+                            <div class="col-sm-4">
+                                <label for="kuotaJumat" class="control-label">Kuota Jum'at</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="kuotaJumat" type="number" class="form-control" ng-model="currentDokter.kuotaJumat" required />
+                             </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formDokter.kuotaSabtu.$invalid, 'has-success':formDokter.kuotaSabtu.$valid}">
+                            <div class="col-sm-4">
+                                <label for="kuotaSabtu" class="control-label">Kuota Sabtu</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="kuotaSabtu" type="number" class="form-control" ng-model="currentDokter.kuotaSabtu" required />
+                             </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':formDokter.kuotaMinggu.$invalid, 'has-success':formDokter.kuotaMinggu.$valid}">
+                            <div class="col-sm-4">
+                                <label for="kuotaMinggu" class="control-label">Kuota Minggu</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="kuotaMinggu" type="number" class="form-control" ng-model="currentDokter.kuotaMinggu" required />
+                             </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" ng-click="hideModalInputDokter()">Cancel</button>
+                <button class="btn btn-primary" ng-click="save()" ng-disabled="formDokter.$invalid">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Confirm Delete -->
+<div class="modal fade bs-example-modal-sm" id="modalConfirmDelete" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header header-custom">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Confirm Delete [{{nipDelete}}]</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure ?
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">No</button>
+                <button class="btn btn-primary" ng-click="remove(idDokter)">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
