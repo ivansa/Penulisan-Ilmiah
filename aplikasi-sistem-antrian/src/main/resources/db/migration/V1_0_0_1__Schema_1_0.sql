@@ -110,10 +110,12 @@ CREATE TABLE IF NOT EXISTS `t_kuota` (
   `current_kuota` int(11) NOT NULL,
   `kuota_date` date NOT NULL,
   `maximum_kuota` int(11) NOT NULL,
-  `id_dokter` varchar(255) NOT NULL,
+  `nama_dokter` varchar(255) NOT NULL,
+  `nio_dokter` varchar(255) NOT NULL,
+  `id_poli` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK_cedsi46x2ngu7rc9g47s4rvsa` (`id_dokter`),
-  CONSTRAINT `FK_cedsi46x2ngu7rc9g47s4rvsa` FOREIGN KEY (`id_dokter`) REFERENCES `m_dokter` (`id`)
+  KEY `FK_cedsi46x2ngu7rc9g47s4rvsa` (`id_poli`),
+  CONSTRAINT `FK_cedsi46x2ngu7rc9g47s4rvsa` FOREIGN KEY (`id_poli`) REFERENCES `m_poli` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `t_log_antrian` (

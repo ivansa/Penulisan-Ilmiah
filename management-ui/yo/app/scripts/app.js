@@ -75,6 +75,12 @@ angular
         controller: 'CategoryCtrl',
         controllerAs: 'category'
       })
+      // Generate
+      .when('/generate/kuota', {
+        templateUrl: 'views/generate/kuota.html',
+        controller: 'GenerateKuotaCtrl',
+        controllerAs: 'generateKuota'
+      })
       .otherwise({
         redirectTo: '/'
       });
