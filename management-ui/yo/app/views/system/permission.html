@@ -15,7 +15,7 @@
 </div>
 <div class="row">
     <form name="formSearchPermission" class="form-inline">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="form-group" ng-class="{'has-error':formSearchPermission.search.$invalid, 'has-success':formSearchPermission.search.$valid}">
                 <input type="text" class="form-control" name="search" ng-model="searchPermission" ng-enter="searchAction()" required>
                 <button class="btn btn-primary" ng-disabled="formSearchPermission.search.$invalid" ng-click="searchAction()" tooltip-placement="bottom" uib-tooltip="Search Permission">Search</button>
@@ -34,7 +34,7 @@
                     <th>
                         Value
                     </th>
-                    <th class="col-sm-2 center">
+                    <th class="col-sm-2 text-center">
                         <button class="btn btn-success" ng-click="showModalInputPermission()" tooltip-placement="bottom" uib-tooltip="Add New Permission"><i class="glyphicon glyphicon-plus"></i></button>
                     </th>
                 </tr>
@@ -43,7 +43,7 @@
                 <tr ng-repeat="x in permissions">
                     <td>{{x.label}}</td>
                     <td>{{x.value}}</td>
-                    <td class="col-xs-1 center">
+                    <td class="col-sm-2 text-center">
                         <a class="glyphicon glyphicon-edit" ng-click="edit(x)" tooltip-placement="bottom" uib-tooltip="Edit {{x.label}}"></a>
                         <a class="glyphicon glyphicon-remove" ng-click="showDialogDelete(x)" tooltip-placement="bottom" uib-tooltip="Delete {{x.label}}"></a>
                     </td>

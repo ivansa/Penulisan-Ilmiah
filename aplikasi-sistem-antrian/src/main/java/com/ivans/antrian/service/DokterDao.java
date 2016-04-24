@@ -5,15 +5,15 @@
  */
 package com.ivans.antrian.service;
 
-import com.ivans.antrian.domain.Loket;
+import com.ivans.antrian.domain.Dokter;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author ivans
+ * @authtor ivans
  */
 @Repository
-public interface LoketDao extends PagingAndSortingRepository<Loket, String>{
-    Loket findByNomorLoket(int nomor);
+public interface DokterDao extends PagingAndSortingRepository<Dokter, String>{
+    Dokter findByNip(String nip);
 }

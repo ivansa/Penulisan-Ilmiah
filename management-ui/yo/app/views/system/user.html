@@ -15,7 +15,7 @@
 </div>
 <div class="row">
     <form name="formSearchUser" class="form-inline">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="form-group" ng-class="{'has-error':formSearchUser.search.$invalid, 'has-success':formSearchUser.search.$valid}">
                 <input type="text" class="form-control" name="search" ng-model="searchUser" ng-enter="searchAction()" required>
                 <button class="btn btn-primary" ng-disabled="formSearchUser.search.$invalid" ng-click="searchAction()" tooltip-placement="bottom" uib-tooltip="Search User">Search</button>
@@ -43,7 +43,7 @@
                     <th>
                         Loket
                     </th>
-                    <th class="col-sm-2 center">
+                    <th class="col-sm-2 text-center">
                         <button class="btn btn-success" ng-click="showModalInputUser()" tooltip-placement="bottom" uib-tooltip="Add New User"><i class="glyphicon glyphicon-plus"></i></button>
                     </th>
                 </tr>
@@ -55,7 +55,7 @@
                     <td>{{x.email}}</td>
                     <td>{{x.role.name}}</td>
                     <td>{{x.loket.nomorLoket}}</td>
-                    <td class="col-xs-1 center">
+                    <td class="col-sm-2 text-center">
                         <a class="glyphicon glyphicon-user" ng-click="showModalDetailUser(x)" tooltip-placement="bottom" uib-tooltip="View Detail {{x.username}}"></a>
                         <a class="glyphicon glyphicon-edit" ng-click="edit(x)" tooltip-placement="bottom" uib-tooltip="Edit {{x.username}}"></a>
                         <a class="glyphicon glyphicon-remove" ng-click="showDialogDelete(x)" tooltip-placement="bottom" uib-tooltip="Delete {{x.username}}"></a>

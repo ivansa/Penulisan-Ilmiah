@@ -31,6 +31,32 @@ public class Loket {
     @ManyToOne
     @JoinColumn(name = "id_category", nullable = false)
     private KategoriAntrian kategori;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getNomorLoket() {
+        return nomorLoket;
+    }
+
+    public void setNomorLoket(int nomorLoket) {
+        this.nomorLoket = nomorLoket;
+    }
+
+    public KategoriAntrian getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(KategoriAntrian kategori) {
+        this.kategori = kategori;
+    }
+    
+    
     
     
 }

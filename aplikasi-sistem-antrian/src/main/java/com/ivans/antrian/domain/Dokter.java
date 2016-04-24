@@ -49,4 +49,94 @@ public class Dokter {
     private int kuotaSabtu = 9;
     @Column(name = "kuota_minggu", nullable = false)
     private int kuotaMinggu = 0;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNip() {
+        return nip;
+    }
+
+    public void setNip(String nip) {
+        this.nip = nip;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Poli getPoli() {
+        return poli;
+    }
+
+    public void setPoli(Poli poli) {
+        this.poli = poli;
+    }
+
+    public int getKuotaSenin() {
+        return kuotaSenin;
+    }
+
+    public void setKuotaSenin(int kuotaSenin) {
+        this.kuotaSenin = kuotaSenin;
+    }
+
+    public int getKuotaSelasa() {
+        return kuotaSelasa;
+    }
+
+    public void setKuotaSelasa(int kuotaSelasa) {
+        this.kuotaSelasa = kuotaSelasa;
+    }
+
+    public int getKuotaRabu() {
+        return kuotaRabu;
+    }
+
+    public void setKuotaRabu(int kuotaRabu) {
+        this.kuotaRabu = kuotaRabu;
+    }
+
+    public int getKuotaKamis() {
+        return kuotaKamis;
+    }
+
+    public void setKuotaKamis(int kuotaKamis) {
+        this.kuotaKamis = kuotaKamis;
+    }
+
+    public int getKuotaJumat() {
+        return kuotaJumat;
+    }
+
+    public void setKuotaJumat(int kuotaJumat) {
+        this.kuotaJumat = kuotaJumat;
+    }
+
+    public int getKuotaSabtu() {
+        return kuotaSabtu;
+    }
+
+    public void setKuotaSabtu(int kuotaSabtu) {
+        this.kuotaSabtu = kuotaSabtu;
+    }
+
+    public int getKuotaMinggu() {
+        return kuotaMinggu;
+    }
+
+    public void setKuotaMinggu(int kuotaMinggu) {
+        this.kuotaMinggu = kuotaMinggu;
+    }
+    
+    
 }
