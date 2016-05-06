@@ -80,6 +80,7 @@ angular.module('managementUiApp')
                             $scope.flagSystem = $scope.authorities.indexOf("ROLE_SYSTEM");
                             $scope.flagMaster = $scope.authorities.indexOf("ROLE_MASTER");
                             $scope.flagLoket = $scope.authorities.indexOf("ROLE_LOKET");
+                            $scope.flagGenerate = $scope.authorities.indexOf("ROLE_GENERATE");
                             $scope.flagReport = $scope.authorities.indexOf("ROLE_REPORT"); 
 						} else {
                             $scope.logout();

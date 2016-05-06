@@ -18,18 +18,21 @@ import org.hibernate.annotations.GenericGenerator;
  *
  * @author ivans
  */
-@Entity @Table(name = "m_dokter")
-public class Dokter {
+@Entity @Table(name = "m_jadwal_dokter")
+public class JadwalDokter {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid2")
     private String id;
     
     @Column(nullable = false, unique = true)
-    private String nip;
+    private String code;
     
     @Column(nullable = false)
     private String name;
+    
+    @Column
+    private String description;
     
     @ManyToOne
     @JoinColumn(name = "id_poli", nullable = false)
@@ -50,20 +53,28 @@ public class Dokter {
     @Column(name = "kuota_minggu", nullable = false)
     private int kuotaMinggu = 0;
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getNip() {
-        return nip;
-    }
-
-    public void setNip(String nip) {
-        this.nip = nip;
     }
 
     public String getName() {

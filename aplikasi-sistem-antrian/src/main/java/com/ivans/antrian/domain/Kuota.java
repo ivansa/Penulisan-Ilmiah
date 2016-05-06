@@ -23,7 +23,7 @@ import org.hibernate.annotations.GenericGenerator;
  * @author ivans
  */
 @Entity @Table(name = "t_kuota",
-uniqueConstraints = @UniqueConstraint(columnNames = {"nip_dokter","kuota_date"}))
+uniqueConstraints = @UniqueConstraint(columnNames = {"code_dokter","kuota_date"}))
 public class Kuota {
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -33,8 +33,8 @@ public class Kuota {
     @Column(name = "nama_dokter", nullable = false)
     private String namaDokter;
     
-    @Column(name = "nip_dokter", nullable = false)
-    private String nipDokter;
+    @Column(name = "code_dokter", nullable = false)
+    private String codeDokter;
     
     @ManyToOne
     @JoinColumn(name = "id_poli", nullable = false)
@@ -50,6 +50,14 @@ public class Kuota {
     @Column(name="kuota_date", nullable = false)
     private Date kuotaDate = new Date();
 
+    public String getCodeDokter() {
+        return codeDokter;
+    }
+
+    public void setCodeDokter(String codeDokter) {
+        this.codeDokter = codeDokter;
+    }
+
     public String getId() {
         return id;
     }
@@ -64,14 +72,6 @@ public class Kuota {
 
     public void setNamaDokter(String namaDokter) {
         this.namaDokter = namaDokter;
-    }
-
-    public String getNipDokter() {
-        return nipDokter;
-    }
-
-    public void setNipDokter(String nipDokter) {
-        this.nipDokter = nipDokter;
     }
 
     public Poli getPoli() {

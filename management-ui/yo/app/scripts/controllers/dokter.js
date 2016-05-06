@@ -34,7 +34,7 @@ angular.module('managementUiApp')
     };
 
     $scope.showDialogDelete = function (x) {
-      $scope.nipDelete = x.nip;
+      $scope.codeDelete = x.code;
       $scope.idDokter = x.id;
       $("#modalConfirmDelete").modal("show");
     };
@@ -42,7 +42,7 @@ angular.module('managementUiApp')
     $scope.hideModalInputDokter = function () {
       $("#modalAddDokter").modal("hide");
       $scope.currentDokter = {};
-      $scope.validateNIP = false;
+      $scope.validateCode = false;
     };
 
     $scope.clearForm = function () {
@@ -53,11 +53,11 @@ angular.module('managementUiApp')
 
     $scope.save = function () {
       // validate by code
-      DokterService.findByNip($scope.currentDokter.nip).success(function (data) {
-        if (data.length !== 0 && $scope.editNip !== data.nip) {
-          $scope.validateNIP = true;
+      DokterService.findByCode($scope.currentDokter.code).success(function (data) {
+        if (data.length !== 0 && $scope.editCode !== data.code) {
+          $scope.validateCode = true;
         } else {
-          $scope.validateNIP = false;
+          $scope.validateCode = false;
           $scope.saveAction();
         }
       });
@@ -92,7 +92,7 @@ angular.module('managementUiApp')
     $scope.edit = function (x) {
       DokterService.findById(x.id).success(function (data) {
         $scope.currentDokter = data;
-        $scope.editNip = x.nip;
+        $scope.editCode = x.code;
         $scope.showModalInputDokter();
       });
     };

@@ -16,5 +16,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface KuotaDao extends PagingAndSortingRepository<Kuota, String>{
-    Kuota findByNipDokterAndKuotaDate(String nip, Date date);
+    Kuota findByCodeDokterAndKuotaDate(String code, Date date);
 }

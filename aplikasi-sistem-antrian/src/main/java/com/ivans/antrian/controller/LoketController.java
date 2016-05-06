@@ -5,7 +5,7 @@
  */
 package com.ivans.antrian.controller;
 
-import com.ivans.antrian.domain.Dokter;
+import com.ivans.antrian.domain.JadwalDokter;
 import com.ivans.antrian.domain.Loket;
 import com.ivans.antrian.domain.Poli;
 import com.ivans.antrian.exception.AntrianServerException;

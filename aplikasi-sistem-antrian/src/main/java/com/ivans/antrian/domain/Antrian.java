@@ -37,7 +37,7 @@ public class Antrian {
     
     @ManyToOne
     @JoinColumn(name = "id_dokter", nullable = false)
-    private Dokter dokter;
+    private JadwalDokter dokter;
     
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="antrian_date", nullable = false)

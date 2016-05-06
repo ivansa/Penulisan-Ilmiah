@@ -7,7 +7,7 @@ package com.ivans.antrian.service;
 
 import com.ivans.antrian.constant.BodStatus;
 import com.ivans.antrian.domain.BodProcess;
-import com.ivans.antrian.domain.Dokter;
+import com.ivans.antrian.domain.JadwalDokter;
 import com.ivans.antrian.domain.Kuota;
 import com.ivans.antrian.exception.BodException;
 import java.text.SimpleDateFormat;
@@ -17,10 +17,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import org.threeten.bp.Instant;
-import org.threeten.bp.LocalDateTime;
-import org.threeten.bp.ZoneId;
-import org.threeten.bp.temporal.ChronoUnit;
 
 /**
  *
@@ -69,10 +65,10 @@ public class BodProcessService {
     private void generateKuota(BodProcess bod) {
         try {
             Date date = new Date();
-            Iterable<Dokter> listDokters = dokterDao.findAll();
+            Iterable<JadwalDokter> listDokters = dokterDao.findAll();
 
-            for (Dokter dokter : listDokters) {
-                LOGGER.info("GENERATE KUOTA [{}]", dokter.getNip());
+            for (JadwalDokter dokter : listDokters) {
+                LOGGER.info("GENERATE KUOTA [{}]", dokter.getCode());
                 createRecordKuota(date, dokter);
             }
 
@@ -86,25 +82,29 @@ public class BodProcessService {
         bodDao.save(bod);
     }
     
-    public void createRecordKuota(Date date, Dokter dokter) throws BodException {
+    public void createRecordKuota(Date date, JadwalDokter dokter) throws BodException {
 
-        Kuota currentKuota = kuotaDao.findByNipDokterAndKuotaDate(dokter.getNip(), date);
+        Kuota currentKuota = kuotaDao.findByCodeDokterAndKuotaDate(dokter.getCode(), date);
         if (currentKuota == null) {
-            LOGGER.info("New Kuota => " + dokter.getNip());
-            currentKuota = new Kuota();
-            currentKuota.setCurrentKuota(0);
-            currentKuota.setMaximumKuota(setMaximumKuota(date, dokter));
-            currentKuota.setNamaDokter(dokter.getName());
-            currentKuota.setNamaDokter(dokter.getName());
-            currentKuota.setPoli(dokter.getPoli());
-            currentKuota.setKuotaDate(date);
+            int jmlKuota = setMaximumKuota(date, dokter);
             
-            kuotaDao.save(currentKuota);
+            if(jmlKuota > 0){
+                LOGGER.info("New Kuota => " + dokter.getCode());
+                currentKuota = new Kuota();
+                currentKuota.setCurrentKuota(0);
+                currentKuota.setMaximumKuota(jmlKuota);
+                currentKuota.setNamaDokter(dokter.getName());
+                currentKuota.setCodeDokter(dokter.getCode());
+                currentKuota.setPoli(dokter.getPoli());
+                currentKuota.setKuotaDate(date);
+
+                kuotaDao.save(currentKuota);
+            }
         }
 
     }
     
-    private int setMaximumKuota(Date date, Dokter dokter) throws BodException {
+    private int setMaximumKuota(Date date, JadwalDokter dokter) throws BodException {
         
         SimpleDateFormat formatHari = new SimpleDateFormat("EEE");
         String hari = formatHari.format(date);

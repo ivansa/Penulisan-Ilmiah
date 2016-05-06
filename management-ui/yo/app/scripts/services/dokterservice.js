@@ -27,8 +27,8 @@ angular.module('managementUiApp')
       findById: function (id) {
         return $http.get(ConfigService.serverUrl + "/api/master/dokter/" + id);
       },
-      findByNip: function (nip) {
-        return $http.get(ConfigService.serverUrl + "/api/master/dokter/byNip/" + nip);
+      findByCode: function (code) {
+        return $http.get(ConfigService.serverUrl + "/api/master/dokter/byCode/" + code);
       },
       findWithoutPaging: function () {
         return $http.get(ConfigService.serverUrl + "/api/master/dokter/withoutPaging");

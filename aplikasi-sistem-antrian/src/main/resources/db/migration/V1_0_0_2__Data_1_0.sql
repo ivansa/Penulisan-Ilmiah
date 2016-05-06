@@ -2,7 +2,8 @@ INSERT INTO `c_security_permission` (`id`, `permission_label`, `permission_value
 ('SYSTEM', 'Page System', 'ROLE_SYSTEM'),
 ('MASTER', 'Page Master', 'ROLE_MASTER'),
 ('LOKET', 'Page Loket', 'ROLE_LOKET'),
-('REPORT', 'Page Report', 'ROLE_REPORT');
+('REPORT', 'Page Report', 'ROLE_REPORT'),
+('GENERATE', 'Page Report', 'ROLE_GENERATE');
 
 INSERT INTO `c_security_role` (`id`, `description`, `name`) VALUES
 ('ADMINISTRATOR', 'Application Administrator', 'Administrator'),
@@ -12,7 +13,8 @@ INSERT INTO `c_security_role_permission` (`id_role`, `id_permission`) VALUES
 ('ADMINISTRATOR', 'SYSTEM'),
 ('ADMINISTRATOR', 'MASTER'),
 ('ADMINISTRATOR', 'LOKET'),
-('ADMINISTRATOR', 'REPORT');
+('ADMINISTRATOR', 'REPORT'),
+('ADMINISTRATOR', 'GENERATE');
 
 
 INSERT INTO `c_security_user` (`id`, `active`, `fullname`, `username`, `id_role`, `address`, `email`, `phone`, `id_loket`) VALUES

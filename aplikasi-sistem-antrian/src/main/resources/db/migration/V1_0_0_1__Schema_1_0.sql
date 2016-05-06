@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `runnum` (
   UNIQUE KEY `UK_qtnff32gosvs4k8s6by1jqas7` (`run_date`,`run_month`,`run_year`,`run_prefix`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `m_dokter` (
+CREATE TABLE IF NOT EXISTS `m_jadwal_dokter` (
   `id` varchar(255) NOT NULL,
   `kuota_jumat` int(11) NOT NULL,
   `kuota_kamis` int(11) NOT NULL,
@@ -97,10 +97,11 @@ CREATE TABLE IF NOT EXISTS `m_dokter` (
   `kuota_selasa` int(11) NOT NULL,
   `kuota_senin` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `nip` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `code` varchar(255) NOT NULL,
   `id_poli` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `UK_itaena7o6t8teu8ry8a3qo6g7` (`nip`),
+  UNIQUE KEY `UK_itaena7o6t8teu8ry8a3qo6g7` (`code`),
   KEY `FK_sg5solicf7m5kw4jmx430mw06` (`id_poli`),
   CONSTRAINT `FK_sg5solicf7m5kw4jmx430mw06` FOREIGN KEY (`id_poli`) REFERENCES `m_poli` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -111,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `t_kuota` (
   `kuota_date` date NOT NULL,
   `maximum_kuota` int(11) NOT NULL,
   `nama_dokter` varchar(255) NOT NULL,
-  `nio_dokter` varchar(255) NOT NULL,
+  `code_dokter` varchar(255) NOT NULL,
   `id_poli` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_cedsi46x2ngu7rc9g47s4rvsa` (`id_poli`),
@@ -130,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `t_log_antrian` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_fkkhvtkmwjybkpef32flp4nli` (`nomor_antrian`),
   KEY `FK_jrrcfni173ooo9dg24ha9w6hs` (`id_dokter`),
-  CONSTRAINT `FK_jrrcfni173ooo9dg24ha9w6hs` FOREIGN KEY (`id_dokter`) REFERENCES `m_dokter` (`id`)
+  CONSTRAINT `FK_jrrcfni173ooo9dg24ha9w6hs` FOREIGN KEY (`id_dokter`) REFERENCES `m_jadwal_dokter` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `t_log_antrian_sound` (

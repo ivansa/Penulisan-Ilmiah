@@ -49,6 +49,9 @@ public class SecurityConfig extends ResourceServerConfigurerAdapter {
                 //Laporan
                 .antMatchers("/api/report/**").hasRole("REPORT")
                 
+                //Generate
+                .antMatchers("/api/generate/**").hasRole("GENERATE")
+                
                 .anyRequest().authenticated();
     }
 }

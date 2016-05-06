@@ -5,7 +5,7 @@
  */
 package com.ivans.antrian.controller;
 
-import com.ivans.antrian.domain.Dokter;
+import com.ivans.antrian.domain.JadwalDokter;
 import com.ivans.antrian.domain.Loket;
 import com.ivans.antrian.domain.Poli;
 import com.ivans.antrian.exception.AntrianServerException;
@@ -39,20 +39,20 @@ public class DokterController {
     private DokterDao dokterDao;
     
     @RequestMapping(method = RequestMethod.GET)
-    public Page<Dokter> allDokter(Pageable pageable, HttpSession session) {
-        PageRequest pr = new PageRequest(pageable.getPageNumber(), pageable.getPageSize(), Sort.Direction.ASC, "nip");
-        Page<Dokter> result = dokterDao.findAll(pr);
+    public Page<JadwalDokter> allDokter(Pageable pageable, HttpSession session) {
+        PageRequest pr = new PageRequest(pageable.getPageNumber(), pageable.getPageSize(), Sort.Direction.ASC, "code");
+        Page<JadwalDokter> result = dokterDao.findAll(pr);
         return result;
     }
     
     @RequestMapping(value = "/withoutPaging", method = RequestMethod.GET)
-    public Iterable<Dokter> findAllWithoutPaging() {
+    public Iterable<JadwalDokter> findAllWithoutPaging() {
         return dokterDao.findAll();
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Dokter findDokterById(@PathVariable String id) {
-        Dokter d = dokterDao.findOne(id);
+    public JadwalDokter findDokterById(@PathVariable String id) {
+        JadwalDokter d = dokterDao.findOne(id);
 
         if (d == null) {
             throw new AntrianServerException("Dokter Dengan ID : " + id + " Tidak Ditemukan");
@@ -63,7 +63,7 @@ public class DokterController {
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable String id) {
-        Dokter d = dokterDao.findOne(id);
+        JadwalDokter d = dokterDao.findOne(id);
         if (d != null) {
             dokterDao.delete(id);
         }else{
@@ -72,14 +72,14 @@ public class DokterController {
     }
     
     @RequestMapping(method = RequestMethod.POST)
-    public void create(@RequestBody @Valid Dokter dokter, HttpServletRequest request, HttpServletResponse response) {
-        LOGGER.info("Save Dokter : " + dokter.getNip());
+    public void create(@RequestBody @Valid JadwalDokter dokter, HttpServletRequest request, HttpServletResponse response) {
+        LOGGER.info("Save Dokter : " + dokter.getCode());
         dokterDao.save(dokter);
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public void update(@PathVariable String id, @RequestBody @Valid Dokter dokter) {
-        Dokter d = dokterDao.findOne(id);
+    public void update(@PathVariable String id, @RequestBody @Valid JadwalDokter dokter) {
+        JadwalDokter d = dokterDao.findOne(id);
         if (d != null) {
             dokter.setId(d.getId());
             dokterDao.save(dokter);
@@ -88,9 +88,9 @@ public class DokterController {
         }
     }
     
-    @RequestMapping(value = "/byNip/{nip}", method = RequestMethod.GET)
-    public Dokter findByNip(@PathVariable String nip) {
-        return dokterDao.findByNip(nip);
+    @RequestMapping(value = "/byCode/{code}", method = RequestMethod.GET)
+    public JadwalDokter findByCode(@PathVariable String code) {
+        return dokterDao.findByCode(code);
     }
     
 }
