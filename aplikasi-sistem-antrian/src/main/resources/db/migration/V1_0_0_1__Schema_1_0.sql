@@ -112,6 +112,7 @@ CREATE TABLE IF NOT EXISTS `t_kuota` (
   `kuota_date` date NOT NULL,
   `maximum_kuota` int(11) NOT NULL,
   `nama_dokter` varchar(255) NOT NULL,
+  `description_dokter` varchar(255) NOT NULL,
   `code_dokter` varchar(255) NOT NULL,
   `id_poli` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
@@ -126,12 +127,12 @@ CREATE TABLE IF NOT EXISTS `t_log_antrian` (
   `nomor_antrian` varchar(255) NOT NULL,
   `nomor_loket` int(11) DEFAULT NULL,
   `status` bit(1) NOT NULL,
-  `updated_date` datetime NOT NULL,
-  `id_dokter` varchar(255) NOT NULL,
+  `updated_date` datetime DEFAULT NULL,
+  `id_kuota` varchar(255),
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_fkkhvtkmwjybkpef32flp4nli` (`nomor_antrian`),
-  KEY `FK_jrrcfni173ooo9dg24ha9w6hs` (`id_dokter`),
-  CONSTRAINT `FK_jrrcfni173ooo9dg24ha9w6hs` FOREIGN KEY (`id_dokter`) REFERENCES `m_jadwal_dokter` (`id`)
+  KEY `FK_jrrcfni173ooo9dg24ha9w6hs` (`id_kuota`),
+  CONSTRAINT `FK_jrrcfni173ooo9dg24ha9w6hs` FOREIGN KEY (`id_kuota`) REFERENCES `t_kuota` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `t_log_antrian_sound` (

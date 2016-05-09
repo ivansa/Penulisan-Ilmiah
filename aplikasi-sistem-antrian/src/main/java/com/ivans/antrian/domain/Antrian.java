@@ -36,8 +36,8 @@ public class Antrian {
     private String jenisLoket;
     
     @ManyToOne
-    @JoinColumn(name = "id_dokter", nullable = false)
-    private JadwalDokter dokter;
+    @JoinColumn(name = "id_kuota", nullable = false)
+    private Kuota dokter;
     
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="antrian_date", nullable = false)
@@ -50,6 +50,72 @@ public class Antrian {
     private int nomorLoket;
     
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="updated_date", nullable = false)
+    @Column(name="updated_date")
     private Date updatedDate;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNomorAntrian() {
+        return nomorAntrian;
+    }
+
+    public void setNomorAntrian(String nomorAntrian) {
+        this.nomorAntrian = nomorAntrian;
+    }
+
+    public String getJenisLoket() {
+        return jenisLoket;
+    }
+
+    public void setJenisLoket(String jenisLoket) {
+        this.jenisLoket = jenisLoket;
+    }
+
+    public Kuota getDokter() {
+        return dokter;
+    }
+
+    public void setDokter(Kuota dokter) {
+        this.dokter = dokter;
+    }
+
+    public Date getAntrianDate() {
+        return antrianDate;
+    }
+
+    public void setAntrianDate(Date antrianDate) {
+        this.antrianDate = antrianDate;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    public int getNomorLoket() {
+        return nomorLoket;
+    }
+
+    public void setNomorLoket(int nomorLoket) {
+        this.nomorLoket = nomorLoket;
+    }
+
+    public Date getUpdatedDate() {
+        return updatedDate;
+    }
+
+    public void setUpdatedDate(Date updatedDate) {
+        this.updatedDate = updatedDate;
+    }
+    
+    
 }

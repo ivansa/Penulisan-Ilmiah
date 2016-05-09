@@ -52,6 +52,9 @@ public class SecurityConfig extends ResourceServerConfigurerAdapter {
                 //Generate
                 .antMatchers("/api/generate/**").hasRole("GENERATE")
                 
+                .antMatchers("/api/pendaftaran/**").hasRole("PENDAFTARAN")
+                
+                
                 .anyRequest().authenticated();
     }
 }

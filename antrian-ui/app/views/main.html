@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="col-sm-6">{{title}}</h1>
+      <button ng-show="formStatus != 'CATEGORY'" type="button" class="btn btn-error btn-danger btn-back" ng-click="back()">Back</button>
+    </div>
+  </div>
+  <hr />
+</div>
+<div class="row" ng-show="formStatus == 'CATEGORY'">
+  <div class="col-sm-4" ng-repeat="x in listCategory">
+    <button type="button" class="btn btn-primary btn-category" ng-click="categorySelect(x.code)">{{x.title}}</button>
+  </div>
+</div>
+
+<div class="row" ng-show="formStatus == 'POLI'">
+  <div class="col-sm-2" ng-repeat="x in listPoli">
+    <button type="button" class="btn btn-primary btn-poli" ng-click="poliSelect(x.id)">{{x.name}}</button>
+  </div>
+</div>
+
+<div class="row" ng-show="formStatus == 'DOKTER'">
+  <div class="col-sm-2" ng-repeat="x in listDokter">
+    <button type="button" ng-disabled="x.currentKuota >= x.maximumKuota" class="btn btn-primary btn-dokter" ng-click="saveAntrian(x.id)">{{x.namaDokter}}<br />({{x.descriptionDokter}})</button>
+  </div>
+</div>

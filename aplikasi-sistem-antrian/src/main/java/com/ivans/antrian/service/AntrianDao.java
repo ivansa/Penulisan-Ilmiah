@@ -5,16 +5,15 @@
  */
 package com.ivans.antrian.service;
 
-import com.ivans.antrian.domain.JadwalDokter;
-import java.util.List;
+import com.ivans.antrian.domain.Antrian;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 /**
  *
- * @authtor ivans
+ * @author ivans
  */
 @Repository
-public interface DokterDao extends PagingAndSortingRepository<JadwalDokter, String>{
-    JadwalDokter findByCode(String code);
+public interface AntrianDao extends PagingAndSortingRepository<Antrian, String>{
+    
 }

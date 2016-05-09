@@ -95,6 +95,7 @@ public class BodProcessService {
                 currentKuota.setMaximumKuota(jmlKuota);
                 currentKuota.setNamaDokter(dokter.getName());
                 currentKuota.setCodeDokter(dokter.getCode());
+                currentKuota.setDescriptionDokter(dokter.getDescription());
                 currentKuota.setPoli(dokter.getPoli());
                 currentKuota.setKuotaDate(date);
 

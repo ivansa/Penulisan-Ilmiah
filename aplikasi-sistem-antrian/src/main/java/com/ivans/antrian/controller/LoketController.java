@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/master/loket")
 public class LoketController {
-    private final Logger LOGGER = LoggerFactory.getLogger(PoliController.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(LoketController.class);
     @Autowired
     private LoketDao loketDao;
     

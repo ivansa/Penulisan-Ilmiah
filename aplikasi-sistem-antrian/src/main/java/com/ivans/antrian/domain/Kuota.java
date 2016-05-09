@@ -33,6 +33,9 @@ public class Kuota {
     @Column(name = "nama_dokter", nullable = false)
     private String namaDokter;
     
+    @Column(name = "description_dokter", nullable = false)
+    private String descriptionDokter;
+    
     @Column(name = "code_dokter", nullable = false)
     private String codeDokter;
     
@@ -49,6 +52,14 @@ public class Kuota {
     @Temporal(TemporalType.DATE)
     @Column(name="kuota_date", nullable = false)
     private Date kuotaDate = new Date();
+
+    public String getDescriptionDokter() {
+        return descriptionDokter;
+    }
+
+    public void setDescriptionDokter(String descriptionDokter) {
+        this.descriptionDokter = descriptionDokter;
+    }
 
     public String getCodeDokter() {
         return codeDokter;
