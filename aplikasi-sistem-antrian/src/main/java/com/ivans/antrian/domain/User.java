@@ -66,6 +66,14 @@ public class User {
     @JoinColumn(name = "id_loket")
     private Loket loket;
 
+    public Loket getLoket() {
+        return loket;
+    }
+
+    public void setLoket(Loket loket) {
+        this.loket = loket;
+    }
+
     public String getPhone() {
         return phone;
     }

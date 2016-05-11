@@ -39,4 +39,46 @@ public class AntrianPanggilan {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private Date timestamp;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNomorAntrian() {
+        return nomorAntrian;
+    }
+
+    public void setNomorAntrian(String nomorAntrian) {
+        this.nomorAntrian = nomorAntrian;
+    }
+
+    public String getTerbilang() {
+        return terbilang;
+    }
+
+    public void setTerbilang(String terbilang) {
+        this.terbilang = terbilang;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
+
+   
 }

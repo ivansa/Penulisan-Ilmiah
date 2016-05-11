@@ -15,6 +15,7 @@ import com.ivans.antrian.domain.KategoriAntrian;
 import com.ivans.antrian.domain.Kuota;
 import com.ivans.antrian.domain.Poli;
 import com.ivans.antrian.exception.AntrianServerException;
+import com.ivans.antrian.helper.DateHelper;
 import com.ivans.antrian.service.AntrianDao;
 import com.ivans.antrian.service.BodDao;
 import com.ivans.antrian.service.DokterDao;
@@ -102,11 +103,14 @@ public class PendaftaranContoller {
         if (!StringUtils.hasText(tiketNumber)) {
             throw new AntrianServerException("Gagal Dalam Membuat Ticket Number");
         }
+        
+        String today = DateHelper.dateToString(new Date(), "yyyy-MM-dd");
         Antrian antrian = new Antrian();
         antrian.setDokter(kuota);
         antrian.setNomorAntrian(tiketNumber);
         antrian.setStatus(Boolean.FALSE);
-        antrian.setAntrianDate(new Date());
+        antrian.setAntrianDate(today);
+        antrian.setTimestamp(new Date());
         antrian.setJenisLoket(param.getCategoryCode());
         
         kuota.setCurrentKuota(kuota.getCurrentKuota() + 1);

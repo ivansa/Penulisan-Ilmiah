@@ -1,0 +1,40 @@
+<center>
+<div class="text-center" style="max-width:700px" ng-if="loket.nomorLoket >= 1">
+    <div class="row" style="background-color:#00B7FF;color:white;">
+        <div class="col-sm-12">
+            <h1 style="font-weight: 800;">RS DR. H. Marzoeki Mahdi Bogor</h1>
+            <span style="font-weight: 400;font-size:24px">[Counter {{ loket.nomorLoket }}]</span>
+        </div>
+    </div>
+    <div class="row" style="background-color:#B3F1FF;padding-bottom:2em">
+        <div class="col-sm-12">
+            <center>
+            <table class="table" style="width:60%;margin-top:1em;border:2px solid black;">
+                <thead>
+                    <tr>
+                        <th style="border:2px solid black;background-color:#33daff" class="text-center">Antrian Sekarang</th>
+                        <th style="border:2px solid black;background-color:#33daff" class="text-center">Antrian Berikutnya</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border:2px solid black;" class="text-center"><h1 style="font-weight: 500;">{{currentAntrian.nomorAntrian | limitTo:4}}</h1></th>
+                        <td style="border:2px solid black;" class="text-center"><h1 style="font-weight: 500;">{{nextAntrian.nomorAntrian | limitTo:4}}</h1></th>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-primary">Panggil Ulang</button>
+            <button type="button" class="btn btn-primary">No Berikutnya</button>
+            </center>
+        </div>
+    </div>
+    <div class="row" style="background-color:#00B7FF;padding-top:1em;color:white">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <p>Jl. Dr. Sumeru No. 114, Bogor, Jawa Barat</p>
+            <p>Phone/Fax : (0251) 8324025, 8324026</p>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+</center>

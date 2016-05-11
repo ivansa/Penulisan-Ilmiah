@@ -6,6 +6,10 @@
 package com.ivans.antrian.service;
 
 import com.ivans.antrian.domain.Antrian;
+import java.util.Date;
+import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,5 +19,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface AntrianDao extends PagingAndSortingRepository<Antrian, String>{
-    
+    public Page<Antrian> findByJenisLoketAndStatusAndAntrianDate(String kategori, Boolean status, String antrianDate, Pageable pageable);
+    public Page<Antrian> findByNomorLoketAndAntrianDate(int number, String antrianDate, Pageable pageable);
+    public Antrian findByNomorAntrian(String nomor);
 }

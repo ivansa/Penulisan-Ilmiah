@@ -21,9 +21,9 @@ angular.module('managementUiApp')
         	});
 
         	// Get Loket
-        	//LoketService.findAllWithoutPaging().success(function (data) {
-	        //     $scope.listLoket = data;
-	        //});
+        	LoketService.findWithoutPaging().success(function (data) {
+	             $scope.listLoket = data;
+	        });
 
             UserService.findAll($scope.paging.currentPage - 1, 10).success(function (data) {
                 $scope.users = data.content;

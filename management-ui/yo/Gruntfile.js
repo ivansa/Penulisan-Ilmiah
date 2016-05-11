@@ -70,7 +70,7 @@ module.exports = function (grunt) {
                 port: 9000,
                 // Change this to '0.0.0.0' to access the server from outside.
                 hostname: '0.0.0.0',
-                livereload: 35730
+                livereload: 35740
             },
             proxies: [{
                 context: '/antrian-server', // the context of the data service

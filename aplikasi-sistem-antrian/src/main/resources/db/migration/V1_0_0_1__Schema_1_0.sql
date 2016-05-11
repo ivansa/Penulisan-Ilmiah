@@ -122,7 +122,8 @@ CREATE TABLE IF NOT EXISTS `t_kuota` (
 
 CREATE TABLE IF NOT EXISTS `t_log_antrian` (
   `id` varchar(255) NOT NULL,
-  `antrian_date` datetime NOT NULL,
+  `antrian_date` varchar(255) NOT NULL,
+  `timestamp` datetime NOT NULL,
   `jenis_loket` varchar(255) NOT NULL,
   `nomor_antrian` varchar(255) NOT NULL,
   `nomor_loket` int(11) DEFAULT NULL,

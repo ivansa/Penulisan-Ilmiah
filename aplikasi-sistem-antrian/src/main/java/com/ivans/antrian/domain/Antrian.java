@@ -39,9 +39,12 @@ public class Antrian {
     @JoinColumn(name = "id_kuota", nullable = false)
     private Kuota dokter;
     
-    @Temporal(TemporalType.TIMESTAMP)
     @Column(name="antrian_date", nullable = false)
-    private Date antrianDate = new Date();
+    private String antrianDate;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name="timestamp", nullable = false)
+    private Date timestamp = new Date();
     
     @Column(nullable = false)
     private Boolean status = Boolean.FALSE;
@@ -52,6 +55,22 @@ public class Antrian {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="updated_date")
     private Date updatedDate;
+
+    public String getAntrianDate() {
+        return antrianDate;
+    }
+
+    public void setAntrianDate(String antrianDate) {
+        this.antrianDate = antrianDate;
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public String getId() {
         return id;
@@ -84,15 +103,7 @@ public class Antrian {
     public void setDokter(Kuota dokter) {
         this.dokter = dokter;
     }
-
-    public Date getAntrianDate() {
-        return antrianDate;
-    }
-
-    public void setAntrianDate(Date antrianDate) {
-        this.antrianDate = antrianDate;
-    }
-
+    
     public Boolean getStatus() {
         return status;
     }

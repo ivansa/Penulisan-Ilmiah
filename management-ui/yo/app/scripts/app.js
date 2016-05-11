@@ -75,11 +75,17 @@ angular
                 controller: 'CategoryCtrl',
                 controllerAs: 'category'
             })
-            // Generate
+            //================================= Generate
             .when('/generate/kuota', {
                 templateUrl: 'views/generate/kuota.html',
                 controller: 'GenerateKuotaCtrl',
                 controllerAs: 'generateKuota'
+            })
+            //================================= Loket
+            .when('/transaksi/loket', {
+              templateUrl: 'views/transaksi/loket.html',
+              controller: 'TransaksiLoketCtrl',
+              controllerAs: 'transaksiLoket'
             })
             .otherwise({
                 redirectTo: '/'

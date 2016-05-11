@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/generate/kuota")
 public class BodController {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(CategoryController.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(BodController.class);
     @Autowired
     private BodProcessService bodService;
     @Autowired
