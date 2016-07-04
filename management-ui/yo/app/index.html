@@ -62,6 +62,7 @@
             </li>
             <li ng-show="flagGenerate >= 0"><a ng-href="#/generate/kuota">Generate</a></li>
             <li ng-show="flagLoket >= 0"><a ng-href="#/transaksi/loket">Loket</a></li>
+            <li ng-show="flagTV >= 0"><a ng-href="#/screen/tv">TV Screen</a></li>
             <li class="dropdown" ng-show="flagReport >= 0">
               <a class="dropdown-toggle" data-toggle="dropdown">Report <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -150,6 +151,8 @@
   <script src="scripts/services/generatekuotaservice.js"></script>
   <script src="scripts/controllers/transaksi_loket.js"></script>
   <script src="scripts/services/transaksiloketservice.js"></script>
+  <script src="scripts/controllers/tvscreen.js"></script>
+  <script src="scripts/services/screentvservice.js"></script>
   <!-- endbuild -->
 </body>
 

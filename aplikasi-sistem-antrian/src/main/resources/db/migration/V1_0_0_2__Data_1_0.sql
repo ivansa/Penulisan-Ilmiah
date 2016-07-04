@@ -4,6 +4,7 @@ INSERT INTO `c_security_permission` (`id`, `permission_label`, `permission_value
 ('LOKET', 'Page Loket', 'ROLE_LOKET'),
 ('REPORT', 'Page Report', 'ROLE_REPORT'),
 ('PENDAFTARAN', 'Page Pendaftaran', 'ROLE_PENDAFTARAN'),
+('SCREEN_TV', 'Page Screen Tv', 'ROLE_SCREEN_TV'),
 ('GENERATE', 'Page Report', 'ROLE_GENERATE');
 
 INSERT INTO `c_security_role` (`id`, `description`, `name`) VALUES
@@ -18,6 +19,7 @@ INSERT INTO `c_security_role_permission` (`id_role`, `id_permission`) VALUES
 ('ADMINISTRATOR', 'LOKET'),
 ('ADMINISTRATOR', 'REPORT'),
 ('ADMINISTRATOR', 'GENERATE'),
+('ADMINISTRATOR', 'SCREEN_TV'),
 ('PENDAFTARAN', 'PENDAFTARAN');
 
 

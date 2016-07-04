@@ -6,6 +6,7 @@
 package com.ivans.antrian.service;
 
 import com.ivans.antrian.domain.Loket;
+import java.util.List;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,4 +17,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LoketDao extends PagingAndSortingRepository<Loket, String>{
     Loket findByNomorLoket(int nomor);
+    List<Loket> findByKategoriIdOrderByNomorLoketAsc(String idKategory);
 }

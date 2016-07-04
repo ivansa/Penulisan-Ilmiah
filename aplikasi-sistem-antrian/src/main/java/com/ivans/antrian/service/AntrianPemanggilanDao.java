@@ -6,6 +6,8 @@
 package com.ivans.antrian.service;
 
 import com.ivans.antrian.domain.AntrianPanggilan;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,4 +19,5 @@ import org.springframework.stereotype.Repository;
 public interface AntrianPemanggilanDao extends PagingAndSortingRepository<AntrianPanggilan, String>{
     
     public AntrianPanggilan findByNomorAntrian(String nomor);
+    public Page<AntrianPanggilan> findByStatus(Boolean status, Pageable pageable);
 }

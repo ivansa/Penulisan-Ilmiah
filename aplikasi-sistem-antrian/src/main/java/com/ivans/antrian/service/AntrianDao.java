@@ -22,4 +22,5 @@ public interface AntrianDao extends PagingAndSortingRepository<Antrian, String>{
     public Page<Antrian> findByJenisLoketAndStatusAndAntrianDate(String kategori, Boolean status, String antrianDate, Pageable pageable);
     public Page<Antrian> findByNomorLoketAndAntrianDate(int number, String antrianDate, Pageable pageable);
     public Antrian findByNomorAntrian(String nomor);
+    public Long countByJenisLoketAndStatusAndAntrianDate(String kategori, Boolean status, String antrianDate);
 }

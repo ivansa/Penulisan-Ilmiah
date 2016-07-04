@@ -5,9 +5,7 @@
  */
 package com.ivans.antrian.controller;
 
-import com.ivans.antrian.domain.Antrian;
 import com.ivans.antrian.domain.AntrianPanggilan;
-import com.ivans.antrian.exception.AntrianServerException;
 import com.ivans.antrian.service.AntrianDao;
 import com.ivans.antrian.service.AntrianPemanggilanDao;
 import com.ivans.antrian.service.KategoriAntrianDao;
@@ -46,7 +44,17 @@ public class AntrianSoundController {
 
         pemanggilan.setStatus(Boolean.FALSE);
         pemanggilan.setTimestamp(new Date());
-        
+
+        pemanggilanDao.save(pemanggilan);
+    }
+
+    @RequestMapping(value = "/recall", method = RequestMethod.GET)
+    public void recall(@RequestParam String number) {
+
+        AntrianPanggilan pemanggilan = pemanggilanDao.findByNomorAntrian(number);
+        pemanggilan.setStatus(Boolean.FALSE);
+        pemanggilan.setTimestamp(new Date());
+
         pemanggilanDao.save(pemanggilan);
     }
 

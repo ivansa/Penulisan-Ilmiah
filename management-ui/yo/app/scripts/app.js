@@ -87,6 +87,11 @@ angular
               controller: 'TransaksiLoketCtrl',
               controllerAs: 'transaksiLoket'
             })
+            .when('/screen/tv', {
+              templateUrl: 'views/screen/tv.html',
+              controller: 'TvScreenCtrl',
+              controllerAs: 'TvScreen'
+            })
             .otherwise({
                 redirectTo: '/'
             });

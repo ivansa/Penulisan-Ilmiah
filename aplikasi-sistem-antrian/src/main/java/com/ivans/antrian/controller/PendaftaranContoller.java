@@ -5,12 +5,10 @@
  */
 package com.ivans.antrian.controller;
 
-import com.ivans.antrian.constant.RunnumType;
 import com.ivans.antrian.domain.Antrian;
 import com.ivans.antrian.domain.AntrianCreate;
 import com.ivans.antrian.domain.AntrianPrint;
 import com.ivans.antrian.domain.BodProcess;
-import com.ivans.antrian.domain.JadwalDokter;
 import com.ivans.antrian.domain.KategoriAntrian;
 import com.ivans.antrian.domain.Kuota;
 import com.ivans.antrian.domain.Poli;
@@ -18,7 +16,6 @@ import com.ivans.antrian.exception.AntrianServerException;
 import com.ivans.antrian.helper.DateHelper;
 import com.ivans.antrian.service.AntrianDao;
 import com.ivans.antrian.service.BodDao;
-import com.ivans.antrian.service.DokterDao;
 import com.ivans.antrian.service.KategoriAntrianDao;
 import com.ivans.antrian.service.KuotaDao;
 import com.ivans.antrian.service.PoliDao;
@@ -29,7 +26,6 @@ import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,8 +57,10 @@ public class PendaftaranContoller {
     
     @Autowired
     private BodDao bodDao;
+    
     @Autowired
     private AntrianDao antrianDao;
+    
     @Autowired
     private RunningNumberService runnService;
 

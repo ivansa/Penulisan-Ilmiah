@@ -1,0 +1,153 @@
+
+%*******************************************************************************************
+% File ini merupakan file template LaTEX untuk Penulisan Ilmiah pada Universitas Gunadarma
+%% Programmer  : Aldino Septa Nugraha
+%% E-mail  : aldi_tob_2000@yahoo.com
+%% Pembuatan program template makalah ini dibuat dengan menggunakan :
+%% Ms. Windows XP SP1 
+%% TeXnicCenter
+%% MikTeX 2.5.4
+%*******************************************************************************************
+%berikut langkah-langkah untuk mendapatkan hasil akhir PI
+%=======================================================================================================
+% Untuk platform Windows, software berikut harus sudah diinstall :
+% MiKTeX (Latex versi Windows). Dapat didownload dari situs http://miktex.org/
+% Untuk kemudahan disarankan untuk menginstall editor khusus Latex untuk versi Windows yaitu:
+% WinEdt (dapat didownload dari http://www.winedt.com
+% Untuk compiling, pada directory file latex berada di command promt ketikkan :
+%  latex MainTemplatePI
+%  bibtex MainTemplatePI
+%  makeindex subject
+%  latex MainTemplatePI
+%  latex MainTemplatePI
+%
+%  Lalu untuk mendapatkan hasil output dalam bentuk pdf kompile dengan cara mengetikkan
+%  pdflatex MainTemplatePI
+%
+%  Nanti akan terbentuk file baru bernama MainTemplatePI.pdf
+%
+%  Bagi yang memakai WinEdt untuk compiling cukup dengan cara :
+%  tekan tombol Latex
+%  tekan tombol bibtex
+%  tekan tombol makeindex
+%  tekan tombol Latex
+%  tekan tombol Latex
+%  tekan tombol Pdf Latex/Pdf Texify
+%=======================================================================================================
+%  Jangan lupa bila ada suatu perubahan pada file *.tex ataupun *.bib harus dikompile dari langkah
+%  pertama dan jangan langsung ke langkah pdflatex %
+%=======================================================================================================
+
+\documentclass[a4paper,12pt,oneside,makeidx]{SamplePI}
+\usepackage[bahasa]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{multind}
+
+%\makeindex{subject}
+
+\centerchapter
+\makeatletter
+\doublespacing
+\makeatother
+\parindent 3.0em
+%===================================================================
+\setlength{\textwidth}{15.0cm}
+\setlength{\evensidemargin}{2.5cm} % outer/right margin
+\setlength{\topmargin}{0.3cm}      % top margin
+\setlength{\footskip}{2.5cm}         % distance between text and foot
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-\topmargin}
+\addtolength{\textheight}{-\headheight}
+\addtolength{\textheight}{-\headsep}
+\addtolength{\textheight}{-\footskip}
+\addtolength{\textheight}{-4cm}   % bottom margin
+%==============================================================================
+%% Bagian Pemenggalan Kata Yang Tidak Sempurna
+%%\hyphenation{Universitas} \hyphenation{Gunadarma}
+%==============================================================================
+\begin{document}
+\nocite{*}
+%#start bagian administrasi #==================================================
+% bagian muka sebelum isi, umumnya halaman administrasi, kalau tidak digunakan
+% dapat diberikan tanda % didepannya
+%cover
+\pagestyle{empty} \pagenumbering{roman} \setcounter{page}{1}
+\include{cover}
+
+
+%halaman lembar pengesahan, abstraksi, kata pengantar
+\pagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{2} %nilai halaman utk awal dari abstrak s/d ucapan terimakasih dlm romawi
+\include{lembarpengesahan}% menggabungkan file lembar pengesahan
+\include{abstraksi}% menggabungkan file abstraksi
+
+%menggabungkan file CV atau riwayat hidup ringkas
+%\include{cv}
+\include{katapengantar}% mengabungkan file kata pengantar
+
+%# akhir bagian administrasi # ==========================================
+
+% #mulai membuat daftar isi, daftar gambar dan  daftar tabel # ==========
+%\setcounter{page}{8} %set nilai halaman sesuai urutannya
+
+% membuat daftar isi
+\addcontentsline{toc}{chapter}{DAFTAR ISI}
+\tableofcontents{}
+
+%membuat daftar gambar
+\listoffigures
+\addcontentsline{toc}{chapter}{DAFTAR GAMBAR}%masih masalah
+
+%% membuat daftar tabel
+\listoftables
+\addcontentsline{toc}{chapter}{DAFTAR TABEL}
+
+\include{daftarlampiran}
+
+% #akhir membuat daftar isi, daftar gambar dan  daftar tabel # ==========
+
+% # mulai bagian isi # ==================================================
+
+\newpage
+\pagestyle{headings}
+\pagenumbering{arabic} % jenis huruf arabic
+\setcounter{page}{1} %mulai dari halaman 1
+
+
+% \input{bab1/bab1.tex} %Bab 1
+
+% \input{bab2/bab2.tex} %Bab 2
+
+% \input{bab3/bab3.tex} %Bab 3
+
+% \input{bab4/bab4.tex} %Bab 4
+
+
+
+
+% diatas menunjukkan SubDir/nama file tex, bisa ditambah/dikurang sesuai kebutuhan
+
+% # akhir bagian isi # ==================================================
+
+% # mulai bagian Daftar Pustaka # ============================================
+\newpage
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA} %memasukkan daftar pustaka di daftar isi
+\bibliographystyle{IEEEtranS}
+\bibliography{MainTemplatePI} %file menyimpan bibtex
+
+% # akhir bagian referensi # ============================================
+
+\newpage
+\pagestyle{plain}
+\include{lampiran}
+
+\end{document}
+%% Finish----------------

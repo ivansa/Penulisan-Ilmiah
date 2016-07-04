@@ -82,6 +82,8 @@ angular.module('managementUiApp')
                             $scope.flagLoket = $scope.authorities.indexOf("ROLE_LOKET");
                             $scope.flagGenerate = $scope.authorities.indexOf("ROLE_GENERATE");
                             $scope.flagReport = $scope.authorities.indexOf("ROLE_REPORT"); 
+                            //$scope.flagTV = $scope.authorities.indexOf("ROLE_SCREEN_TV"); 
+                            $scope.flagTV = $scope.authorities.indexOf("ROLE_REPORT"); 
 						} else {
                             $scope.logout();
                         }

@@ -55,6 +55,9 @@ public class SecurityConfig extends ResourceServerConfigurerAdapter {
                 .antMatchers("/api/pendaftaran/**").hasRole("PENDAFTARAN")
                 
                 
+                .antMatchers("/api/screen/tv/**").hasRole("SCREEN_TV")
+                
+                
                 .anyRequest().authenticated();
     }
 }

@@ -17,5 +17,14 @@ angular.module('managementUiApp')
       getAntrian: function (loketNumber) {
         return $http.get(ConfigService.serverUrl + "/api/transaksi/loket/get/antrian/" + loketNumber);
       },
+      takeAntrian: function (antrianNumber, loketNumber) {
+        return $http.get(ConfigService.serverUrl + "/api/transaksi/loket/take?number=" + antrianNumber + "&loket=" + loketNumber);
+      },
+      setCall: function (antrianNumber, loketNumber) {
+        return $http.get(ConfigService.serverUrl + "/api/pemanggilan/set?number=" + antrianNumber + "&loket=" + loketNumber);
+      },
+      recall: function (antrianNumber) {
+        return $http.get(ConfigService.serverUrl + "/api/pemanggilan/recall?number=" + antrianNumber);
+      },
     };
   });
