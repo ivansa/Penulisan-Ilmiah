@@ -10,6 +10,8 @@ import com.ivans.antrian.service.AntrianDao;
 import com.ivans.antrian.service.AntrianPemanggilanDao;
 import com.ivans.antrian.service.KategoriAntrianDao;
 import java.util.Date;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -32,12 +34,17 @@ public class AntrianSoundController {
 
     @Autowired
     private AntrianPemanggilanDao pemanggilanDao;
+    
+    private final Logger LOGGER = LoggerFactory.getLogger(AntrianSoundController.class);
 
     @RequestMapping(value = "/set", method = RequestMethod.GET)
     public void set(@RequestParam String number, @RequestParam String loket) {
-
+        LOGGER.info("Number --------- > " + number);
+        LOGGER.info("Loket -----------> " + loket);
+        
         AntrianPanggilan pemanggilan = pemanggilanDao.findByNomorAntrian(number);
         if (pemanggilan == null) {
+            pemanggilan = new AntrianPanggilan();
             pemanggilan.setNomorAntrian(number);
             pemanggilan.setTerbilang(setTerbilang(number, loket));
         }

@@ -46,7 +46,7 @@ public class HistoryObat {
     @Column(nullable = false)
     private String buyerName;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private Date transactionDate;
 

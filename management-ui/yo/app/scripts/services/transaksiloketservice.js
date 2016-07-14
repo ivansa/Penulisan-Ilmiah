@@ -14,8 +14,8 @@ angular.module('managementUiApp')
       getLoketByUserActive: function () {
         return $http.get(ConfigService.serverUrl + "/api/transaksi/loket/get/loket");
       },
-      getAntrian: function (loketNumber) {
-        return $http.get(ConfigService.serverUrl + "/api/transaksi/loket/get/antrian/" + loketNumber);
+      getAntrian: function (category, loketNumber) {
+        return $http.get(ConfigService.serverUrl + "/api/transaksi/loket/get/antrian/" + category + "/" + loketNumber);
       },
       takeAntrian: function (antrianNumber, loketNumber) {
         return $http.get(ConfigService.serverUrl + "/api/transaksi/loket/take?number=" + antrianNumber + "&loket=" + loketNumber);

@@ -13,6 +13,9 @@ angular.module('managementUiApp')
     return {
       getLoketByCategory: function () {
         return $http.get(ConfigService.serverUrl + "/api/screen/tv/get/loket/byCategory");
+      },
+      getListAntrian: function (){
+        return $http.get(ConfigService.serverUrl + "/api/screen/tv/get/antrian");
       }
     };
   });

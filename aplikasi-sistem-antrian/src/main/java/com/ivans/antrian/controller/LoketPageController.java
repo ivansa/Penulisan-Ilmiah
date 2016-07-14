@@ -60,20 +60,24 @@ public class LoketPageController {
 
     @RequestMapping(value = "/get/antrian/{category}/{noLoket}", method = RequestMethod.GET)
     public Map<String, Object> getAntrian(@PathVariable String category, @PathVariable int noLoket) {
-        PageRequest pr = new PageRequest(1, 1, Sort.Direction.DESC, "timestamp");
-        PageRequest prCurrent = new PageRequest(1, 1, Sort.Direction.ASC, "nomorAntrian");
+        PageRequest pr = new PageRequest(0, 1, Sort.Direction.ASC, "nomorAntrian");
+        PageRequest prCurrent = new PageRequest(0, 1, Sort.Direction.DESC, "nomorAntrian");
         String today = DateHelper.dateToString(new Date(), "yyyy-MM-dd");
 
         Map<String, Object> result = new HashMap<String, Object>();
+        LOGGER.info("Category ========= " + category);
+        LOGGER.info("Tanggal =========== " + today);
         Page<Antrian> antrianPage = antrianDao.findByJenisLoketAndStatusAndAntrianDate(category, Boolean.FALSE, today, pr);
 
+        LOGGER.info(String.valueOf(antrianPage.getContent().size()));
         Page<Antrian> current = antrianDao.findByNomorLoketAndAntrianDate(noLoket, today, prCurrent);
         
         Long totalAntrian = antrianDao.countByJenisLoketAndStatusAndAntrianDate(category, Boolean.FALSE, today);
         Boolean status = true;
-        if (current.getContent().get(0) != null) {
+        if (!current.getContent().isEmpty() && current.getContent().get(0) != null) {
             AntrianPanggilan pemanggilan = pemanggilanDao.findByNomorAntrian(current.getContent().get(0).getNomorAntrian());
-            status = pemanggilan.getStatus();
+            
+            status =  pemanggilan == null ? pemanggilan.getStatus():false;
         }
 
         result.put(category, antrianPage);

@@ -30,7 +30,7 @@ public class HistoryPasien {
     @GenericGenerator(name = "system-uuid", strategy = "uuid2")
     private String id;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private Date transactionDate;
 

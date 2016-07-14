@@ -5,12 +5,17 @@
  */
 package com.ivans.antrian.controller;
 
+import com.ivans.antrian.domain.Antrian;
 import com.ivans.antrian.domain.AntrianPanggilan;
 import com.ivans.antrian.domain.KategoriAntrian;
+import com.ivans.antrian.domain.Loket;
+import com.ivans.antrian.helper.DateHelper;
+import com.ivans.antrian.service.AntrianDao;
 import com.ivans.antrian.service.AntrianPemanggilanDao;
 import com.ivans.antrian.service.KategoriAntrianDao;
 import com.ivans.antrian.service.LoketDao;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,38 +36,61 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/screen/tv")
 public class ScreenTvController {
+
     private final Logger LOGGER = LoggerFactory.getLogger(ScreenTvController.class);
 
     @Autowired
+    private AntrianDao antrianDao;
+
+    @Autowired
     private KategoriAntrianDao categoryDao;
-    
+
     @Autowired
     private LoketDao loketDao;
-    
+
     @Autowired
     private AntrianPemanggilanDao pemanggilanDao;
-    
+
     @RequestMapping(value = "/get/loket/byCategory", method = RequestMethod.GET)
     public Map<String, Object> findAllLoketByCategory() {
         Map<String, Object> result = new HashMap<String, Object>();
         List<Map<String, Object>> listCategory = new ArrayList<Map<String, Object>>();
-        
-        for(KategoriAntrian category : categoryDao.findAll()){
+
+        for (KategoriAntrian category : categoryDao.findAll()) {
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("category", category);
             map.put("loket", loketDao.findByKategoriIdOrderByNomorLoketAsc(category.getId()));
             listCategory.add(map);
         }
-        
-        PageRequest pr = new PageRequest(0, 1, Sort.Direction.ASC, "timestamp");
-        Page<AntrianPanggilan> pageCall = pemanggilanDao.findByStatus(Boolean.TRUE, pr);
-        
+
         result.put("listCategory", listCategory);
-        
-        if(pageCall.getTotalElements() > 0){
-            result.put("call", pageCall.getContent().get(0));
+
+        return result;
+    }
+
+    @RequestMapping(value = "/get/antrian", method = RequestMethod.GET)
+    public Map<String, Object> findAllAntrian() {
+        Map<String, Object> result = new HashMap<String, Object>();
+        PageRequest prCurrent = new PageRequest(0, 1, Sort.Direction.DESC, "nomorAntrian");
+        String today = DateHelper.dateToString(new Date(), "yyyy-MM-dd");
+
+        Iterable<Loket> listLoket = loketDao.findAll();
+
+        for (Loket loket : listLoket) {
+            Page<Antrian> current = antrianDao.findByNomorLoketAndAntrianDate(loket.getNomorLoket(), today, prCurrent);
+            LOGGER.info("================ > " + current.getTotalElements());
+            if (!current.getContent().isEmpty()) {
+                result.put(String.valueOf(loket.getNomorLoket()), current.getContent().get(0));
+            }
         }
         
+        
+        PageRequest pr = new PageRequest(0, 1, Sort.Direction.ASC, "timestamp");
+        Page<AntrianPanggilan> pageCall = pemanggilanDao.findByStatus(Boolean.FALSE, pr);
+        if (pageCall.getTotalElements() > 0) {
+            result.put("call", pageCall.getContent().get(0));
+        }
+
         return result;
     }
 }

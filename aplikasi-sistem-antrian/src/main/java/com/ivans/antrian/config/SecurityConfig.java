@@ -39,6 +39,8 @@ public class SecurityConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers("/sounds/**").permitAll()
+                
                 //Management
                 .antMatchers("/api/system/**").hasRole("SYSTEM")
                 .antMatchers("/api/master/**").hasRole("MASTER")
@@ -53,6 +55,7 @@ public class SecurityConfig extends ResourceServerConfigurerAdapter {
                 .antMatchers("/api/generate/**").hasRole("GENERATE")
                 
                 .antMatchers("/api/pendaftaran/**").hasRole("PENDAFTARAN")
+                .antMatchers("/api/check/bod").hasRole("PENDAFTARAN")
                 
                 
                 .antMatchers("/api/screen/tv/**").hasRole("SCREEN_TV")

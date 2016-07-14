@@ -24,17 +24,17 @@ angular.module('managementUiApp')
     $scope.getLoket();
 
     $scope.runPolling = function () {
-      TransaksiLoketService.getAntrian($scope.loket.nomorLoket).success(function (data) {
+      TransaksiLoketService.getAntrian($scope.loket.kategori.code, $scope.loket.nomorLoket).success(function (data) {
         if ($scope.loket.kategori.code == "A") {
           $scope.nextAntrian = data.A.content[0];
         } else if ($scope.loket.kategori.code == "B") {
           $scope.nextAntrian = data.B.content[0];
-          console.log(data.B.content[0]);
         } else {
           $scope.nextAntrian = data.F.content[0];
         }
         $scope.currentAntrian = data.current.content[0];
         $scope.loading(data.pemanggilan);
+        $scope.totalAntrian = data.totalAntrian;
         $timeout(function () {
           $scope.runPolling();
         }, 1000);
@@ -43,7 +43,8 @@ angular.module('managementUiApp')
 
     $scope.take = function () {
       TransaksiLoketService.takeAntrian($scope.nextAntrian.nomorAntrian, $scope.loket.nomorLoket).success(function (data) {
-        if (number) {
+        if (data.number) {
+          
           $scope.setPemanggilan(data);
         }
       });
