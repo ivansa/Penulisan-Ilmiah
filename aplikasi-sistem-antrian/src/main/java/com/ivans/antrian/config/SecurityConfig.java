@@ -39,7 +39,7 @@ public class SecurityConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/sounds/**").permitAll()
+                .antMatchers("/api/sound/**").permitAll()
                 
                 //Management
                 .antMatchers("/api/system/**").hasRole("SYSTEM")

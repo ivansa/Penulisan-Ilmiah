@@ -65,11 +65,7 @@ public class LoketPageController {
         String today = DateHelper.dateToString(new Date(), "yyyy-MM-dd");
 
         Map<String, Object> result = new HashMap<String, Object>();
-        LOGGER.info("Category ========= " + category);
-        LOGGER.info("Tanggal =========== " + today);
         Page<Antrian> antrianPage = antrianDao.findByJenisLoketAndStatusAndAntrianDate(category, Boolean.FALSE, today, pr);
-
-        LOGGER.info(String.valueOf(antrianPage.getContent().size()));
         Page<Antrian> current = antrianDao.findByNomorLoketAndAntrianDate(noLoket, today, prCurrent);
         
         Long totalAntrian = antrianDao.countByJenisLoketAndStatusAndAntrianDate(category, Boolean.FALSE, today);
@@ -77,7 +73,9 @@ public class LoketPageController {
         if (!current.getContent().isEmpty() && current.getContent().get(0) != null) {
             AntrianPanggilan pemanggilan = pemanggilanDao.findByNomorAntrian(current.getContent().get(0).getNomorAntrian());
             
-            status =  pemanggilan == null ? pemanggilan.getStatus():false;
+            status =  pemanggilan != null ? pemanggilan.getStatus():false;
+            LOGGER.info("status ======== " + pemanggilan.getNomorAntrian());
+            LOGGER.info("status ======== " + pemanggilan.getStatus());
         }
 
         result.put(category, antrianPage);

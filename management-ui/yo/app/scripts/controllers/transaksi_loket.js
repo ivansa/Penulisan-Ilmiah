@@ -33,7 +33,7 @@ angular.module('managementUiApp')
           $scope.nextAntrian = data.F.content[0];
         }
         $scope.currentAntrian = data.current.content[0];
-        $scope.loading(data.pemanggilan);
+        $scope.statusCall = data.pemanggilan;
         $scope.totalAntrian = data.totalAntrian;
         $timeout(function () {
           $scope.runPolling();
@@ -60,13 +60,5 @@ angular.module('managementUiApp')
       TransaksiLoketService.recall($scope.currentAntrian.nomorAntrian).success(function (data) {
 
       });
-    };
-
-    $scope.loading = function (x) {
-      if (x) {
-        $("#modalLoading").modal("hide");
-      } else {
-        $("#modalLoading").modal("show");
-      }
     };
   });

@@ -27,8 +27,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <button type="button" class="btn btn-primary" ng-click="recall()">Panggil Ulang</button>
-                            <button type="button" class="btn btn-primary" ng-click="take()">No Berikutnya</button><br />
+                            <button type="button" ng-disabled="statusCall" class="btn btn-primary" ng-click="recall()">Panggil Ulang</button>
+                            <button type="button" ng-disabled="statusCall"  class="btn btn-primary" ng-click="take()">No Berikutnya</button><br />
                             <span style="padding:1em;display: inline-block;"><i>Total Antrian : {{totalAntrian}}</i></span>
                         </center>
                     </div>

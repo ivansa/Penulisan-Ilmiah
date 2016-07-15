@@ -92,6 +92,17 @@ angular
               controller: 'TvScreenCtrl',
               controllerAs: 'TvScreen'
             })
+            //================================= Report
+            .when('/report/antrian', {
+              templateUrl: 'views/report/antrian_harian.html',
+              controller: 'ReportAntrianHarianCtrl',
+              controllerAs: 'reportAntrianHarian'
+            })
+            .when('/report/kuota', {
+              templateUrl: 'views/report/kuota_harian.html',
+              controller: 'ReportKuotaHarianCtrl',
+              controllerAs: 'reportKuotaHarian'
+            })
             .otherwise({
                 redirectTo: '/'
             });

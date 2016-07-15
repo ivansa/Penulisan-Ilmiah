@@ -8,7 +8,7 @@
  * Controller of the managementUiApp
  */
 angular.module('managementUiApp')
-  .controller('TvScreenCtrl', function ($scope, $timeout, ScreenTvService) {
+  .controller('TvScreenCtrl', function ($scope, $timeout, ScreenTvService, TransaksiLoketService, ConfigService) {
     $scope.currentCall = {};
     $scope.antrian = {};
 
@@ -28,19 +28,31 @@ angular.module('managementUiApp')
     };
 
     $scope.runAudio = function (x) {
+      var audioHtml = "<audio id='audio'' preload='auto'' tabindex='0' controls='' type='audio/mpeg'>";
+      $("#audioPlayer").html(audioHtml);
       var audio = $('audio');
-      audio[0].src = "antrian-server/sounds/" + $scope.arrayMsg[x] + ".mp3";
+
+      audio[0].src = ConfigService.serverUrl + "/api/sound/" + $scope.arrayMsg[x];
       audio[0].load();
       audio[0].play();
       audio[0].addEventListener('ended', function (e) {
-        if (x == $scope.arrayMsg.length) {
-          audio[0].src = null;
-          $timeout(function () {
-            $scope.runPolling();
-          }, 1000);
+        var i = x + 1;
+        if (i == $scope.arrayMsg.length) {
+          $("#audioPlayer").html("-");
+          $scope.setFinishedCall();
         } else {
-          $scope.runAudio(x + 1);
+          $timeout(function () {
+            $scope.runAudio(x + 1);
+          }, 150);
         }
+      });
+    };
+
+    $scope.setFinishedCall = function () {
+      ScreenTvService.setFinishedCall($scope.currentCall.id).success(function () {
+        $timeout(function () {
+          $scope.runPolling();
+        }, 1000);
       });
     };
 

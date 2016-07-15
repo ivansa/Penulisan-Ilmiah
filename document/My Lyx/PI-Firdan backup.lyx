@@ -1,0 +1,5627 @@
+#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+%% \renewcommand{\chapter}[1]{\chapter[#1]{\centering #1}}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\newcommand{\Judul}{Beternak bebek dengan menggunakan metoda Agile dan pendekatan Usability}
+\newcommand{\JudulInggris}{Duck development using Agile and Usability approach}
+\newcommand{\Penulis}{Jagoan Neon}
+\newcommand{\NPM}{01234567}
+\newcommand{\NIRM}{98432324243}
+\newcommand{\JenisTulisan}{Penulisan Ilmiah}
+\newcommand{\Gelar}{Jenjang DIII / Setara Sarjana Muda}
+\newcommand{\Jurusan}{Sistem Informasi}
+\newcommand{\Prodi}{Direktorat Program Diploma Tiga Teknologi Informasi}
+\newcommand{\Tahun}{2020}
+\newcommand{\Bulan}{November}
+\newcommand{\Tanggal}{24}
+\newcommand{\Kota}{Jakarta}
+\newcommand{\KataKunci}{Teori antrian, model antrian, (FIFO/$\sim$/$\sim$)}
+\newcommand{\KeyWords}{Queuing theory, queieing model}
+\newcommand{\KoordinatorPI}{Dr. Batman Suratman}
+\newcommand{\KetuaJurusan}{Gugum Gumbira PhD}
+\newcommand{\Pembimbing}{Prof. Dr. Gundala Putra Petir, SSi, MSc}
+\newcommand{\Ringkasan}{Tulis ringkasan skripsi, pi, atau apa dengan bahasa yang jelas, lugas dan
+menggambarkan secara singkat tulisan ini.  Sebaiknya tidak lebih dari 150 kata
+dan sudah menjelaskan dari permasalahan, pembahasan dan penutup.}
+\newcommand{\JumlahPustaka}{8}
+\newcommand{\JumlahHalaman}{80}
+\newcommand{\JumlahHalamanDepan}{10}
+\newcommand{\TahunPustaka}{1980-1993}
+%%
+%% Keterangan administratif sidang sarjana
+%%
+\newcommand{\TanggalSidang}{14 Februari 1998}
+\newcommand{\TanggalLulus}{14 Februari 1998}
+\newcommand{\TanggalSah}{6 April 1998}
+\newcommand{\PejabatBagianSidang}{Drs. Edi Sukirman, MM}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{Chapter  \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
+
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[LO]{\textit{\nouppercase{\rightmark}}}
+
+\fancypagestyle{plain}{ %
+\fancyhf{} % remove everything
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+\renewcommand{\footrulewidth}{0pt}}
+\end_preamble
+\use_default_options true
+\language bahasa
+\inputencoding auto
+\font_roman charter
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 4cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{made-hypen-2010.tex} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+sloppy 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Aplikasi Mobile Kehamilan
+\end_layout
+
+\begin_layout Author
+Firdan Ardiansyah
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{10mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size huge
+UNIVERSITAS GUNADARMA
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+FAKULTAS ILMU KOMPUTER & TEKNOLOGI INFORMASI
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{12mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Gambar/LogoGunadarma.jpg
+	width 35mm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{6mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+PENULISAN ILMIAH
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{1cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features>
+<column alignment="center" valignment="middle" width="13cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+APLIKASI MOBILE KEHAMILAN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nama
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Firdan Ardiansyah
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+10108822
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Program Studi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Sistem Informasi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pembimbing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Pembimbing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+vspace*{10mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Diajukan Guna Memperoleh Gelar Setara Sarjana Muda
+\size default
+
+\begin_inset VSpace 3mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Universitas Gunadarma
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{3mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Pernyataan orisinalitas dan publikasi
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Saya yang bertanda tangan di bawah ini:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features>
+<column alignment="left" valignment="top" width="35mm">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nama
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Firdan Ardiansyah
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+10108822
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NIRM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NIRM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Judul PI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+APLIKASI KEHAMILAN MOBILE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tanggal Sidang
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalSidang
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tanggal Lulus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalLulus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+menyatakan bahwa tulisan di atas merupakan hasil karya saya sendiri dan
+ dapat dipublikasikan sepenuhnya oleh Universitas Gunadarma.
+ Segala kutipan dalam bentuk apapun telah mengikuti kaidah dan etika yang
+ berlaku.
+ Semua hak cipta dari logo serta produk yang disebut dalam buku ini adalah
+ milik masing-masing pemegang haknya, kecuali disebutkan lain.
+ Mengenai isi dan tulisan merupakan tanggung jawab Penulis, bukan Universitas
+ Gunadarma.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Demikianlah pernyataan ini dibuat dengan sebenarnya dan dengan penuh kesadaran.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{25mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Kota, 
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tanggal
+\backslash
+ 
+\backslash
+Bulan
+\backslash
+ 
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{25mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Chapter*
+Lembar Pengesahan
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{5mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="65text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Judul
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Judul
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nama
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NIRM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NIRM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tanggal Sidang
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalSidang
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tanggal Lulus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalLulus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{10mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+Menyetujui
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{20mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Pembimbing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Ketua Bagian Sidang Ujian
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Pembimbing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KoordinatorPI
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{25mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features>
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+Ketua Jurusan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KetuaJurusan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Chapter*
+Abstraksi
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Abstraksi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+MakeUppercase{
+\backslash
+Judul}
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Jurusan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Jurusan 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Prodi
+\end_layout
+
+\end_inset
+
+, Universitas Gunadarma, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Kata Kunci : 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KataKunci
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JumlahHalamanDepan
+\end_layout
+
+\end_inset
+
+ + 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JumlahHalaman
+\end_layout
+
+\end_inset
+
+ + lampiran)
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Penulisian ilmiah ini tidak ilmiah banget deh Pada tahun 80-an, komputer
+ IBM PC yang tak dihubungkan ke jaringan (stand alone) mulai digunakan untuk
+ berbagai keperluan.
+ Saat itu, masalah keamanan merupakan masalah fisik semata.
+ Ketika jaringan komputer mulai dikenal dan digunakan, sekuriti komputer
+ mulai diperhatikan dan digunakan untuk mengatur hak pemakaian resource,
+ baik fisik (memory, processor, disk) maupun data.
+ Kini masalah sekuriti menjadi kompleks seiring dengan meluasnya pemanfaatan
+ komputer, terutama setelah lahirnya Internet.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Internet awalnya dikembangkan untuk menghubungkan antar pihak yang saling
+ dipercaya dengan tujuan saling bertukar menukar informasi.
+ Walau merupakan proyek Departemen Pertahanan Amerika, Internet digunakan
+ dan dikembangkan untuk tujuan kolaborasi dunia akademis yang serba terbuka
+ dengan menyediakan sarana jaringan agar, bagi pengguna Internet yang notabene
+ adalah ilmuwan dapat saling menggunakan sumber daya komputasi dan informasi.
+ Saat itu antar pengguna seringkali bertukar password ataupun sistem yang
+ begitu terbuka dengan akun guest tidak menjadi masalah.
+ Tidak heran layanan seperti telnet, ftp, finger yang digunakan secara luas
+ pada awal masa Internet memiliki begitu besar celah keamanan.
+ Misal layanan telnet dengan mudah disadap, sehingga orang dapat mengetahui
+ password dari rekan kerjanya
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Daftar Pustaka (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TahunPustaka
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Chapter*
+Abstract
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Abstract}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+MakeUppercase{
+\backslash
+JudulInggris}
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Jurusan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Jurusan 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Prodi
+\end_layout
+
+\end_inset
+
+, Universitas Gunadarma, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Keywords : 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KeyWords
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JumlahHalamanDepan
+\end_layout
+
+\end_inset
+
+ + 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JumlahHalaman
+\end_layout
+
+\end_inset
+
+ + appendix)
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Abstraksi dalam bahasa Inggris Penulisian ilmiah ini tidak ilmiah banget
+ deh Pada tahun 80-an, komputer IBM PC yang tak dihubungkan ke jaringan
+ (stand alone) mulai digunakan untuk berbagai keperluan.
+ Saat itu, masalah keamanan merupakan masalah fisik semata.
+ Ketika jaringan komputer mulai dikenal dan digunakan, sekuriti komputer
+ mulai diperhatikan dan digunakan untuk mengatur hak pemakaian resource,
+ baik fisik (memory, processor, disk) maupun data.
+ Kini masalah sekuriti menjadi kompleks seiring dengan meluasnya pemanfaatan
+ komputer, terutama setelah lahirnya Internet.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Internet awalnya dikembangkan untuk menghubungkan antar pihak yang saling
+ dipercaya dengan tujuan saling bertukar menukar informasi.
+ Walau merupakan proyek Departemen Pertahanan Amerika, Internet digunakan
+ dan dikembangkan untuk tujuan kolaborasi dunia akademis yang serba terbuka
+ dengan menyediakan sarana jaringan agar, bagi pengguna Internet yang notabene
+ adalah ilmuwan dapat saling menggunakan sumber daya komputasi dan informasi.
+ Saat itu antar pengguna seringkali bertukar password ataupun sistem yang
+ begitu terbuka dengan akun guest tidak menjadi masalah.
+ Tidak heran layanan seperti telnet, ftp, finger yang digunakan secara luas
+ pada awal masa Internet memiliki begitu besar celah keamanan.
+ Misal layanan telnet dengan mudah disadap, sehingga orang dapat mengetahui
+ password dari rekan kerjanya
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ References (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TahunPustaka
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Chapter*
+Kata Pengantar
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Kata Pengantar}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Penulis haturkan banyak banyak terima kasih sebab semua sudah menolong seperti
+ memberi Indomie.
+ Sebuah mobil milik Menteri Dalam Negeri Jerman Thomas de Maizière dicuri
+ di kota Dresden, bagian timur negeri itu.
+ Demikian keterangan polisi setempat, Kamis (8/7).
+\end_layout
+
+\begin_layout Standard
+Mobil yang dicuri tersebut bermerek Audi, yang saat kejadian sedang dibawa
+ putrinya.
+ "Pencurinya, warga negara Polandia berusia 33 tahun, dihentikan polisi
+ di jalan raya di Jerman timur," kata juru bicara kepolisian Dresden, Thomas
+ Geithner.
+ "Pencuri tersebut mungkin tidak tahu bahwa ia mencuri mobil milik Menteri
+ Dalam Negeri," kata Geithner.
+\end_layout
+
+\begin_layout Standard
+"Kami agak beruntung karena kami dapat menangkap pencuri itu," tambahnya.
+ De Maizière, yang bertugas membawahi polisi di Jerman, melontarkan keluhannya
+ pada Mei 2010, terkait meningkatnya pencurian mobil dan meminta pembuat
+ agar meningkatkan langkah-langkah preventif dalam menekan kasus pencurian.Abstra
+ksi
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Pendahuluan
+\end_layout
+
+\begin_layout Section
+Latar Belakang
+\end_layout
+
+\begin_layout Standard
+Informasi mengenai kehamilan bagi ibu hamil merupakan suatu hal yang sangat
+ penting untuk diperhatikan pada saat kehamilan berlangsung, informasi tersebut
+ dapat diperoleh dari buku-buku yang banyak membahas mengenai informasi
+ kehamilan dan juga cara-cara untuk menjaga kesehatan selama masa kehamilan
+ berlangsung.
+ Namun bagaimana jika ibu hamil yang sedang mengandung tidak memiliki waktu
+ untuk datang ke toko buku karena memiliki kesibukan yang padat atau karena
+ beberapa hal yang tidak memungkinkan bagi ibu hamil untuk datang ke toko
+ buku.
+\end_layout
+
+\begin_layout Standard
+Berangkat dari masalah itulah penulis mencoba untuk membuat sebuah aplikasi
+ mobile berbasis android yang didalamnya terdapat berbagai macam hal mengenai
+ informasi bagi ibu hamil, sehingga ibu hamil tersebut dapat dimudahkan
+ dalam mendapatkan informasi mengenai kehamilan yang sedang dialaminya dimana
+ saja dia berada hanya dengan melalui telepon genggam 
+\shape italic
+(handphone)
+\shape default
+ yang berbasiskan Android.
+\end_layout
+
+\begin_layout Section
+Rumusan Masalah
+\end_layout
+
+\begin_layout Standard
+Di era emansipasi wanita sekarang ini, wanita dimungkinkan untuk memiliki
+ ataupun melakukan pekerjaan yang biasanya dilakukan oleh laki-laki dan
+ hal ini berdampak pada semakin tingginya mobilitas dan kesibukan yang dimiliki
+ oleh para wanita dan menyebabkan waktu luang yang dimiliki menjadi semakin
+ sempit.
+ Lalu timbul pertanyaan bagaimana seandainya wanita yang memiliki kesibukan
+ dan mobilitas tinggi tersebut sedang mengalami masa kehamilan? bagaimana
+ wanita yang hamil tersebut bisa mendapatkan informasi mengenai masa kehamilanny
+a? Disinilah penulis mencoba membuat aplikasi mobile berbasis android mengenai
+ informasi bagi wanita hamil sehingga dapat memudahkan wanita hamil yang
+ memiliki kesibukan tinggi tersebut mendapatkan informasi yang berguna bagi
+ kehamilannya, dimana didalam aplikasi tersebut terdapat menu makanan sehat,
+ informasi mengenai perkembangan janin, nama-nama anak dan juga posisi pada
+ saat berhubungan intim bagi wanita yang sedang hamil.
+\end_layout
+
+\begin_layout Section
+Tujuan Penulisan
+\end_layout
+
+\begin_layout Standard
+Tujuan dari penulisan ilmiah ini adalah untuk membuat sebuah aplikasi mobile
+ berbasis android mengenai kehamilan yang dapat membantu wanita atau ibu
+ hamil yang memiliki kesibukan dan mobilitas tinggi dalam mendapatkan informasi
+ mengenai kehamilan yang sedang dialaminya.
+\end_layout
+
+\begin_layout Section
+Metode Penulisan 
+\end_layout
+
+\begin_layout Standard
+Metode yang digunakan penulis dalam mengumpulkan data.
+\end_layout
+
+\begin_layout Enumerate
+Riset Kepustakaan ( Library Research )
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Penulis melakukan riset kepustakaan dengan membaca literatur-literatur yang
+ berhubungan dengan objek penulisan ditambah dengan bahan kuliah serta sumber-su
+mber lain yang mendukung penulisan ini.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Riset Lapangan ( Field Research )
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Usaha yang dilakukan oleh penulis untuk memperoleh data adalah dengan kunjungan
+ langsung ke beberapa bidan dan juga melakukan wawancara dengan beberapa
+ ibu hamil sehingga penulis dapat mengetahui apa yang dibutuhkan oleh ibu
+ hamil pada saat kehamilannya.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Sistematika Penulisan
+\end_layout
+
+\begin_layout Standard
+Dalam penulisan ilmiah ini penulis membaginya kedalam empat bab, yaitu sebagai
+ berikut :
+\end_layout
+
+\begin_layout Itemize
+BAB I PENDAHULUAN
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dalam bab ini penulis akan menguraikan dan menjelaskan latar belakang masalah
+ yang dihadapi, pembatasan masalah, tujuan penulisan, metode penulisan dan
+ sistematika penulisan yang digunakan untuk menyelesaikan permasalahan yang
+ ada.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+BAB II LANDASAN TEORI
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dalam bab ini penulis akan menguraikan hal-hal yang bersangkutan dan teori-teori
+ yang digunakan untuk mendukung pembuatan aplikasi serta ulasan mengenai
+ bahasa pemrograman yang digunakan, yaitu Eclipse Helios dengan Android
+ Development Kit (ADK).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+BAB III PEMBAHASAN
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dalam bab ini penulis akan menerangkan tentang tahapan cara penyusunan aplikasi,
+ pembuatan aplikasi, sampai dengan tahap pengujian aplikasi.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+BAB IV PENUTUP
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dalam bab ini berisi kesimpulan dan saran untuk pengembangan selanjutnya.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Landasan Teori
+\end_layout
+
+\begin_layout Section
+Sistem Informasi Kesehatan
+\end_layout
+
+\begin_layout Standard
+Sistem informasi kesehatan menurut Lippeveld, Sauerborn, dan Bodart adalah
+ sekumpulan komponen dan prosedur yag terorganisasi dengan objek yang dapat
+ menghasilkan informasi untuk meningkatkan kesehatan bagi yang menggunakan
+ Sistem informasi kesehatan tersebut.
+\end_layout
+
+\begin_layout Standard
+Sistem Informasi Kehamilan merupakan salah satu cabang dari Sistem Informasi
+ Kesehatan yang dapat digunakan bagi ibu hamil untuk mendapatkan informasi
+ mengenai kehamilan yang sedang dialaminya.
+ Dengan menggunakan sistem informasi kehamilan ini diharapkan ibu yang sedang
+ mengandung dapat mendapatkan informasi yang berguna untuk menjaga kesehatan
+ pada masa kehamilannya.
+\end_layout
+
+\begin_layout Section
+Kehamilan
+\end_layout
+
+\begin_layout Standard
+Kehamilan adalah masa dimana seorang wanita membawa embrio (janin) di dalam
+ tubuhnya.
+ Kehamilan pada manusia umumnya terjadi selama 40 minggu antara waktu menstruasi
+ terakir dan kelahiran (38 minggu dari pembuahan) .
+ Istilah medis untuk wanita hamila adalah gravida, sedangkan manusia didalamnya
+ disebut embrio (minggu-minggu awal) dan kemudian janin (sampai kelahiran).
+ Seorang wanita yang hamil untuk pertama kalinya disebut primigravida atau
+ gravida 1.
+ Sedangkan seorang wanita yang belum pernah hamil dikenal sebagai gravida
+ 0.
+\end_layout
+
+\begin_layout Subsection
+Fase-Fase Kehamilan.
+\end_layout
+
+\begin_layout Standard
+Menurut Sabrina Maharani, dalam kehamilan terdapat beberapa fase yang harus
+ dicermati dan harus diperhatikan secara khusus.
+ Yaitu fase trimester pertama, fase trimester kedua dan fase trimester ketiga.
+\end_layout
+
+\begin_layout Itemize
+Fase Trimester Pertama
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dimana pada fase pertama adalah fase dimana janin baru mulai terbentuk,
+ dan tidak mendapatkan perlindungan maksimal.
+ Hal ini dikarenakan kantung ketuban (bumper) baru mulai terbentuk namun
+ belum sempurna, jadi ibu yang sedang hamil harus ekstra hati-hati dalan
+ fase ini.
+ Daya lekat sel telur yang sudah menjadi embrio ke sisi dinding rahim juga
+ belum terlalu kuat, jadi keguguran mungkin saja terjadi jika si ibu tidak
+ menjaga dirinya dengana baik.
+\end_layout
+
+\begin_layout Standard
+Pantangan makanan juga terpaksa harus dilakukan pada trimester pertama ini
+ karena perlu diketahui pula bahwa pada trimester pertama ini, yang terbentuk
+ adalah otak, mata, struktur tulang belakang dan organ vital lainnya.
+ Saat pembentukan sel-sel ini diharapkan si ibu harus mensterilkan dirinya
+ karena makanan-makanan yang mengandung virus akan dengan mudah menjangkit
+ janin.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fase trisemester kedua
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Fase ini adalah fase teraman bagi calon ibu, karena pada fase ini perlindungan
+ bagi si janin sudah terbentuk sempurna.
+ Baik dari pembentukan kantung ketuban, pembentukan otak, mata, tulang belakang
+ dan organ vital lainnya.
+ Pada fase ini adalah fase pengembangan dari yang sudah dibentuk di fase
+ sebelumnya.
+ Jadi jangan kaget bahwa pada fase ini, perkembangan si janin akan sangat
+ pesat bisa jadi hanya berbeda 1 minggu saja tubuh si ibu akan berubah drastis.
+ Fase ini pula si ibu bebas untuk makan apa saja, karena segala yang di
+ makan ibu tidak lagi terlalu berpengaruh kepada si janin.
+\end_layout
+
+\begin_layout Standard
+Nah di fase ini pula kontrol ke dokter juga bisa diperjarang, lagipula biasanya
+ vitamin yang diberikan juga sudah tidak ada perubahan lagi.
+ Paling jika ada kasus-kasus khusus yang butuh pertolongan dokter seperti
+ ada nyeri-nyeri yang tidak normal pada rahim selain itu tidak ada yang
+ penting.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Fase trisemester ketiga
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Fase ini merupakan fase yang lumayan beresiko lagi untuk si calon ibu, karena
+ ukuran si janin yang sudah cukup besar dan juga keseimbangan si ibu juga
+ sudah mulai terganggu.
+ Jadi kudu harus dijaga kalau si ibu jangan sampai jatuh, karena hal ini
+ secara langsung akan berakibat juga pada si janin.
+ Terlebih jika sudah masuk ke bulan-bulan akhir, kontrol ke dokter juga
+ harus lebih sering lagi.
+\end_layout
+
+\begin_layout Standard
+Untuk makanan, diharapkan si ibu untuk mengurangi konsumsi makanan yang
+ mengandung banyak kaborhidrat dan gula.
+ Karena ke dua unsur ini akan memperbesar ukuran janin, dan persalinan secara
+ normal akan lebih sulit karena ukuran bayi bisa tidak sebanding dengan
+ ukuran maksimal rahim.
+ Bahkan bukan tidak mungkin mengganggu organ tubuh dari calon ibu, misalnya
+ sesak nafas dan lain sebagainya karena ukuran janin yang besar bisa menekan
+ organ-organ tubuh si calon ibu di sekitarnya.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Psikologi Ibu Hamil
+\end_layout
+
+\begin_layout Standard
+Saat mengalami masa kehamilan, kondisi psikologis sang ibu kadang tidak
+ menentu, hal ini dikarenakan kehamilan merupakan sebuah bagian dramatis
+ terhadap kondisi biologis.
+ Sebagian besar wanita menganggap bahwa kehamilan adalah peristiwa kodrati
+ yang harus dilalui tetapi sebagian wanita menganggap bahwa kehamilan adalah
+ proses khusus yang menentukan kehidupan selanjutnya.
+ Perubahan fisik dan emosional yang kompleks memerlukan adaptasi terhadap
+ penyesuaian pola hidup dengan proses kehamilan yang terjadi.
+ Perhatian khusus dari suami dan juga keluarga sangat membantu sang ibu
+ hamil untuk melalui masa kehamilannya dengan sempurna.
+\end_layout
+
+\begin_layout Subsection
+Psikologi Yang Terjadi Pada Ibu Hamil
+\end_layout
+
+\begin_layout Standard
+Kehamilan merupakan bagian perubahan kondisi fisik dan psikologis yang kompleks
+ bagi seorang wanita.
+ Untuk itu, wanita yang sedang mengalami fase kehamilan perlu menyesuaikan
+ diri terhadap pola makanan dengan proses kehamilan yang terjadi.
+\end_layout
+
+\begin_layout Standard
+Dalam bukunya, Poppy Anggraeni menjelaskan bahwa tugas ibu pada masa kehamilan
+ memang tidak sedikit.
+ Ibu harus menerima kehamilannya, membina hubungan dengan janin menyesuaikan
+ perubahan fisik, menyesuaikan perubahan hubungan suami istri, dan melakukan
+ persiapan melahirkan menjadi orang tua.
+\end_layout
+
+\begin_layout Standard
+Poppy mengelompokan kondisi psikologis ibu hamil menjadi 3, yaitu pada trimester
+ pertama, trimester kedua, dan trimester ketiga.
+\end_layout
+
+\begin_layout Standard
+Pada trimester pertama, timbul kecemasan kebahagiaan bercampur keraguan
+ dengan kehamilannya antara ya dan tidak, dan juga di trimester pertama
+ ini sering terjadi perubahan emosi sehingga pada periode ini mempunyai
+ resiko tinggi untuk terjadinya pertengkaran atau rasa tidak nyaman, adanya
+ perubahan hormonal, dan mual di pagi hari (
+\shape italic
+morning sickness
+\shape default
+).
+\end_layout
+
+\begin_layout Standard
+Untuk trimester kedua, kondisi psikologi ibu hamil lebih tenang dan mulai
+ dapat beradapatasi, perhatian mulai beralih pada perubahan bentuk tubuh,
+ kehidupan seksual, keluarga dan hubungan batiniah dengan bayi yang ada
+ di kandungan, serta peningkatan kebutuhan untuk dekat dengan figur ibu,
+ melihat, dan meniru peran ibu.
+ Selain itu, ketergantungan kepada pasangan juga semakin meningkat.
+\end_layout
+
+\begin_layout Standard
+Kondisi psikologis ibu hamil pada trimester ketiga biasanya stres akan meningkat
+ kembali.
+ Hal ini dapat terjadi dikarenakan kondisi kehamilan semakin membesar.
+ Kondisi itu tidak jarang memunculkan masalah seperti posisi tidur yang
+ kurang nyaman dan mudah mengalami rasa lelah.
+ Stres yang dialami oleh ibu hamil pada trimester ketiga ini berkaitan dengan
+ takut menghadapi proses persalinan dan kehilangan perhatian khusus yang
+ diberikan oleh pasangan pada saat proses kehamilan berlangsung dikarenakan
+ calon ibu tersebut telah melahirkan.
+\end_layout
+
+\begin_layout Subsection
+Mengatasi Gangguan Psikologis Kehamilan
+\end_layout
+
+\begin_layout Standard
+Ibu yang sedang hamil pasti akan mengalami berbagai macam perubahan, bukan
+ hanya secara fisik, namun juga secara psikologis.
+ Jangan heran jika ibu yang hamil tiba-tiba menangis atau marah.
+ Ini terjadi karena adanya perubahan hormon yang lazim dialami oleh ibu-ibu
+ yang sedang hamil.
+\end_layout
+
+\begin_layout Standard
+Untuk itu, calon ibu yang sedang mengandung buah hati harus selalu menjaga
+ kondisi psikologisnya agar tetap baik dan seimbang.
+ Jika kondisi psikologis sang ibu baik, pastinya sang ibu akan lebih tenang
+ atau rileks saat menjalani masa-masa kehamilannya.
+ Berikut ini beberapa cara yang dapat menyeimbangkan kodisi psikologis saat
+ ibu sedang mengandung.
+\end_layout
+
+\begin_layout Enumerate
+Informasi
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Carilah informasi seputar kehamilan terutama mengenai perubahan yang terjadi
+ dalam diri ibu termasuk hal-hal yang perlu dihindari saat sedang mengandung
+ janin agar janin tumbuh dengan sehat.
+ Pengetahuan dan informasi yang tepat akan membuat ibu merasa lebih yakin
+ sekaligus bisa mengurangi rasa cemas yang sering muncul karena ketidaktahuan
+ mengenai perubahan yang terjadi.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Komunikasi Dengan Suami
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Bicarakan perubahan yang terjadi pada suami selama masa kehamilan, sehingga
+ suami dapat mengetahui dan memaklumi perubahan yang terjadi pada ibu hamil.
+ Tidak jarang jika ibu hamil mengkomunikasikan segala sesuatu yang dia rasakan
+ kepada suami, sang suami akan memberikan dukungan psikologis yang dibutuhkan.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Rajin Check Up
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Periksakan kehamilan secara teratur.
+ Cari informasi dari dokter atau bidan terpercaya mengenai kehamilan yang
+ sedang di jalani.
+ Jangan lupa untuk mengajak suami saat berkonsultasi ke dokter atau bidan,
+ sehingga suami dapat mengetahui juga informasi yang dibutuhkan bagi ibu
+ hamil sehingga suami dapat membantu menjaga proses kehamilan berjalan dengan
+ baik.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Makan Sehat
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Pahami benar pengetahuan mengenai asupan makanan yang sehat dan bergizi
+ bagi perkembangan janin.
+ Hindari makanan yang membahayakan janin, seperti makanan yang mengandung
+ zat-zat adiktif, alkohol, rokok, atau obat-obatan yang tidak dianjurkan
+ bagi ibu hamil.
+ Jauhkan juga zat berbahaya gas kendaraan dan polusi udara yang berbahaya
+ bagi perkembangan kecerdasan otak janin.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Jaga Penampilan
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Perhatikanlah penampilan fisik dengan menjaga kebersihan dan berpakaian
+ yang sesuai dengan kondisi badan yang sedang berbadan dua.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Senam Hamil
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Bergabunglah dengan kelompok senam hamil sejak usia kandungan menginjak
+ usia 5-6 bulan.
+ Jangan lupa untuk berkonsultasi terlebih dahulu dengan dokter kandungan.
+ Senam hamil tidak hanya bermanfaat melatih otot-otot yang diperlukan dalam
+ proses persalinan.
+ Melainkan juga memberi manfaat psikologis.
+ Pertemuan sesama calon ibu biasanya diisi dengan acara berbagi pengalaman
+ yang dapat dijadikan pelajaran positif.
+ Melalui kegiatan itu pula secara perlahan kesiapan psikologis calon ibu
+ dalam menghadapi persalinan menjadi semakin mantap.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Latihan Pernafasan
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Lakukan latihan relaksasi dan latihan pernafasan secara teratur, latihan
+ ini bermanfaat untuk ketenangan dan kenyamanan sehingga kondisi psikologis
+ dapat lebih stabil.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Ubiquitous Computing
+\end_layout
+
+\begin_layout Standard
+Perkembangan teknologi komputer sangat pesat.
+ Dulu, mainframe merupakan produk utama pada masa itu.
+ Sebuah komputer berukuran besar, digunakan secara bersama-sama oleh beberapa
+ orang.
+ "One computer, many people", merupakan gelombang pertama teknologi komputer.
+ 
+\end_layout
+
+\begin_layout Standard
+Lalu PC menggantikan peran mainframe sebagai pemeran utama dunia komputasi.
+ Ukuran komputer semakin kecil dan memiliki kemampuan lebih dibanding gelombang
+ pertama.
+ Jumlahnya pun bertambah secara eksponensial, sehingga "one person, one
+ computer" telah menjadi kenyataan.
+ Saat ini komputer menjadi sangat murah dan mudah digunakan dan ditandai
+ dengan lazimnya pemakaian beberapa komputer oleh satu orang, "one person,
+ many computers." Selain daripada itu, internet yang merupakan kombinasi
+ antara teknologi komputasi dan komputasi, menjadi tulang punggung infrastruktur
+ informasi global.
+\end_layout
+
+\begin_layout Standard
+Masa Depan Infrastruktur Informasi dan Ubiquitous Computing Internet sebagai
+ tulang-punggung infrastruktur informasi global, mulai berpengaruh kepada
+ kehidupan akademik maupun sosial.
+ Internet menjadi sumber utama informasi, komunikasi, bisnis, dan bahkan
+ menjadi kendaraan politik para politisi.
+ Teknologi komputasi dan komputasi membuat akses ke internet menjadi sangat
+ cepat dan mempertinggi mobilitas.
+ Penggunaan komputer yang terhubung internet secara mobil (bergerak) merupakan
+ hal yang mudah.
+ Teknologi energi memungkinkan komputer semakin ringan dan kecil.
+ Mudah didapatkan, portabel, mudah dioperasikan dan murah.
+\end_layout
+
+\begin_layout Standard
+Menurut Stefan Poslad dalam bukunya yang berjudul Ubiquitous Computing :
+ Smart Devices, Environment and Interactions.
+ Stefan menjelaskan bahwa Perkembangan komputer dan internet yang berkembang
+ dengan sangat pesat memungkinkan manusia untuk berinteraksi dengan komputer
+ secara kontinyu, dimana saja, kapan saja dan tanpa disadari oleh yang menggunak
+annya.
+ Inilah yang disebut dengan ubiquitous Computing.
+\end_layout
+
+\begin_layout Standard
+Pelopor ubiquitous computing adalah Mark Weiser, seorang Chief Teknologi
+ di Xerox PARC (Palo Alto Research Center) pada th 1988.
+ Menurut Weiser, ubiquitous computing memungkinkan pemakaian beratus-ratus
+ device (alat) komputasi wireless per orang perkantor dalam semua skala.
+ Kemudian komputer menjadi semakin embedded (tertanam dalam suatu alat),
+ semakin pas dan enak, serta semakin natural.
+ Sehingga bagi yang menggunakannya tanpa memikirkannya dan tanpa menyadarinya.
+\end_layout
+
+\begin_layout Subsection
+Siapa Yang Menggunakan Ubiquitous Computing?
+\end_layout
+
+\begin_layout Standard
+Sebenarnya, tanpa disadari hampir semua orang telah memanfaatkan 
+\shape italic
+ubiquitous computing
+\shape default
+ tersebut.
+ Contoh pada saat anda mengendarai kendaraan dan melewati sebuah lampu merah,
+ tanpa disadari anda telah memanfaatkan ubiquitous computing tersebut karena
+ lampu merah diatur oleh sebuah komputer untuk pengoperasiannya.
+ Contoh lainnya adalah sebuah telepon genggam (
+\shape italic
+handphone
+\shape default
+), tanpa disadari telepon genggam telah menyatu dengan kegiatan sehari-hari.
+ Selain untuk berkomunikasi, telepon genggam juga dapat digunakan sebagai
+ pengatur jadwal kegiatan sehari-hari dengan memanfaatkan aplikasi yang
+ terdapat pada telepon genggam tersebut, dan lagi-lagi tanpa disadari 
+\shape italic
+ubiquitous computing
+\shape default
+ mempunya peranan disini.
+\end_layout
+
+\begin_layout Standard
+Ubiquitous Computing juga dapat dimanfaatkan untuk membuat sebuah aplikasi
+ mobile berbasis android mengenai kesehatan bagi ibu hamil dalam menjalani
+ masa kehamilannya, sehingga ibu hamil tersebut dapat memanfaatkan aplikasi
+ mobile tersebut untuk mendapatkan informasi mengenai kehamilannya dimana
+ saja dan kapan saja selama ibu hamil tersebut memiliki perangkat mobile
+ berbasis android dan aplikasi mengenai informasi kehamilan bagi ibu hamil
+ tersebut.
+\end_layout
+
+\begin_layout Subsection
+Teknologi Mobile
+\end_layout
+
+\begin_layout Standard
+Saat ini dunia teknologi informasi mengalami perkembangan yang sangat pesat
+ dan cepat, hampir diseluruh aspek kehidupan manusia sudah sangat bergantung
+ dengan perkembangan informasi tersebut.
+ Kebutuhan manusia yang beragam mengakibatkan teknologi informasi harus
+ terus maju dan berkembang, salah satu kebutuhan pokok manusia adalah mereka
+ ingin segala pekerjaan dan urusannya dapat diselesaikan dengan cepat dan
+ efisien sehingga tidak membuang banyak waktu dan tenaga.
+ Kebutuhan inilah yang membuat teknologi mobile semakin berkembang sehingga
+ dapat membantu para penggunanya dalam menyelesaikan pekerjaan dimana saja
+ dan kapan saja.
+\end_layout
+
+\begin_layout Standard
+Teknologi mobile adalah istilah kolektif yang digunakan untuk menjelaskan
+ bermacam-macam tipe dari teknologi komunikasi selular dan juga saat ini
+ perangkat mobile telah berkembang dengan pesat dari hanya komunikasi satu
+ arah seperti pager menjadi telepon selular yang dapat digunakan untuk berbagai
+ macam kepentingan seperti GPS yang dapat digunakan untuk sistem navigasi,
+ perangkat mobile yang didalamnya terdapat web browser sehingga memungkinkan
+ seseorang untuk berinternet, video games, instant messenger seperti Yahoo
+ dan sebagainya.
+ Saat ini telepon selular pun telah jauh berkembang menjadi telepon cerdas
+ (
+\shape italic
+smart phone
+\shape default
+) sehingga dapat lebih memudahkan para penggunanya dalam menyelesaikan atau
+ mengatur jadwal kegiatannya hanya dengan menggunakan 
+\shape italic
+smart phone
+\shape default
+ tersebut.
+\end_layout
+
+\begin_layout Subsubsection
+Sistem Operasi
+\end_layout
+
+\begin_layout Standard
+Saat ini banyak sekali tipe dari sistem operasi yang digunakan 
+\shape italic
+smartphone, 
+\shape default
+diantaranya : Symbian, Android, Blackberry, WebOS, Apple iOS, Windows Moobile
+ Professional (untuk telepon genggam dengan kemampuan layar sentuh), Windows
+ Mobile Standar (untuk telepon genggam dengan kemampuan non layar sentuh)
+ dan sistem operasi Bada.
+ Diantara sekian banyaknya sistem operasi yang digunakan oleh 
+\shape italic
+smartphone, 
+\shape default
+namun yang paling populer adalah Apple iPhone dan sistem operasi yang paling
+ baru, yaitu Android.
+\end_layout
+
+\begin_layout Subsubsection
+Android
+\end_layout
+
+\begin_layout Standard
+Android adalah sistem operasi untuk telepon seluler yang berbasiskan linux.Androi
+d menyediakan platform terbuka bagi para pengembang untuk menciptakan aplikasi
+ mereka sendiri sehingga dapat digunakan oleh bermacam peranti penggerak.
+ Awalnya Google Inc.
+ membeli Android Inc.
+ pendatang baru yang membuat software (perangkat lunak) untuk telepon genggam.
+ Kemudian untuk mengembangkan android di bentuklah 
+\shape italic
+Open Handset Alliance 
+\shape default
+yang merupakan gabungan dari 34 perusahaan peranti keras, peranti lunak
+ dan telekomunikasi termasuk Google, HTC, Intel, Motorola, Qualcomm, T-Mobile,
+ dan NVidia.
+\end_layout
+
+\begin_layout Standard
+Pada saat perilisan perdana Android pada tanggal 5 november 2007, Android
+ bersama Open Handset Alliance menyatakan mendukung pengembangan standar
+ terbuka pada perangkat seluler.
+ Di lain pihak, Google merilis kode-kode Android dibawah lisensi Apache,
+ sebuah lisensi perangkat lunak dan standar terbuka perangkat seluler.
+\end_layout
+
+\begin_layout Standard
+Terdapat dua jenis distributor sistem operasi Android.
+ Pertama yang dapat dukungan penuh dari Google atau Google Mail Service
+ (GMS) dan kedua adalah yang benar-benar bebas distribusinya tanpa dukungan
+ langsung dari Google atau dikenal sebagai Open Handset Distribution (DHD).
+\end_layout
+
+\begin_layout Standard
+Berikut ini adalah sejarah perjalanan Android :
+\end_layout
+
+\begin_layout Enumerate
+Kerjasama Android Inc.
+ dengan Google Inc.
+\end_layout
+
+\begin_layout Enumerate
+2007 - 2008 Produk awal Android
+\end_layout
+
+\begin_layout Enumerate
+Android versi 1.1
+\end_layout
+
+\begin_layout Enumerate
+Android Versi 1.5 (Cupcake)
+\end_layout
+
+\begin_layout Enumerate
+Android Versi 1.6 (Donut)
+\end_layout
+
+\begin_layout Enumerate
+Android Versi 2.0/2.1 (Eclair)
+\end_layout
+
+\begin_layout Enumerate
+Android Versi 2.2 (Froyo / Frozen Yoghurt)
+\end_layout
+
+\begin_layout Enumerate
+Android Versi 2.3 (Gingerbread)
+\end_layout
+
+\begin_layout Enumerate
+Android Versi 3.0 (Honeycomb)
+\end_layout
+
+\begin_layout Subsubsection
+Pemrograman Aplikasi Mobile
+\end_layout
+
+\begin_layout Standard
+Pemrograman aplikasi mobile adalah sebuah cara untuk membuat aplikasi yang
+ dapat memudahkan para penggunanya untuk mendapatkan informasi ataupun membantu
+ penggunanya tersebut dalam menyelesaikan suatu pekerjaan hanya dengan menggunak
+an telepon genggam (
+\shape italic
+handphone
+\shape default
+) ataupun telepon cerdas (
+\shape italic
+smartphone
+\shape default
+).
+ Dengan melakukan pemrograman untuk aplikasi mobile, para 
+\shape italic
+programmer
+\shape default
+ (yang membuat program/aplikasi) dapat membuat suatu program sesuai dengan
+ kebutuhan para pengguna program/aplikasi mobile tersebut.
+ Misalnya aplikasi pengolah kata berbasis mobile dapat memudahkan penggunanya
+ untuk melakukan kegiatan pengolahan kata hanya dengan menggunakan telepon
+ genggamnya, aplikasi agenda harian dapat memudahkan para penggunanya untuk
+ mengatur segala kegiatan hanya dengan menggunakan telepon genggam ataupun
+ peralatan mobile lainnya.
+\end_layout
+
+\begin_layout Standard
+Menurut Tony Wakefield dalam bukunya yang berjudul Introduction To Mobile
+ Communications, ada beberapa bahasa pemrograman (bahasa yang digunakan
+ untuk membuat suatu program) yang dapat digunakan dalam membangun aplikasi
+ mobile, seperti misalnya bahasa pemrogramana phyton, Java ME (Micro Edition),
+ Symbian dan sebagainya.
+ Seiring dengan semakin majunya teknologi, maka hadir sebuah sistem operasi
+ baru yang dapat digunakan untuk membuat aplikasi mobile yang lebih canggih
+ dan menarik, yaitu Android.
+\end_layout
+
+\begin_layout Standard
+Salah satu aplikasi yang dapat digunakan untuk membantu para pengguna aplikasi
+ mobile adalah aplikasi mobile kehamilan bagi ibu hamil yang penulis coba
+ buat, dimana dengan menggunakan aplikasi kehamilan bagi ibu hamil, diharapkan
+ ibu hamil dapat mendapatkan informasi-informasi penting mengenai kehamilannya
+ sehingga ibu hamil tersebut dapat memberikan yang terbaik bagi janin yang
+ dikandungnya selama masa kehamilan berlangsung walaupun hanya dengan menggunaka
+n aplikasi mobile bagi ibu hamil tersebut.
+\end_layout
+
+\begin_layout Subsection
+Uji Aplikasi
+\end_layout
+
+\begin_layout Standard
+Aplikasi mobile kehamilan bagi ibu hamil berbasiskan Android ini hanya dapat
+ dijalankan pada telepon genggam atau 
+\shape italic
+smartphone 
+\shape default
+yang menggunakan Android sebagai sistem operasinya, dan aplikasi mobile
+ kehamilan bagi ibu hamil ini hanya dapat berjalan untuk Android dengan
+ versi 2.2 (Froyo/Frozen Yoghurt) kebawah.
+ Penulis telah mencoba menjalankan aplikasi kehamilan bagi ibu hamil ini
+ pada telepon genggam atau 
+\shape italic
+smartphone 
+\shape default
+Samsung Galaxy S Mini, Samsung Galaxy Ace dan Samsung Galaxy Gio dan aplikasi
+ kehamilan bagi ibu hamil ini berjalan dengan baik pada ketiga jenis telepon
+ genggam atau 
+\shape italic
+smartphone
+\shape default
+ tersebut.
+\end_layout
+
+\begin_layout Subsubsection
+Kelebihan dan Kekurangan Aplikasi
+\end_layout
+
+\begin_layout Standard
+Kelebihan aplikasi mobile kehamilan bagi ibu hamil ini adalah dapat memberikan
+ informasi mengenai kehamilan bagi penggunanya yang memiliki pergerakan
+ (
+\shape italic
+mobilitas
+\shape default
+) yang tinggi yang sedang menjalani masa kehamilan untuk mendapatkan informasi
+ yang berguna bagi janin yang dikandungnya dan juga informasi kesehatan
+ bagi ibu hamil tersebut hanya dengan menggunakan teknologi mobile seperti
+ telepon genggam atau 
+\shape italic
+smartphone
+\shape default
+ yang dapat dibawa kemana-mana.
+\end_layout
+
+\begin_layout Standard
+Adapun kekurangan dari aplikasi mobile kehamilan bagi ibu hamil ini adalah
+ hanya terjadi komunikasi satu arah antara aplikasi dan ibu hamil yang menggunak
+annya, dimana aplikasi ini hanya dapat memberikan informasi mengenai kehamilan
+ tanpa terjadi timbal balik dari penggunanya.
+\end_layout
+
+\begin_layout Chapter
+Analisa Dan Perancangan
+\end_layout
+
+\begin_layout Standard
+Pada bab ini dilakukan analisis dan perancangan berdasarkan teori yang telah
+ dijelaskan pada bab sebelumnya.
+ Analisis dimulai dari masalah membangun aplikasi ini pada 
+\shape italic
+platform
+\shape default
+ Android.
+ Proses pembuatan aplikasi ini melalui beberapa tahapan, mulai dari proses
+ analisa, user profil, pembuatan struktur navigasi, pembuatan storyboard,
+ perancangan interface, perancangan output, pengujian, pembuatan program,
+ pengambilan data, implementasi, spesifikasi hardware, software dan juga
+ tahap evaluasi.
+\end_layout
+
+\begin_layout Section
+Analisis
+\end_layout
+
+\begin_layout Standard
+Pada pembuatan aplikasi, diperlukan pembuatan analisa sistem.
+ Analisa sistem adalah penguraian dari suatu sistem yang utuh kedalam bagian-bag
+ian komponennya dengan maksud untuk mengidentifikasi dan mengevaluasi permasalah
+an.
+\end_layout
+
+\begin_layout Standard
+Mengidentifikasi (mengenal) masalah merupakan langkah pertama yang dilakukan
+ dalam tahap analisis sistem.
+ Masalah dapat didefinisikan sebagai suatu pertanyaan yang ingin dipecahkan.
+\end_layout
+
+\begin_layout Standard
+Sama halnya dalam pembuatan aplikasi ini.
+ Penulis memilih informasi mengenai kehamilan karena informasi mengenai
+ kehamilan tersebut sangat dibutuhkan bagi ibu yang sedang menjalani masa
+ kehamilan.
+ Beberapa alasannya lainnya karena kesibukan yang dimiliki oleh ibu hamil
+ yang sedang menjalani masa kehamilan, sehingga waktu yang dimiliki oleh
+ ibu hamil tersebut sangat terbatas untuk mendapat informasi mengenai kehamilan
+ yang sangat penting bagi kehamilannya.
+\end_layout
+
+\begin_layout Standard
+Selanjutnya, analisis masalah dapat dilakukan.
+ Pada bagian analisis, terdiri dari atas analisis fungsional dan analisis
+ permasalahan 
+\shape italic
+resource
+\shape default
+.
+\end_layout
+
+\begin_layout Subsection
+Analisis Fungsional
+\end_layout
+
+\begin_layout Standard
+Analisis fungsional merupakan paparan mengenai fitur-fitur yang akan dimasukkan
+ kedalam aplikasi ini.
+ Fitur-fitur tersebut antara lain informasi mengenai nutrisi yang dibutuhkan
+ pada saat kehamilan, perkembangan janin, olahraga bagi ibu hamil, seks
+ pada saat kehamilan berlangsung dan contoh nama-nama anak.
+\end_layout
+
+\begin_layout Subsection
+Analisis Permasalahan Resource (Sumber Daya)
+\end_layout
+
+\begin_layout Standard
+Berbeda dengan perangkat desktop yang didukung oleh hardware yang lebih
+ powerfull, perangkat mobile sangat terbatas dalam hal resource.
+ Hal ini menyebabkan penggunaan resource pada proses komputasi mobile harus
+ dilakukan secara efisien dan seefektif mungkin.
+ Keterbatasan resource yang perlu diperhatikan antara lain adalah masalah
+ baterai dan keterbatasan memori.
+\end_layout
+
+\begin_layout Standard
+Penghematan baterai pada perangkat mobile Android pada aplikasi ini dilakukan
+ dengan minimasi gambar dan animasi.
+ Tampilan gambar menggunakan tampilan yang sederhana dan ditampilkan hanya
+ pada halaman-halaman tertentu.
+ Untuk menghemat memori maka aplikasi melakukan alokasi memori seoptimal
+ dan seefisien mungkin.
+\end_layout
+
+\begin_layout Section
+Profil Pengguna
+\end_layout
+
+\begin_layout Standard
+Kebutuhan akan informasi mengenai kehamilan sangat dibutuhkan oleh ibu hamil,
+ dimana dengan mengetahui informasi mengenai kehamilan tersebut diharapkan
+ ibu hamil dapat memaksimalkan proses kehamilan dengan berbagai macam hal
+ yang berguna bagi perkembangan janin yang ada dalam kandungannya.
+ Namun pada masa sekarang ini banyak ibu hamil memiliki kesibukan yang tinggi
+ sehingga waktu untuk mendapatkan informasi mengenai kehamilan sangat sedikit.
+\end_layout
+
+\begin_layout Standard
+Untuk mengatasi masalah tersebutlah penulis mencoba untuk membuat sebuah
+ aplikasi mobile berbasiskan Android yang didalamnya terdapat berbagai macam
+ informasi mengenai kehamilan yang dapat diakses dengan mudah serta dimana
+ saja selama aplikasi mobile kehamilan tersebut terpasang pada telepon genggam
+ berbasiskan Android yang digunakan oleh ibu hamil yang akan menggunakannya.
+\end_layout
+
+\begin_layout Section
+Pembahasan
+\end_layout
+
+\begin_layout Standard
+Penulisan ilmiah ini dibuat oleh satu tim, dimana dalam penulisan ilmiah
+ ini penulis mencoba untuk membuat sebuah aplikasi mobile dengan nama 
+\begin_inset Quotes eld
+\end_inset
+
+APLIKASI MOBILE BAGI IBU HAMIL
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Aplikasi ini dapat digunakan oleh ibu hamil atau siapa saja yang ingin
+ mencari berbagai macam informasi mengenai kehamilan.
+ Didalam aplikasi mobile ini terdapat beberapa informasi yang dapat digunakan
+ atau dimanfaatkan oleh ibu yang sedang hamil, seperti informasi mengenai
+ kehamilan, informasi mengenai perkembangan janin, nama-nama anak muslim,
+ olahraga yang dapat dilakukan oleh ibu hamil dan juga informasi mengenai
+ seks pada saat kehamilan berlangsung.
+\end_layout
+
+\begin_layout Standard
+Pada bagian informasi kehamilan, terdapat beberapa menu seperti mengetahui
+ tanda-tanda kehamilan, nutrisi penting yang dibutuhkan oleh ibu hamil selama
+ masa kehamilan berlangsung, prinsip-prinsip makanan yang baik untuk dikonsumsi
+ bagi ibu hamil, makanan-makanan yang harus dihindari oleh ibu hamil selama
+ masa kehamilan sehingga tidak mengganggu atau membahayakan tumbuh kembang
+ janin, posisi tidur yang baik bagi ibu hamil dan juga beberapa kiat yang
+ dapat digunakan untuk mendapatkan bayi laki-laki ataupun perempuan.
+\end_layout
+
+\begin_layout Standard
+Pada bagian menu perkembangan janin, aplikasi ini akan menampilkan gambar-gambar
+ dan juga informasi mengenai perkembangan janin tersebut berdasarkan bulan
+ perkembangannya.
+ Daftar gambar ditampilkan dalam bentuk 
+\shape italic
+horizontal scroll view
+\shape default
+ yang dapat digeser secara horizontal dan jika pengguna telah memilih salah
+ satu gambar di dalam 
+\shape italic
+horizontal scroll view
+\shape default
+ tersebut, maka gambar yang dipilih akan ditampilkan dalam bentuk yang lebih
+ besar beserta informasi mengenai perkembangan janin sesuai dengan bulan
+ perkembangannya.
+\end_layout
+
+\begin_layout Standard
+Pada bagian menu nama-nama anak muslim, didalamnya terdapat dua buah sub
+ menu yang terdiri dari contoh nama untuk anak laki-laki dan contoh nama
+ untuk anak perempuan.
+ Untuk menggunakannya, pengguna hanya perlu memilih salah satu sub menu
+ contoh nama laki-laki atau perempuan yang selanjutnya akan masuk ke dalam
+ menu nama dan pengguna hanya perlu memasukan alphabet atau huruf yang diinginka
+n, maka aplikasi ini akan menampilkan beberapa contoh nama sesuai dengan
+ alphabet atau huruf yang dipilih.
+\end_layout
+
+\begin_layout Standard
+Selanjutnya pada menu olahraga bagi ibu hamil, terdapat beberapa macam jenis
+ olahraga yang dapat dilakukan oleh ibu hamil seperti yoga, pilates, hypnobirthi
+ng, yopytta dan senam nifas yang ditampilkan dalam bentuk menu, sehingga
+ pengguna aplikasi ini hanya tinggal memilih bagian olahraga untuk ibu hamil
+ yang diinginkan.
+ Dan juga di dalam menu olahraga bagi ibu hamil ini terdapat menu mengenai
+ tujuan dan manfaat senam hamil dan juga tahap-tahap senam hamil yang diperlukan
+ sebelum melakukan kegiatan olahraga bagi ibu hamil tersebut.
+\end_layout
+
+\begin_layout Standard
+Pada menu seks untuk ibu hamil didalamnya terdapat dua buah menu yaitu informasi
+ mengenai seks pada saat kehamilan dan juga menu posisi bercinta bagi ibu
+ hamil yang dapat digunakan sebagai panduan berhubungan intim selama masa
+ kehamilan berlangsung.
+\end_layout
+
+\begin_layout Standard
+Terakhir adalah menu tentang program, menu ini menampilkan nama penulis
+ dimana penulis adalah yang membuat aplikasi mobile bagi ibu hamil tersebut
+ dan juga mengenai versi dari program aplikasi.
+\end_layout
+
+\begin_layout Section
+Pengembangan Aplikasi
+\end_layout
+
+\begin_layout Standard
+Pada tahap pengembangan aplikasi ini merupakan tahap yang paling awal dalam
+ pembuatan aplikasi.
+ Pada tahap ini yang dilakukan adalah merancang tampilan aplikasi yang akan
+ dibuat berdasarkan data-data yang telah diperoleh sehingga dapat direalisasikan
+ dalam sebuah program aplikasi.
+\end_layout
+
+\begin_layout Standard
+Data-data yang dibutuhkan diperoleh dengan cara observasi, wawancara dan
+ juga pengambilan data-data yang telah tersedia.
+ Adapun data-data yang diperoleh yaitu Informasi mengenai kebutuhan gizi
+ selama kehamilan, informasi mengenai perkembangan janin, informasi mengenai
+ olahraga yang dapat dilakukan oleh ibu hamil, informasi mengenai seks saat
+ hamil, foto-foto yang dibutuhkan untuk mendukung pembuatan aplikasi dan
+ juga foto-foto untuk mempercantik tampilan aplikasi.
+ Kemudian langkah berikutnya adalah merancang tampilan aplikasi dimulai
+ dari splash screen sebelum masuk ke dalam menu aplikasi, tata letak menu-menu,
+ banyaknya menu yang digunakan, warna tampilan aplikasi, letak komponen-komponen
+ lainnya yang mendukung aplikasi dan perancangan lainnya yang dibutuhkan.
+\end_layout
+
+\begin_layout Standard
+Setelah tampilan rancangan selesai, maka langkah selanjutnya adalah menginstall
+ software eclipse versi helios dan menginstall plugin 
+\shape italic
+Android Developer Kit
+\shape default
+ (ADT) untuk eclipse versi helios tersebut sehingga eclipse dapat digunakan
+ sebagai media untuk membuat sebuah aplikasi android.
+ Namun sebelum melakukan instalasi dan konfigurasi eclipse dengan Android
+ Developer Kit, penulis akan terlebih dahulu menentukan struktur navigasi
+ yang akan digunakan dalam pembuatan aplikasi mobile bagi ibu hamil tersebut.
+ Struktur navigasi yang dibuat dapat dilihat pada gambar 3.1.
+\end_layout
+
+\begin_layout Section
+Struktur Navigasi
+\end_layout
+
+\begin_layout Standard
+Dalam proses pembuatan aplikasi ini penulis menggunakan struktur navigasi
+ campuran.
+ Struktur navigasi campuran ini gabungan antara struktur navigasi hirarki
+ dan non linier atau biasanya disebut juga sebagai struktur navigasi bebas,
+ karena dalam beberapa menu terdapat percabangan atau sub menu pada menu
+ utama.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Struktur Navigasi.jpeg
+	scale 65
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Struktur Navigasi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Rancangan Tampilan Aplikasi
+\end_layout
+
+\begin_layout Standard
+Rancangan tampilan aplikasi merupakan hal yang sangat penting untuk kemudahan
+ para pengguna saat berinteraksi dengan sebuah aplikasi dan kemudahan mendapatka
+n informasi yang dibutuhkan dengan cepat dan efisien.
+\end_layout
+
+\begin_layout Standard
+Dengan memberikan deskripsi ini, penulis berharap agar sebelum sampai pada
+ tahap penjelasan proses pembuatan, aplikasi ini sudah dapat dipandang secara
+ utuh dengan kata lain dapat dipahami secara jelas apa yang akan dibahas
+ pada proses pembuatan aplikasi ini.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Menu Utama
+\end_layout
+
+\begin_layout Standard
+Halaman menu merupakan halaman pertama yang ditampilkan oleh aplikasi mobile
+ kehamilan bagi ibu hamil setelah ditampilkannya splash screen, dimana pada
+ halaman ini diletakkan 6 buah tombol (
+\shape italic
+button
+\shape default
+).
+ Berikut ini rancangan pada halaman menu yang terlihat pada gambar 3.2 sebagai
+ berikut.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Utama.jpg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Halaman Menu Utama
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari Gambar 3.2 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Informasi Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Perkembangan Janin.
+\end_layout
+
+\begin_layout Itemize
+Gambar 3 : Tombol Nama-Nama Anak Muslim.
+\end_layout
+
+\begin_layout Itemize
+Gambar 4 : Tombol Olahraga Bagi Ibu Hamil.
+\end_layout
+
+\begin_layout Itemize
+Gambar 5 : Tombol Seks Untuk Ibu Hamil.
+\end_layout
+
+\begin_layout Itemize
+Gambar 6 : Tombol Tentang Program.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Informasi Kehamilan
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akan disimpan tombol-tombol mengenai informasi kehamilan,
+ dimana pada halaman ini terdapat 6 buah tombol yang masing-masing akan
+ menginformasikan informasi mengenai kehamilan, seperti : Mengetahui tanda
+ kehamilan, nutrisi penting selama masa kehamilan, prinsip makanan yang
+ baik, makanan yang harus dihindari, posisi tidur yang baik selama kehamilan,
+ dan kiat untuk mendapatkan bayi laki-laki / perempuan.
+ Berikut ini tampilan rancangan pada halaman informasi kehamilan seperti
+ yang ditampilkan pada gambar 3.3 sebagai berikut.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Informasi Kehamilan.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Informasi Kehamilan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari Gambar 3.3 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Mengetahui Tanda Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Gambar 3 : Tombol Nutrisi Penting Selama Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Gambar 4 : Tombol Prinsip Makanan Yang Baik.
+\end_layout
+
+\begin_layout Itemize
+Gambar 5 : Tombol Makanan Yang Harus Dihindari.
+\end_layout
+
+\begin_layout Itemize
+Gambar 6 : Tombol Posisi Tidur Yang Baik Selama Masa Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Gambar 7 : Tombol Kiat Mendapatkan Bayi Laki-Laki / Perempuan.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Mengetahui Tanda Kehamilan
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akan menampilkan informasi mengenai tanda-tanda kehamilan,
+ dimana pada halaman ini terdapat dua buah text view dimana kedua buah text
+ view tersebut digunakan untuk menampilkan judul dan juga informasi mengenai
+ tanda-tanda kehamilan.
+ Berikut ini tampilan rancangan pada halaman Mengetahui Tanda Kehamilan
+ yang ditampilkan pada gambar sebagai berikut.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Mengetahui Tanda Kehamilan.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Mengetahui Tanda Kehamilan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.4 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Informasi Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Teks untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Teks untuk menampilkan informasi mengenai tanda kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ tanda kehamilan dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Subsection
+Halaman Nutrisi Penting Selama Hamil
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akan ditampilkan beberapa gambar beserta informasi mengenai
+ nutrisi penting selama hamil yang dibutuhkan oleh ibu hamil selama proses
+ kehamilan berlangsung, dimana pada halaman ini terdapat sebuah gambar utama
+ untuk menampilkan gambar dari contoh nutrisi, teks untuk menampilkan judul
+ halam, teks untuk menampilkan nama nutrisi yang dibutuhkan, teks untuk
+ menampilkan informasi mengenai nutrisi tersebut dan 9 gambar lainnya yang
+ dapat digunakan untuk memilih jenis nutrisi yang dibutuhkan oleh ibu hamil
+ yang ditampilkan secara horizontal scroll view sehingga gambar-gambar tersebut
+ dapat digeser secara vertikal pada saat memilihnya.
+ Berikut ini tampilan rancangan pada halaman perkembangan janin yang ditampilkan
+ pada gambar 3.5 berikut.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Nutrisi Penting Selama Kehamilan.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Nutrisi Penting Selama Hamil
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.5 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Informasi Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Gambar 3 : Gambar utama dari contoh nutrisi.
+\end_layout
+
+\begin_layout Itemize
+Gambar 4 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 5 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 6 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 7 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Untuk menampilkan nama nutrisi.
+\end_layout
+
+\begin_layout Itemize
+Teks 3 : Untuk menampilkan informasi mengenai nutrisi.
+\end_layout
+
+\begin_layout Itemize
+Scroll View : Digunakan agar teks untuk menampilkan informasi mengenai nutrisi
+ penting selama hamil dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Itemize
+Horizontal Scroll View 1 : Digunakan agar gambar-gambar pilihan dapat digeser
+ secara horisontal untuk menampilkan gambar-gambar lainnya.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Prinsip Makanan Yang Baik
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akan ditampilkan informasi mengenai prinsip makana yang
+ baik selama kehamilan berlangsung, dimana pada halaman ini terdapat 2 buah
+ tombol untuk kembali ke menu informasi kehamilan dan tombol untuk kembali
+ ke menu 
+\shape italic
+home
+\shape default
+ (menu utama), pada halaman ini juga terdapat 2 buah teks untuk menampilkan
+ judul halaman dan untuk menampilkan informasi mengenai prinsip makanan
+ yang baik selama masa kehamilan.
+ Berikut ini tampilan rancangan pada halaman prinsip makanan yang baik yang
+ ditampilkan pada gambar 3.6 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Prinsip Makanan Yang Baik Selama Kehamilan.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Prinsip Makanan Yang Baik
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.6 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Informasi Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Untuk menampilkan judul halamana.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Untuk menampilkan informasi mengenai prinsip makanan yang baik.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ prinsip makanan yang baik dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Makanan Yang Harus Dihindari
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akana ditampilkan beberapa gambar beserta informasi mengenai
+ makanan yang harus dihindari selama kehamilan berlangsung, dimana pada
+ halaman ini terdapat sebuah gambar utama, teks untuk menampilkan judul
+ halaman, teks untuk menampilkan jenis makanan yang harus dihindari dan
+ juga teks untuk menampilkan informasi mengenai makanan yang harus dihindari
+ tersebut.
+ Pada halaman ini juga terdapat 7 buah gambar yang ditampilkan secara 
+\shape italic
+horizontal scroll view
+\shape default
+ sehingga gambar-gambar tersebut dapat digeser secara horisontal untuk memilih
+ jenis makanan yang harus dihindari lainnya.
+ Berikut ini adalah tampilan rancangan pada halaman makanan yang harus dihindari
+ yang ditampilkan pada gambar 3.7 sebagai berikut : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Makanan Yang Harus Dihindari.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Makanan Yang Harus Dihindari
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.7 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Informasi Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Gambar 3 : Gambar utama dari makanan yang harus dihindari.
+\end_layout
+
+\begin_layout Itemize
+Gambar 4 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 5 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 6 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 7 :Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Teks untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Teks untuk menampilkan nama dari jenis makanan yang harus dihindari.
+\end_layout
+
+\begin_layout Itemize
+Teks 3 : Teks untuk menampilkan informasi mengenai makanan yang harus dihindari.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ makanan yang harus dihindari dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Itemize
+Horizontal Scroll View : Digunakan agar gambar-gambar pilihan dapat digeser
+ secara horisontal untuk menampilkan gambar-gambar lainnya.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Posisi Tidur Yang Baik Selama Masa Kehamilan
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akan ditampilkan informasi mengenai posisi tidur yang baik
+ selama masa kehamilan, dimana pada halaman ini terdapat 2 buah tombol untuk
+ kembali ke menu informasi kehamilan dan tombol untuk kembali ke menu 
+\shape italic
+home
+\shape default
+ (menu utama), pada halaman ini juga terdapat 2 buah teks untuk menampilkan
+ judul halaman dan untuk menampilkan informasi mengenai posisi tidur yang
+ baik selama masa kehamilan.
+ Berikut ini tampilan rancangan pada halaman posisi tidur yang baik selama
+ masa kehamilan yang ditampilkan pada gambar 3.8 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Posisi Tidur Yang Baik Selama Masa Kehamilan.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Posisi Tidur Yang Baik Selama Masa Kehamilan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.8 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Informasi Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Untuk menampilkan judul halamana.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Untuk menampilkan informasi mengenai posisi tidur yang baik selama
+ masa kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ posisi tidur yang baik selama masa kehamilan dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Kiat Mendapatkan Bayi Laki-Laki Atau Perempuan
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akan ditampilkan informasi mengenai kiat mendapatkan bayi
+ laki-laki atau perempuan, dimana pada halaman ini terdapat 2 buah tombol
+ untuk kembali ke menu informasi kehamilan dan tombol untuk kembali ke menu
+ 
+\shape italic
+home
+\shape default
+ (menu utama), pada halaman ini juga terdapat 2 buah teks untuk menampilkan
+ judul halaman dan untuk menampilkan informasi mengenai kiat mendapatkan
+ bayi laki-laki atau perempuan.
+ Berikut ini tampilan rancangan pada halaman kiat mendapatkan bayi laki-laki
+ atau perempuan yang ditampilkan pada gambar 3.9 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Kiat Mendapatkan Bayi Laki-Laki atau Perempuan.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Kiat Mendapatkan Bayi Laki-Laki Atau Perempuan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.9 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Informasi Kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Untuk menampilkan informasi mengenai kiat mendapatkan bayi laki-laki
+ atau perempuan.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ kiat mendapatkan bayi laki-laki atau perempuan dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Perkembangan Janin
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akan ditampilkan beberapa gambar beserta informasi mengenai
+ perkembangan janin selama didalam kandungan, dimana pada halaman ini terdapat
+ sebuah gambar utama, teks untuk menampilkan judul halaman, bulan perkembangan
+ janin dan juga teks untuk menampilkan informasi mengenai perkembangan janin
+ berdasarkan bulannya.
+ Pada halaman ini juga terdapat 9 buah gambar yang ditampilkan secara 
+\shape italic
+horizontal scroll view
+\shape default
+ yang digunakan untuk memilih bulan perkembangan janin.
+ Berikut ini tampilan rancangan pada halaman perkembangan janin yang ditampilkan
+ pada gambar 3.10 sebagai berikut.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Perkembangan Janin.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Perkembangan Janin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.10 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Gambar utama dari perkembangan janin.
+\end_layout
+
+\begin_layout Itemize
+Gambar 3 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 4 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 5 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 6 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Teks untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Teks untuk menampilkan informasi bulan kehamilan.
+\end_layout
+
+\begin_layout Itemize
+Teks 3 : Teks untuk menampilkan informasi mengenai perkembangan janin selama
+ dalam kandungan.
+\end_layout
+
+\begin_layout Itemize
+Scroll View : Digunakan agar teks untuk menampilkan informasi mengenai kiat
+ mendapatkan bayi laki-laki atau perempuan dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Itemize
+Horizontal Scroll View : Digunakan agar gambar-gambar pilihan dapat digeser
+ secara horisontal untuk menampilkan gambar-gambar lainnya.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Nama-Nama Anak Muslim
+\end_layout
+
+\begin_layout Standard
+Pada halaman nama-nama anak muslim ini akan ditampilkan sebuah halaman pilihan,
+ dimana pada halaman ini terdapat dua buah tombol yang masing-masing tombolnya
+ digunakan untuk menampilkan contoh nama-nama anak muslim laki-laki atau
+ perempuan.
+ Berikut ini tampilan rancangan pada halaman nama-nama anak muslim yang
+ ditampilkan pada gambar 3.5 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Nama-nama anak muslim.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Nama-Nama Anak Muslim
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.5 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Laki-Laki.
+\end_layout
+
+\begin_layout Itemize
+Gambar 3 : Tombol Perempuan.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Pencarian Nama Anak Muslim Laki-Laki dan Perempuan
+\end_layout
+
+\begin_layout Standard
+Pada halaman pencarian nama anak muslim ini akan menampilkan contoh nama-nama
+ anak.
+ Pada halaman ini terdapat satu buah edit teks, satu buah tombol (
+\shape italic
+button
+\shape default
+) dan dua buah teks view yang salah satunya digunakan untuk menampilkan
+ contoh nama-nama anak muslim tersebut.
+ Berikut ini merupakan rancangan tampilan pada halaman pencarian nama anak
+ muslim yang ditampilkan pada gambar 3.6 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/halaman pencarian nama anak.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Pencarian Nama Anak Muslim 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.6 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Halaman Nama-Nama Anak Muslim.
+\end_layout
+
+\begin_layout Itemize
+Gambar 3 : Tombol OK.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Teks informasi / cara.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Teks untuk menampilkan contoh nama anak.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Olahraga Bagi Ibu Hamil
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman olahraga bagi ibu hamil ini akan menampilkan beberapa
+ tombol yang digunakan sebagai pilihan olahraga yang akan dipilih oleh ibu
+ hamil.
+ Pada halaman ini terdapat 8 buah tombol (
+\shape italic
+button
+\shape default
+) yang digunakan sebagai pilihan beberapa jenis olahraga bagi ibu hamil
+ dan 2 buah teks.
+ Berikut ini merupakan rancangan halaman olahraga bagi ibu hamil yang ditampilka
+n pada gambar 3.7 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Olahraga Bagi Ibu Hamil.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Olahrga Bagi Ibu Hamil
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.7 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Tujuan & Manfaat Senam Hamil.
+\end_layout
+
+\begin_layout Itemize
+Gambar 3 : Tombol Tahapan-Tahapan Senam.
+\end_layout
+
+\begin_layout Itemize
+Gambar 4 : Tombol Yoga.
+\end_layout
+
+\begin_layout Itemize
+Gambar 5 : Tombol Philates.
+\end_layout
+
+\begin_layout Itemize
+Gambar 6 : Tombol Hypnobirthing.
+\end_layout
+
+\begin_layout Itemize
+Gambar 7 : Tombol Yopytta.
+\end_layout
+
+\begin_layout Itemize
+Gambar 8 : Tombol Senam Nifas.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Teks Informasi Senam.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Teks Jenis-Jenis Senam.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Tujuan Dan Manfaat Senam Hamil
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman tujuan dan manfaat senam hamil ini terdapat 2 buah
+ tombol yang digunakan untuk kembali ke menu utama dan juga untuk kembali
+ ke halaman olahraga bagi ibu hamil.
+ Pada halaman ini juga terdapat 2 buah teks yang digunakan untuk menampilkan
+ judul halaman dan juga menampilkan informasi mengenai tujuan dan manfaat
+ senam hamil.
+ Berikut ini merupakan rancangan tampilan halaman seks tujuan dan manfaat
+ senam hamil yang ditampilkan pada gambar 3.14 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Tujuan dan Manfaat Senam Hamil.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Tujuan Dan Manfaat Senam Hamil
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.14 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Olahraga Bagi Ibu Hamil.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Untuk menampilkan informasi mengenai tujuan dan manfaat senam hamil.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ tujuan dan manfaat senam hamil dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Tahap-Tahap Senam
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman tujuan dan manfaat senam hamil ini terdapat 2 buah
+ tombol yang digunakan untuk kembali ke menu utama dan juga untuk kembali
+ ke halaman olahraga bagi ibu hamil.
+ Pada halaman ini juga terdapat 2 buah teks yang digunakan untuk menampilkan
+ judul halaman dan juga menampilkan informasi mengenai tahap-tahap senam.
+ Berikut ini merupakan rancangan tampilan halaman tahap-tahap senam yang
+ ditampilkan pada gambar 3.15 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Tahap-Tahap Senam.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Tahap-Tahap Senam
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.15 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Olahraga Bagi Ibu Hamil.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Untuk menampilkan informasi mengenai tahap-tahap senam.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ tahap-tahap senam dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Yoga
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akan ditampilkan beberapa gambar beserta informasi mengenai
+ senam yoga, dimana pada halaman ini terdapat dua buah tombol untuk kembali
+ kehalaman utama dan juga tombol untuk kembali ke halaman olahraga bagi
+ ibu hamil, sebuah gambar utama, teks untuk menampilkan judul halaman, teks
+ untuk menampilkan nama dari senam yoga dan juga teks untuk menampilkan
+ informasi mengenai cara-cara melakukan senam yoga.
+ Pada halaman ini juga terdapat 4 buah gambar yang ditampilkan secara 
+\shape italic
+horizontal scroll view
+\shape default
+ yang digunakan untuk memilih cara melakukan senam yoga lainnya.
+ Berikut ini tampilan rancangan pada halaman yoga yang ditampilkan pada
+ gambar 3.16 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Yoga.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Yoga
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.16 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Olahraga Bagi Ibu Hamil.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Gambar utama dari senam yoga.
+\end_layout
+
+\begin_layout Itemize
+Gambar 4 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 5 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 6 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 7 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Teks untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Teks untuk menampilkan nama senam yoga.
+\end_layout
+
+\begin_layout Itemize
+Teks 3 : Teks untuk menampilkan informasi mengenai tata cara melakukan senam
+ yoga.
+\end_layout
+
+\begin_layout Itemize
+Scroll View : Digunakan agar teks untuk menampilkan informasi mengenai tata
+ cara melakukan senam yoga dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Itemize
+Horizontal Scroll View : Digunakan agar gambar-gambar pilihan dapat digeser
+ secara horisontal untuk menampilkan gambar-gambar lainnya.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Pilates
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman tujuan dan manfaat senam hamil ini terdapat 2 buah
+ tombol yang digunakan untuk kembali ke menu utama dan juga untuk kembali
+ ke halaman olahraga bagi ibu hamil.
+ Pada halaman ini juga terdapat 2 buah teks yang digunakan untuk menampilkan
+ judul halaman dan juga menampilkan informasi mengenai tahap-tahap senam
+ Pilates.
+ Berikut ini merupakan rancangan tampilan halaman Pilates yang ditampilkan
+ pada gambar 3.17 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Pilates.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Pilates
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.17 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Olahraga Bagi Ibu Hamil.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Untuk menampilkan informasi mengenai tahap-tahap senam Pilates.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ tahap-tahap senam pilates dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Hypnobirthing
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman Hypnobirthing ini terdapat 2 buah tombol yang digunakan
+ untuk kembali ke menu utama dan juga untuk kembali ke halaman olahraga
+ bagi ibu hamil.
+ Pada halaman ini juga terdapat 2 buah teks yang digunakan untuk menampilkan
+ judul halaman dan juga menampilkan informasi mengenai Hypnobirthing.
+ Berikut ini merupakan rancangan tampilan halaman Hypnobirthing yang ditampilkan
+ pada gambar 3.18 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Hypnobirthing.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Hypnobirthing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.18 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Olahraga Bagi Ibu Hamil.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Untuk menampilkan informasi mengenai Hypnobirthing.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ Hypnobirthing dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Yopytta
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman Yopytta ini terdapat 2 buah tombol yang digunakan
+ untuk kembali ke menu utama dan juga untuk kembali ke halaman olahraga
+ bagi ibu hamil.
+ Pada halaman ini juga terdapat 2 buah teks yang digunakan untuk menampilkan
+ judul halaman dan juga menampilkan informasi mengenai Yopytta.
+ Berikut ini merupakan rancangan tampilan halaman Yopytta yang ditampilkan
+ pada gambar 3.19 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Yopytta.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Yopytta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.19 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Olahraga Bagi Ibu Hamil.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Untuk menampilkan informasi mengenai Yopytta.
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan informasi mengenai
+ Yopytta dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Senam Nifas
+\end_layout
+
+\begin_layout Standard
+Pada halaman ini akan ditampilkan beberapa gambar beserta informasi mengenai
+ senam Nifas, dimana pada halaman ini terdapat dua buah tombol untuk kembali
+ kehalaman utama dan juga tombol untuk kembali ke halaman olahraga bagi
+ ibu hamil, sebuah gambar utama, teks untuk menampilkan judul halaman, teks
+ untuk menampilkan nama dari senam nifas dan juga teks untuk menampilkan
+ informasi mengenai tata cara-cara melakukan senam Nifas.
+ Pada halaman ini juga terdapat 6 buah gambar yang ditampilkan secara 
+\shape italic
+horizontal scroll view
+\shape default
+ yang digunakan untuk memilih cara melakukan senam nifas lainnya.
+ Berikut ini tampilan rancangan pada halaman senam Nifas yang ditampilkan
+ pada gambar 3.20 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Senam Nifas.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Senam Nifas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.20 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Olahraga Bagi Ibu Hamil.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Gambar utama dari senam Nifas.
+\end_layout
+
+\begin_layout Itemize
+Gambar 4 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 5 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 6 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Gambar 7 : Gambar pilihan untuk ditampilkan pada gambar utama.
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Teks untuk menampilkan judul halaman.
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Teks untuk menampilkan nama senam Nifas.
+\end_layout
+
+\begin_layout Itemize
+Teks 3 : Teks untuk menampilkan informasi mengenai tata cara melakukan senam
+ Nifas.
+\end_layout
+
+\begin_layout Itemize
+Scroll View : Digunakan agar teks untuk menampilkan informasi mengenai tata
+ cara melakukan senam Nifas dapat di geser secara vertikal.
+\end_layout
+
+\begin_layout Itemize
+Horizontal Scroll View : Digunakan agar gambar-gambar pilihan dapat digeser
+ secara horisontal untuk menampilkan gambar-gambar lainnya.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Seks Untuk Ibu Hamil
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman seks untuk ibu hamil ini terdapat tiga buah tombol
+ yang salah satunya digunakan untuk kembali kehalaman utama dan dua tombol
+ lainnya digunakan untuk menuju halaman informasi seks selama kehamilan
+ dan posisi bercinta bagi ibu hamil.
+ Berikut ini merupakan rancangan tampilan halaman seks untuk ibu hamil yang
+ ditampilkan pada gambar 3.8 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Seks Untuk Ibu Hamil.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Seks Untuk Ibu Hamil
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.8 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol Info Seks Saat Hamil.
+\end_layout
+
+\begin_layout Itemize
+Gambar 3 : Tombol Posisi Bercinta Ibu Hamil.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Catatan
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman catatan ini dibuat agar pengguna aplikasi mobile
+ kehamilan bagi ibu hamil ini dapat menuliskan catatan mengenai kehamilannya.
+ Dimana pada halaman ini terdapat 2 buah tombol yaitu tombol untuk kembali
+ ke menu utama dan juga tombol untuk menyimpan catatan, 2 buah teks untuk
+ menampilkan perintah menuliskan catatan dan juga teks untuk menampilkan
+ hasil dari catatan yang telah disimpan.
+ Berikut ini merupakan rancangan halaman catatan yang ditampilkan pada gambar
+ 3.21 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/halaman catatan.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Catatan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.22 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Tombol untuk menyimpan catatan
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Perintah untuk menuliskan catatan
+\end_layout
+
+\begin_layout Itemize
+Teks 2 : Teks untuk menampilkan catatan yang telah disimpan
+\end_layout
+
+\begin_layout Itemize
+Edit Teks 1 : Tempat menuliskan catatan
+\end_layout
+
+\begin_layout Itemize
+Scroll View 1 : Digunakan agar teks untuk menampilkan catatan yang tersimpan
+ dapat di geser secara vertikal
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Tentang Program
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman tentang program ini digunakan untuk menampilkan informasi
+ tentang versi program dan juga informasi mengenai pembuat program.
+ Dimana pada halaman ini terdapat 2 buah gambar yang salah satunya digunakan
+ sebagai gambar latar (Background) dan satu buah teks yang digunakan untuk
+ menampilkan versi program dan nama pembuat program.
+ Berikut ini merupakan rancangan halaman tentang program yang ditampilkan
+ pada gambar 3.9 sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/Halaman Tentang Program.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rancangan Halaman Tentang Program
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keterangan dari gambar 3.9 adalah sebagai berikut :
+\end_layout
+
+\begin_layout Itemize
+Gambar 1 : Tombol Home.
+\end_layout
+
+\begin_layout Itemize
+Gambar 2 : Gambar Latar Belakang (
+\shape italic
+Background
+\shape default
+).
+\end_layout
+
+\begin_layout Itemize
+Teks 1 : Teks mengenai informasi program dan nama pembuat.
+\end_layout
+
+\begin_layout Section
+Langkah-langkah Pembuatan Aplikasi
+\end_layout
+
+\begin_layout Standard
+Pada pembuatan aplikasi mobile bagi ibu hamil ini penulis menggunakan sistem
+ operasi Linux openSUSE 11.4 dan juga software Open Source Eclipse yang telah
+ disetting agar dapat digunakan untuk membuat aplikasi mobile berbasis Android
+ dengan cara menginstall 
+\shape italic
+Android Developer Kit
+\shape default
+ (ADT) pada software Eclipse tersebut.
+\end_layout
+
+\begin_layout Subsection
+Instalasi Java Runtime Environment (JRE) dan Java Development Kit (JDK)
+\end_layout
+
+\begin_layout Standard
+Java Runtime Environment dan Java Development Kit harus terinstall agar
+ dapat melakukan pembuatan aplikasi mobile berbasis Android.
+ Disini penulis menggunakan JRE versi 1.6 update 26 dan JDK versi 1.6 update
+ 25, adapun langkah-langkah instalasinya adalah :
+\end_layout
+
+\begin_layout Enumerate
+Buka terminal dengan menekan alt+f2 lalu ketika su agar kita bisa masuk
+ sebagai root setelah memasukan password.
+\end_layout
+
+\begin_layout Enumerate
+Setelah berhasil masuk sebagai root, selanjutnya masuk kedalam folder dimana
+ file instalasi JRE dan JDK tersebut berada, disini penulis menyimpan file
+ instalasi JRE dan JDK tersebut di dalam folder /opt maka untuk masuk kedalam
+ folder /etc tersebut dengan mengetikan pada terminal cd /opt.
+\end_layout
+
+\begin_layout Enumerate
+Setelah masuk ke dalam folder /opt maka langkah selanjutnya adalah menginstall
+ kedua software JRE dan JDK tersebut dengan perintah zypper in jre-6u26-linux-i5
+86.rpm, tunggu sampai proses instalasi selesai.
+\end_layout
+
+\begin_layout Enumerate
+Setelah proses instalasi JRE selesai, maka langkah selanjutnya adalah menginstal
+ file instalasi JDK yang juga masih berada di dalam folder /opt dengan perintah
+ zypper in zypper in jdk-6u25-linux-i586.bin, tunggu sampai proses instalasi
+ selesai.
+\end_layout
+
+\begin_layout Enumerate
+Setelah kedua software JRE dan JDK tersebut berhasil diinstall, langkah
+ selanjutnya adalah menguji apakah JRE dan JDK tersebut sudah terinstall
+ dengan baik pada sistem operasi openSUSE yang penulis gunakan dengan mengetikan
+ pada terminal perintah java -version.
+ Jika proses instalasi JRE dan JDK telah sukses, maka terminal akan menampilkan
+ informasi seperti gambar 3.10 dibawah ini.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/versi java.jpeg
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Versi Java Yang Digunakan & Terinstall Dengan Baik
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Instalasi Eclipse Helios
+\end_layout
+
+\begin_layout Standard
+Setelah melakukan instalasi JRE dan JDK, maka langkah selanjutnya adalah
+ menginstall software open source Eclipse yang nantinya akan digunakan sebagai
+ media untuk pembuatan program aplikasi mobile bagi ibu hamil.
+ Di sini penulis menggunakan software Eclipse dengan versi Helios dan berikut
+ adalah langkah-langkah instalasi software eclipse.
+\end_layout
+
+\begin_layout Enumerate
+Buka terminal dengan menekan alt+f2 lalu ketika su agar kita bisa masuk
+ sebagai root setelah memasukan password.
+\end_layout
+
+\begin_layout Enumerate
+Setelah berhasil masuk sebagai root, selanjutnya masuk kedalam folder dimana
+ file Eclipse tersebut berada, disini penulis menyimpan file instalasi Eclipse
+ tersebut di dalam folder /opt maka untuk masuk kedalam folder /opt tersebut
+ dengan mengetikan pada terminal cd /opt.
+\end_layout
+
+\begin_layout Enumerate
+Setelah masuk ke dalam folder /opt maka langkah selanjutnya adalah mengekstrak
+ software eclipse tersebut dengan perintah tar xvfz eclipse-java-helios-SR2-linu
+x-gtk.tar.gz, lalu setelah itu file eclipse akan di ekstrak seperti yang ditampilk
+an pada gambar 3.11 dan tunggu sampai proses ekstrak selesai.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/proses ekstrak file eclipse.jpeg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Proses Ekstrak File Eclipse
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Setelah proses ekstrak selesai, maka kita langsung dapat menggunakan Eclipse
+ dengan versi Helios tersebut, untuk menjalankannya masuk kedalam terminal
+ lalu ketikan su dan masukan password agar hak akses menjadi root, setelah
+ itu ketikan /opt/eclipse/./eclipse, apabila proses ekstrak tidak bermasalah
+ maka eclipse dapat langsung digunakan.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/tampilan awal eclipse.jpeg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tampilan awal Eclipse Helios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Konfigurasi Eclipse Helios Dengan Android Software Development Kit (Android
+ SDK)
+\end_layout
+
+\begin_layout Standard
+Setelah software Eclipse berjalan dengan baik, maka langkah selanjutnya
+ adalah mengkonfigurasinya dengan 
+\shape italic
+Android Developer Kit
+\shape default
+ (ADK) agar software Eclipse tersebut dapat digunakan untuk membuat aplikasi
+ mobile berbasis Android.
+ Adapun cara untuk mengkonfigurasinya adalah sebagai berikut.
+\end_layout
+
+\begin_layout Enumerate
+Download Android SDK di situs http://developer.android.com/skd/index.html setelah
+ file Android SDK berhasil di download, lalu copy file tersebut kedalam
+ folder /opt lalu ekstrak dengan perintah tar xvfz android-sdk_r11-linux_x86.tgz
+\end_layout
+
+\begin_layout Enumerate
+Setelah itu buka eclipse lalu install plugin android dengan cara pilih menu
+ Help-Install New Software, lalu akan keluar jendela Install lalu pilih
+ Add, ketikan adt-android dan pada bagian location ketikan https://dl-sll.google.c
+om/android/eclipse.
+ Setelah selesai maka akan keluar jendela Developer Tool, lalu centang pada
+ bagian Developer Tools lalu klik next.
+\end_layout
+
+\begin_layout Enumerate
+Selanjutnya adalah download Library Android dengan cara klik menu Android
+ lalu pilih menu Windows - Android SDK and AVD Manager lalu pilih semua
+ package yang tersedia, klik install selected dan tunggu sampai proses download
+ selesai.
+\end_layout
+
+\begin_layout Enumerate
+Setelah proses download library Android selesai, maka selanjutnya adalah
+ membuat emulator Android.
+ Pilih Menu Windows - Android SDK and AVD Manager.
+ Setelah keluar windows Android SDK and AVD Manager pilih New, lalu pada
+ Name isikan dengan nama Emulator lalu klik Edit AVD.
+\end_layout
+
+\begin_layout Enumerate
+Setelah emulator Android berhasil dibuat maka langkah selanjutnya adalah
+ mencoba menjalankan emulator Android tersebut apakah berjalan dengan baik
+ atau tidak dengan cara, pilih menu Windows - Android SDK and AVD Manager,
+ pilih Virtual Devices.
+ Lalu pilih emulator Android yang sebelumnya telah dibuat, lalu klik Start.
+ Tunggu beberapa saat sampai emulator Android menampilkan gambar seperti
+ dibawah ini.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Gambar/emulator Android.jpeg
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Emulator Android
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sampai tahap ini Android Emulator dan juga Android SDK telah berhasil diinstall
+ dan siap digunakan untuk membuat aplikasi mobile berbasis Android
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

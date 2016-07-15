@@ -16,6 +16,9 @@ angular.module('managementUiApp')
       },
       getListAntrian: function (){
         return $http.get(ConfigService.serverUrl + "/api/screen/tv/get/antrian");
+      },
+      setFinishedCall: function (id){
+        return $http.get(ConfigService.serverUrl + "/api/screen/tv/set/finished/" + id);
       }
     };
   });

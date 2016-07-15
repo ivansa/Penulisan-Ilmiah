@@ -25,6 +25,6 @@ angular.module('managementUiApp')
       },
       recall: function (antrianNumber) {
         return $http.get(ConfigService.serverUrl + "/api/pemanggilan/recall?number=" + antrianNumber);
-      },
+      }
     };
   });

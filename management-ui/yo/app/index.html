@@ -66,8 +66,8 @@
             <li class="dropdown" ng-show="flagReport >= 0">
               <a class="dropdown-toggle" data-toggle="dropdown">Report <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#report/harian">Report Antrian Harian</a></li>
-                <li><a href="#report">Report Antrian</a></li>
+                <li><a href="#report/antrian">Report Antrian Harian</a></li>
+                <li><a href="#report/kuota">Report Kuota Harian</a></li>
               </ul>
             </li>
           </ul>
@@ -130,29 +130,34 @@
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/main.js"></script>
   <script src="scripts/controllers/about.js"></script>
-  <script src="scripts/services/configservice.js"></script>
   <script src="scripts/controllers/poli.js"></script>
   <script src="scripts/controllers/nav.js"></script>
-  <script src="scripts/services/userservice.js"></script>
   <script src="scripts/controllers/user.js"></script>
   <script src="scripts/controllers/permission.js"></script>
   <script src="scripts/controllers/role.js"></script>
   <script src="scripts/controllers/dokter.js"></script>
   <script src="scripts/controllers/tvsetting.js"></script>
   <script src="scripts/controllers/loket.js"></script>
+  <script src="scripts/controllers/generate_kuota.js"></script>
+  <script src="scripts/controllers/transaksi_loket.js"></script>
+  <script src="scripts/controllers/tvscreen.js"></script>
+  <script src="scripts/controllers/report_antrian_harian.js"></script>
+  <script src="scripts/controllers/report_kuota_harian.js"></script>
+  <script src="scripts/controllers/category.js"></script>
+  
   <script src="scripts/services/permissionservice.js"></script>
+  <script src="scripts/services/configservice.js"></script>
   <script src="scripts/services/roleservice.js"></script>
   <script src="scripts/services/loketservice.js"></script>
   <script src="scripts/services/poliservice.js"></script>
   <script src="scripts/services/categoryservice.js"></script>
-  <script src="scripts/controllers/category.js"></script>
+  <script src="scripts/services/userservice.js"></script>
   <script src="scripts/services/dokterservice.js"></script>
-  <script src="scripts/controllers/generate_kuota.js"></script>
   <script src="scripts/services/generatekuotaservice.js"></script>
-  <script src="scripts/controllers/transaksi_loket.js"></script>
   <script src="scripts/services/transaksiloketservice.js"></script>
-  <script src="scripts/controllers/tvscreen.js"></script>
   <script src="scripts/services/screentvservice.js"></script>
+  <script src="scripts/services/reportkuotaservice.js"></script>
+  <script src="scripts/services/reportantrianservice.js"></script>
   <!-- endbuild -->
 </body>
 

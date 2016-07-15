@@ -9,6 +9,7 @@ import com.ivans.antrian.domain.Antrian;
 import com.ivans.antrian.domain.AntrianPanggilan;
 import com.ivans.antrian.domain.KategoriAntrian;
 import com.ivans.antrian.domain.Loket;
+import com.ivans.antrian.exception.AntrianServerException;
 import com.ivans.antrian.helper.DateHelper;
 import com.ivans.antrian.service.AntrianDao;
 import com.ivans.antrian.service.AntrianPemanggilanDao;
@@ -25,6 +26,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -83,8 +85,7 @@ public class ScreenTvController {
                 result.put(String.valueOf(loket.getNomorLoket()), current.getContent().get(0));
             }
         }
-        
-        
+
         PageRequest pr = new PageRequest(0, 1, Sort.Direction.ASC, "timestamp");
         Page<AntrianPanggilan> pageCall = pemanggilanDao.findByStatus(Boolean.FALSE, pr);
         if (pageCall.getTotalElements() > 0) {
@@ -93,4 +94,17 @@ public class ScreenTvController {
 
         return result;
     }
+
+    @RequestMapping(value = "/set/finished/{id}", method = RequestMethod.GET)
+    public void setFinishedCall(@PathVariable String id) {
+        AntrianPanggilan pemanggilan = pemanggilanDao.findOne(id);
+        if (pemanggilan == null) {
+            throw new AntrianServerException("ID Pemanggilan tidak di temukan, tolong hubungi pihak administrator");
+        }
+        
+        pemanggilan.setStatus(Boolean.TRUE);
+        
+        pemanggilanDao.save(pemanggilan);
+    }
+
 }

@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><span style="color: orangered;">Report</span></li>
+            <li class="active">Antrian</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <form class="form-horizontal" name="formSearch" id="formSearch">
+            <div class="row well" style="margin-right:0px;margin-left:0px">
+                <div class="col-sm-6">
+                    <div class="form-group" ng-class="{'has-error': formSearch.tanggal.$invalid, 'has-success':formSearch.tanggal.$valid}">
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <label class="input-group-addon">Tanggal</label>
+                                <input type="date" class="form-control" name="tanggal" ng-model="currentSearch.tanggal" placeholder="Tanggal" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6" style="border-left:1px solid lightgrey">
+                    <div class="form-group" ng-class="{'has-error': formSearch.customer.$invalid, 'has-success':checkedNomor}">
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" ng-model="checkedNomor" ng-change="nomorChanged()" />
+                                </span>
+                                <label class="input-group-addon">Nomor</label>
+                                <input type="text" class="form-control" name="nomor" ng-model="currentSearch.nomor" placeholder="Nomor Antrian" ng-disabled="!checkedNomor" ng-required="checkedNomor" />
+                            </div>
+                        </div>
+                    </div>
+                    <div align="right">
+                        <button class="btn btn-primary" ng-disabled="formSearch.$invalid" ng-click="search()">Search</button>
+                        <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nomor Antrian</th>
+                    <th>Kategori</th>
+                    <th>Loket</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in listData">
+                    <td>{{x.nomorAntrian}}</td>
+                    <td>{{x.jenisLoket}}</td>
+                    <td>{{x.nomorLoket}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div align="center">
+            <uib-pagination total-items="paging.totalItems" 
+                            ng-model="paging.currentPage" 
+                            max-size="paging.maxPage" 
+                            class="pagination-sm" 
+                            ng-change="search()" 
+                            boundary-links="true"
+                            items-per-page="paging.itemsPerPage">    
+            </uib-pagination>
+        </div>
+        <div align="center">
+            <pre>Page: {{paging.currentPage}} / {{paging.maxPage}}</pre>
+        </div>
+    </div>
+</div>
