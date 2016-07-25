@@ -936,14 +936,34 @@ Sistem Antrian
 \end_layout
 
 \begin_layout Standard
-Gross dan Haris (Gross, 2001) mengatakan bahwa sistem antrian adalah kedatangan
- pelanggan untuk mendapatkan pelayanan, menunggu untuk dilayani jika fasilitas
- pelayanan (server) masih sibuk, mendapatkan pelayanan dankemudian meninggalkan
- sistem setelah dilayani.
- Pada umumnya, sistem antrian dapat diklasifikasikan menjadi sistem yang
- berbeda-beda di mana teori antrian dan simulasi sering diterapkan secara
- luas.
- Klasifikasi menurut Hillier dan Lieberman adalah sebagai berikut :
+Sistem antrian terdiri satu atau lebih pelayanan yang mana penyedian pelayanan
+ tersebut digunakan untuk melayani bermacam-macam jenis antar kedatangan
+ pelanggan.
+ pelanggan yang datang jika mendapati keadaan pelayanan sedang sibuk maka
+ pelanggan tersebut akan bergabung dalam antrian dalam satu baris dan yang
+ terdekat siap untuk masuk pada pelayanan berikutnya.
+ perlakuan yang seperti inilah yang disebut sistem antrian.
+ sedangkan jika ketika masuk pelanggan mendapat kondisi pelayanan sedang
+ kosong maka pelanggan tersebut dapat langsung untuk dilayani dan tidak
+ perlu menunggu untuk antri.
+\end_layout
+
+\begin_layout Standard
+Menurut Lelono Djati proporsi yang ada dalam discrete-event simulation sangat
+ besar untuk suatu pengamatan karena meliputi model sistem antrian yang
+ kita temui secara nyata atau justru lebih sedikit komponen dari sistem
+ yang disimulasikan jika dengan menggunakan sistem antrian yang sebenarnya
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Klasifikasi menurut Hillier dan Lieberman adalah sebagai berikut :
 \end_layout
 
 \begin_layout Enumerate
@@ -1159,6 +1179,13 @@ Priority Service (PS), di mana prioritas pelayanan diberikan kepada pelanggan
  dokter, hubungan kekerabatan pelayan dan pelanggan potensial akan dilayani
  terlebih dahulu.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -1397,28 +1424,43 @@ sikan dan menginstalasi perangkat lunak pada kemungkinan ribuan komputer
 \end_layout
 
 \begin_layout Section
+AngularJS
+\end_layout
+
+\begin_layout Standard
+AngularJS merupakan framework javascript open source yang dirilis oleh google
+ pada tahun 2009.
+ Konsep dari AngularJS adalah meningkatkan fungsi dari HTML untuk membangun
+ wepapp.
+ Bayangkan awalnya HTML hanya digunakan untuk membuat halaman website statis
+ dan kini bisa berfungsi untuk membuat wepapp dengan menggunakan AngularJS.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 Java
 \end_layout
 
 \begin_layout Standard
-Java adalah bahasa pemrograman yang dapat dijalankan di berbagai komputer
- termasuk telepon genggam.
- Bahasa ini awalnya dibuat oleh James Gosling saat masih bergabung di Sun
- Microsystems saat ini merupakan bagian dari Oracle dan dirilis tahun 1995.
- Bahasa ini banyak mengadopsi sintaksis yang terdapat pada C dan C++ namun
- dengan sintaksis model objek yang lebih sederhana serta dukungan rutin-rutin
- aras bawah yang minimal.
- Aplikasi-aplikasi berbasis java umumnya dikompilasi ke dalam p-code (bytecode)
- dan dapat dijalankan pada berbagai Mesin Virtual Java (JVM).
- Java merupakan bahasa pemrograman yang bersifat umum/non-spesifik (general
- purpose), dan secara khusus didisain untuk memanfaatkan dependensi implementasi
- seminimal mungkin.
- Karena fungsionalitasnya yang memungkinkan aplikasi java mampu berjalan
- di beberapa platform sistem operasi yang berbeda, java dikenal pula dengan
- slogannya, "Tulis sekali, jalankan di mana pun".
- Saat ini java merupakan bahasa pemrograman yang paling populer digunakan,
- dan secara luas dimanfaatkan dalam pengembangan berbagai jenis perangkat
- lunak aplikasi ataupun aplikasi.
+Java adalah nama sebuah bahasa pemrograman yang sangat terkenal.
+ Sebagai bahasa pemrograman, Java dapat digunakan untuk menulis program.
+ Sebagaimana diketahui, program adalah kumpulan instruksi yang ditujukan
+ unutk komputer.
+ Melalui program, komputer dapat diatur agar melaksanakan tugas tertentu
+ sesuai yang ditentukan oleh pemrogram (orang yang membuat program).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -1521,18 +1563,413 @@ Struktur navigasi adalah urutan alur informasi dari suatu aplikasi multimedia.
 
 \begin_layout Subsection
 Struktur Navigasi Admin
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_admin.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subsection
 Struktur Navigasi Loket
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_loket.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Loket
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Subsection
 Struktur Navigasi Information Monitor
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_tv.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Subsection
 Struktur Navigasi Pendaftaran Antrian
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Rancangan Tampilan
+\end_layout
+
+\begin_layout Standard
+Struktur navigasi adalah urutan alur informasi dari suatu aplikasi multimedia.
+ Dengan menggunakan struktur navigasi yang tepat maka suatu aplikasi mempunyai
+ suatu pedoman dan arah informasi yang jelas.
+ Dalam proses pembuatan aplikasi ini penulis menggunakan struktur navigasi
+ hirarki.
+ Karena dalam beberapa menu terdapat percabangan atau sub menu pada menu
+ utama.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Login
+\end_layout
+
+\begin_layout Standard
+Pada rancangan halaman
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman System dan Master.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Loket
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Information Monitor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Pendaftaran
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Report
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "key-1"
+
+\end_inset
+
+Djati, Bonett SL .
+ 
+\shape italic
+Simulasi Teori dan Aplikasinya
+\shape default
+.
+ Andi Publisher.
+ Yogyakarta:2007.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\noindent
+\align left
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "key-2"
+
+\end_inset
+
+Kodir, Abdul.
+ 
+\shape italic
+Buku Pertama Belajar Pemrograman Java Untuk Pemula
+\shape default
+.
+ Mediakom.
+ Yogyakarta:2013.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\noindent
+\align left
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "3"
+key "key-3"
+
+\end_inset
+
+Febrian, Rully.
+ (2014, Agustus).
+ Apa Itu AngularJS.
+ Retrieved from http://www.dumetschool.com/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "4"
+key "key-4"
+
+\end_inset
+
+Kakiay, Thomas J.
+ Dasar Teori Antrian Untuk Kehidupan Nyata.
+ Andi Offset.
+ Yogyakarta:2004
 \end_layout
 
 \end_body

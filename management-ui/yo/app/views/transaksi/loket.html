@@ -1,5 +1,5 @@
 <center>
-    <div class="row">
+    <div class="row" style="margin-bottom: 1em">
         <div class="col-md-6">
             <div class="text-center" ng-if="loket.nomorLoket >= 1">
                 <div class="row" style="background-color:#00B7FF;color:white;">
@@ -8,7 +8,7 @@
                         <span style="font-weight: 400;font-size:24px">[Counter {{ loket.nomorLoket }}]</span>
                     </div>
                 </div>
-                <div class="row" style="background-color:#B3F1FF;padding-bottom:2em">
+                <div class="row" style="background-color:#B3F1FF;padding-bottom:2em;height:320px">
                     <div class="col-sm-12">
                         <center>
                             <table class="table" style="width:60%;margin-top:1em;border:2px solid black;">
@@ -28,7 +28,8 @@
                                 </tbody>
                             </table>
                             <button type="button" ng-disabled="statusCall" class="btn btn-primary" ng-click="recall()">Panggil Ulang</button>
-                            <button type="button" ng-disabled="statusCall"  class="btn btn-primary" ng-click="take()">No Berikutnya</button><br />
+                            <button type="button" ng-disabled="statusCall" class="btn btn-primary" ng-click="take()">No Berikutnya</button><br
+                            />
                             <span style="padding:1em;display: inline-block;"><i>Total Antrian : {{totalAntrian}}</i></span>
                         </center>
                     </div>
@@ -44,117 +45,270 @@
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="row" ng-hide="pageHistory == 'SEARCH'">
-                <form name="formSearch" class="well">
-                    <div class="form-horizontal">
-                        <div class="form-group" ng-class="{'has-error':formSearch.noPasien.$invalid, 'has-success':formSearch.noPasien.$valid}">
-                            <div class="col-md-4">
-                                <label for="noPasien" class="control-label">No.Pasien </label>
-                            </div>
-                            <div class="col-md-8">
-                                <input name="noPasien" type="text" class="form-control" ng-model="currentSearch.noPasien" required />
+        <div class="col-md-6" style="height:500px">
+            <div class="panel panel-primary" ng-show="pageHistory == 'SEARCH'">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Form Pencarian Pasien</h1>
+                </div>
+                <form name="formSearch">
+                    <div class="panel-body">
+                        <div class="form-horizontal">
+                            <div class="form-group" ng-class="{'has-error':formSearch.noPasien.$invalid, 'has-success':formSearch.noPasien.$valid}">
+                                <div class="col-md-4">
+                                    <label for="noPasien" class="control-label">No.Pasien </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="noPasien" type="text" class="form-control" ng-model="currentSearch" required />
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-4"></div>
-                            <div class="col-md-8 text-left">
-                                <button class="btn btn-danger" ng-click="clear()">Cancel</button>
-                                <button class="btn btn-primary" ng-click="search()" ng-disabled="formSearch.$invalid">Cari</button>
-                                <button class="btn btn-info" ng-click="createNew()">Buat Baru</button>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-8 text-left">
+                                    <button class="btn btn-danger" ng-click="clear()">Cancel</button>
+                                    <button class="btn btn-primary" ng-click="search()" ng-disabled="formSearch.$invalid">Cari</button>
+                                    <button class="btn btn-info" ng-click="createNew()">Buat Baru</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="row" ng-hide="pageHistory == 'PASIEN'" style="overflow:auto;max-height:500px">
-                <form name="formPasien" class="well">
-                    <div class="form-horizontal">
-                        <div class="form-group" ng-class="{'has-error':formPasien.noPasien.$invalid, 'has-success':formPasien.noPasien.$valid}">
-                            <div class="col-md-4">
-                                <label for="noPasien" class="control-label">No.Pasien </label>
+            <div class="panel panel-primary" ng-show="pageHistory == 'PASIEN'">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Form Data Pasien</h1>
+                </div>
+                <form name="formPasien">
+                    <div class="panel-body" style="overflow:auto;max-height:380px">
+                        <div class="form-horizontal">
+                            <div class="form-group" ng-class="{'has-error':formPasien.noPasien.$invalid, 'has-success':formPasien.noPasien.$valid}">
+                                <div class="col-md-4">
+                                    <label for="noPasien" class="control-label">No.Pasien </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="noPasien" type="text" class="form-control" ng-model="currentPasien.noPasien" required />
+                                </div>
                             </div>
-                            <div class="col-md-8">
-                                <input name="noPasien" type="text" class="form-control" ng-model="currentPasien.noPasien" required />
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{'has-error':formPasien.identityType.$invalid, 'has-success':formPasien.identityType.$valid}">
-                            <div class="col-md-4">
-                                <label for="identityType" class="control-label">Jenis ID </label>
-                            </div>
-                            <div class="col-md-8">
-                                <select name="identityType" class="form-control" ng-model="currentPasien.identityType" required>
+                            <div class="form-group" ng-class="{'has-error':formPasien.identityType.$invalid, 'has-success':formPasien.identityType.$valid}">
+                                <div class="col-md-4">
+                                    <label for="identityType" class="control-label">Jenis ID </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <select name="identityType" class="form-control" ng-model="currentPasien.identityType" required>
                                     <option value="KTP">KTP</option>
                                     <option value="SIM">SIM</option>
                                     <option value="KARTU_PELAJAR">Kartu Pelajar</option>
                                     <option value="ETC">Lainnya</option>
                                 </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group" ng-class="{'has-error':formPasien.identityNumber.$invalid, 'has-success':formPasien.identityNumber.$valid}">
-                            <div class="col-md-4">
-                                <label for="identityNumber" class="control-label">No.ID </label>
+                            <div class="form-group" ng-class="{'has-error':formPasien.identityNumber.$invalid, 'has-success':formPasien.identityNumber.$valid}">
+                                <div class="col-md-4">
+                                    <label for="identityNumber" class="control-label">No.ID </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="identityNumber" type="text" class="form-control" ng-model="currentPasien.identityNumber" required />
+                                </div>
                             </div>
-                            <div class="col-md-8">
-                                <input name="identityNumber" type="text" class="form-control" ng-model="currentPasien.identityNumber" required />
+                            <div class="form-group" ng-class="{'has-error':formPasien.name.$invalid, 'has-success':formPasien.name.$valid}">
+                                <div class="col-md-4">
+                                    <label for="name" class="control-label">Nama </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="name" type="text" class="form-control" ng-model="currentPasien.name" required />
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group" ng-class="{'has-error':formPasien.name.$invalid, 'has-success':formPasien.name.$valid}">
-                            <div class="col-md-4">
-                                <label for="name" class="control-label">Nama </label>
+                            <div class="form-group" ng-class="{'has-error':formPasien.dateOfBirth.$invalid, 'has-success':formPasien.dateOfBirth.$valid}">
+                                <div class="col-md-4">
+                                    <label for="dateOfBirth" class="control-label">Tgl Lahir </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="dateOfBirth" type="date" class="form-control" ng-model="currentPasien.dateOfBirth" required />
+                                </div>
                             </div>
-                            <div class="col-md-8">
-                                <input name="name" type="text" class="form-control" ng-model="currentPasien.name" required />
+                            <div class="form-group" ng-class="{'has-error':formPasien.address.$invalid, 'has-success':formPasien.address.$valid}">
+                                <div class="col-md-4">
+                                    <label for="address" class="control-label">Alamat </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <textarea name="address" class="form-control" ng-model="currentPasien.address" required></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group" ng-class="{'has-error':formPasien.dateOfBirth.$invalid, 'has-success':formPasien.dateOfBirth.$valid}">
-                            <div class="col-md-4">
-                                <label for="dateOfBirth" class="control-label">Tgl Lahir </label>
-                            </div>
-                            <div class="col-md-8">
-                                <input name="dateOfBirth" type="text" class="form-control" ng-model="currentPasien.dateOfBirth" required />
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{'has-error':formPasien.address.$invalid, 'has-success':formPasien.address.$valid}">
-                            <div class="col-md-4">
-                                <label for="address" class="control-label">Alamat </label>
-                            </div>
-                            <div class="col-md-8">
-                                <textarea name="address" class="form-control" ng-model="currentPasien.address" required></textarea>
-                            </div>
-                        </div>
 
-                        <div class="form-group" ng-class="{'has-error':formPasien.phone.$invalid, 'has-success':formPasien.phone.$valid}">
-                            <div class="col-md-4">
-                                <label for="phone" class="control-label">No. Telp </label>
+                            <div class="form-group" ng-class="{'has-error':formPasien.phone.$invalid, 'has-success':formPasien.phone.$valid}">
+                                <div class="col-md-4">
+                                    <label for="phone" class="control-label">No. Telp </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="phone" type="text" class="form-control" ng-model="currentPasien.phone" required />
+                                </div>
                             </div>
-                            <div class="col-md-8">
-                                <input name="phone" type="text" class="form-control" ng-model="currentPasien.phone" required />
-                            </div>
-                        </div>
 
-                        <div class="form-group" ng-class="{'has-error':formPasien.weight.$invalid, 'has-success':formPasien.weight.$valid}">
-                            <div class="col-md-4">
-                                <label for="weight" class="control-label">Berat </label>
+                            <div class="form-group" ng-class="{'has-error':formPasien.weight.$invalid, 'has-success':formPasien.weight.$valid}">
+                                <div class="col-md-4">
+                                    <label for="weight" class="control-label">Berat </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="weight" type="number" class="form-control" ng-model="currentPasien.weight" required />
+                                </div>
                             </div>
-                            <div class="col-md-8">
-                                <input name="weight" type="number" class="form-control" ng-model="currentPasien.weight" required />
+                            <div class="form-group" ng-class="{'has-error':formPasien.height.$invalid, 'has-success':formPasien.height.$valid}">
+                                <div class="col-md-4">
+                                    <label for="height" class="control-label">Tinggi </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="height" type="number" class="form-control" ng-model="currentPasien.height" required />
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error':formPasien.bloodType.$invalid, 'has-success':formPasien.bloodType.$valid}">
+                                <div class="col-md-4">
+                                    <label for="bloodType" class="control-label">Golongan Darah </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="bloodType" type="text" class="form-control" ng-model="currentPasien.bloodType" required />
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group" ng-class="{'has-error':formPasien.height.$invalid, 'has-success':formPasien.height.$valid}">
-                            <div class="col-md-4">
-                                <label for="height" class="control-label">Tinggi </label>
-                            </div>
-                            <div class="col-md-8">
-                                <input name="height" type="number" class="form-control" ng-model="currentPasien.height" required />
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-8 text-left">
+                                    <button class="btn btn-primary" ng-click="savePasein()" ng-disabled="formPasien.$invalid">Simpan</button>
+                                    <button class="btn btn-danger" ng-click="clear()">Cancel</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group" ng-class="{'has-error':formPasien.bloodType.$invalid, 'has-success':formPasien.bloodType.$valid}">
-                            <div class="col-md-4">
-                                <label for="bloodType" class="control-label">Golongan Darah </label>
+                    </div>
+                </form>
+            </div>
+            <div class="panel panel-primary" ng-if="pageHistory == 'HISTORY_PASIEN'">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Form History Pasien
+                        <span class="glyphicon glyphicon-list" ng-click="showListHistory()" aria-hidden="true" style="float: right"></span></h1>
+                </div>
+                <form name="formHistory">
+                    <div class="panel-body" style="overflow:auto;max-height:380px">
+                        <div class="form-horizontal">
+
+                            <div class="form-group" ng-class="{'has-error':formHistory.noPasien.$invalid, 'has-success':formHistory.noPasien.$valid}">
+                                <div class="col-md-4">
+                                    <label for="noPasien" class="control-label">No.Pasien </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="noPasien" type="text" class="form-control" ng-model="currentHistory.pasien.noPasien" required />
+                                </div>
                             </div>
-                            <div class="col-md-8">
-                                <input name="bloodType" type="text" class="form-control" ng-model="currentPasien.bloodType" required />
+                            <div class="form-group" ng-class="{'has-error':formHistory.name.$invalid, 'has-success':formHistory.name.$valid}">
+                                <div class="col-md-4">
+                                    <label for="name" class="control-label">Nama </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="name" type="text" class="form-control" ng-model="currentHistory.pasien.name" required />
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error':formHistory.dokter.$invalid, 'has-success':formHistory.dokter.$valid}">
+                                <div class="col-md-4">
+                                    <label for="dokter" class="control-label">Dokter </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="dokter" type="text" class="form-control" ng-model="currentHistory.doctorName" required />
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error':formHistory.description.$invalid, 'has-success':formHistory.description.$valid}">
+                                <div class="col-md-4">
+                                    <label for="description" class="control-label">Keterangan </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <textarea name="description" class="form-control" ng-model="currentHistory.description" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error':formHistory.complaints.$invalid, 'has-success':formHistory.complaints.$valid}">
+                                <div class="col-md-4">
+                                    <label for="complaints" class="control-label">Keluhan </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <textarea name="complaints" class="form-control" ng-model="currentHistory.complaints" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-8 text-left">
+                                    <button class="btn btn-primary" ng-click="saveHistory()" ng-disabled="formPasien.$invalid">Simpan</button>
+                                    <button class="btn btn-danger" ng-click="clear()">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="panel panel-primary" ng-if="pageHistory == 'HISTORY_OBAT'">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Form History Obat
+                        <span class="glyphicon glyphicon-list" ng-click="showListHistory()" aria-hidden="true" style="float: right"></span></h1>
+                </div>
+                <form name="formHistory">
+                    <div class="panel-body" style="overflow:auto;max-height:380px">
+                        <div class="form-horizontal">
+
+                            <div class="form-group" ng-class="{'has-error':formHistory.noPasien.$invalid, 'has-success':formHistory.noPasien.$valid}">
+                                <div class="col-md-4">
+                                    <label for="noPasien" class="control-label">No.Pasien </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="noPasien" type="text" class="form-control" ng-model="currentHistory.pasien.noPasien" required />
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error':formHistory.name.$invalid, 'has-success':formHistory.name.$valid}">
+                                <div class="col-md-4">
+                                    <label for="name" class="control-label">Nama </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="name" type="text" class="form-control" ng-model="currentHistory.pasien.name" required />
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error':formHistory.dokter.$invalid, 'has-success':formHistory.dokter.$valid}">
+                                <div class="col-md-4">
+                                    <label for="dokter" class="control-label">Dokter </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input name="dokter" type="text" class="form-control" ng-model="currentHistory.doctorName" required />
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error':formHistory.description.$invalid, 'has-success':formHistory.description.$valid}">
+                                <div class="col-md-4">
+                                    <label for="description" class="control-label">Keterangan </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <textarea name="description" class="form-control" ng-model="currentHistory.description" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error':formHistory.complaints.$invalid, 'has-success':formHistory.complaints.$valid}">
+                                <div class="col-md-4">
+                                    <label for="complaints" class="control-label">Keluhan </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <textarea name="complaints" class="form-control" ng-model="currentHistory.complaints" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-8 text-left">
+                                    <button class="btn btn-primary" ng-click="saveHistory()" ng-disabled="formPasien.$invalid">Simpan</button>
+                                    <button class="btn btn-danger" ng-click="clear()">Cancel</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,28 +320,35 @@
 
 <!-- Modal Add New Pasien -->
 <div class="modal fade" id="modalHistoryPasien" tabindex="-1" role="dialog" data-backdrop="static">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header header-custom">
                 <h4 class="modal-title">History Pasien</h4>
             </div>
             <div class="modal-body">
-                <form name="formHistoryPasien">
-                    <div class="form-horizontal">
-                        <div class="form-group" ng-class="{'has-error':formHistoryPasien.code.$invalid, 'has-success':formHistoryPasien.code.$valid}">
-                            <div class="col-sm-4">
-                                <label for="code" class="control-label">Code</label>
-                            </div>
-                            <div class="col-sm-8">
-                                <input name="code" type="text" class="form-control" ng-model="currentDokter.code" required />
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <table class="table table-bordered">
+                    <thead>
+                        <th>No Pasien</th>
+                        <th>Nama</th>
+                        <th>Dokter</th>
+                        <th>Tanggal</th>
+                        <th>Keterangan</th>
+                        <th>Keluhan</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in listHistory.content">
+                            <td>{{x.pasien.noPasien}}</td>
+                            <td>{{x.pasien.name}}</td>
+                            <td>{{x.doctorName}}</td>
+                            <td>{{x.transactionDate | date}}</td>
+                            <td>{{x.description}}</td>
+                            <td>{{x.complaints}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-default" ng-click="hideModalInputDokter()">Cancel</button>
-                <button class="btn btn-primary" ng-click="save()" ng-disabled="formDokter.$invalid">Save</button>
+                <button class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</button>
             </div>
         </div>
     </div>
@@ -201,22 +362,9 @@
                 <h4 class="modal-title">History Obat</h4>
             </div>
             <div class="modal-body">
-                <form name="formHistoryPasien">
-                    <div class="form-horizontal">
-                        <div class="form-group" ng-class="{'has-error':formHistoryObat.code.$invalid, 'has-success':formHistoryObat.code.$valid}">
-                            <div class="col-sm-4">
-                                <label for="code" class="control-label">Code</label>
-                            </div>
-                            <div class="col-sm-8">
-                                <input name="code" type="text" class="form-control" ng-model="currentDokter.code" required />
-                            </div>
-                        </div>
-                    </div>
-                </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-default" ng-click="hideModalInputDokter()">Cancel</button>
-                <button class="btn btn-primary" ng-click="save()" ng-disabled="formDokter.$invalid">Save</button>
+                <button class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</button>
             </div>
         </div>
     </div>
