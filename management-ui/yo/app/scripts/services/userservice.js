@@ -39,7 +39,7 @@ angular.module('managementUiApp')
           return $http.get(ConfigService.serverUrl + "/api/system/user/byRole/" + role);
         },
         getUserLoggedIn: function(){
-                return $http.get(ConfigService.serverUrl + "/api/system/user/loggedIn");  
+                return $http.get(ConfigService.serverUrl + "/api/user/loggedIn");  
         }
      }
   });

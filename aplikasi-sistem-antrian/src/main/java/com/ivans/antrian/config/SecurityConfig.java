@@ -60,6 +60,7 @@ public class SecurityConfig extends ResourceServerConfigurerAdapter {
                 
                 .antMatchers("/api/screen/tv/**").hasRole("SCREEN_TV")
                 
+                .antMatchers("/api/user/**").hasRole("USER_LOGGED_IN")
                 
                 .anyRequest().authenticated();
     }

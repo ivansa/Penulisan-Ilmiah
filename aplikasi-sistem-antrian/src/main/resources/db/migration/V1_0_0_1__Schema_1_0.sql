@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `t_kuota` (
   `nama_dokter` varchar(255) NOT NULL,
   `description_dokter` varchar(255) NOT NULL,
   `code_dokter` varchar(255) NOT NULL,
-  `id_poli` varchar(255) NOT NULL,
+  `id_poli` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_cedsi46x2ngu7rc9g47s4rvsa` (`id_poli`),
   CONSTRAINT `FK_cedsi46x2ngu7rc9g47s4rvsa` FOREIGN KEY (`id_poli`) REFERENCES `m_poli` (`id`)
@@ -126,6 +126,7 @@ CREATE TABLE IF NOT EXISTS `t_log_antrian` (
   `timestamp` datetime NOT NULL,
   `jenis_loket` varchar(255) NOT NULL,
   `nomor_antrian` varchar(255) NOT NULL,
+  `nomor_pasien` varchar(255) NOT NULL,
   `nomor_loket` int(11) DEFAULT NULL,
   `status` bit(1) NOT NULL,
   `updated_date` datetime DEFAULT NULL,

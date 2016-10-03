@@ -39,7 +39,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author ivans
  */
 @RestController
-@RequestMapping("/api/system")
+@RequestMapping("/api")
 public class UserController {
     @Autowired
     private UserDao userDao;
@@ -47,14 +47,14 @@ public class UserController {
     private PasswordEncoder encoder;
     private final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
     
-    @RequestMapping("/user")
+    @RequestMapping("/system/user")
     public Page<User> allUser(Pageable pageable, HttpSession session) {
         PageRequest pr = new PageRequest(pageable.getPageNumber(), pageable.getPageSize(), Sort.Direction.ASC, "username");
         Page<User> result = userDao.findAll(pr);
         return result;
     }
 
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/system/user/{id}", method = RequestMethod.GET)
     public User findUserById(@PathVariable String id) {
         User u = userDao.findOne(id);
 
@@ -65,7 +65,7 @@ public class UserController {
         return u;
     }
 
-    @RequestMapping(value = "/user/byEmail", method = RequestMethod.GET)
+    @RequestMapping(value = "/system/user/byEmail", method = RequestMethod.GET)
     public User findUserByEmail(@RequestParam(value = "email", required = true) String email) {
         User u = userDao.findByEmail(email);
         if (u == null) {
@@ -75,7 +75,7 @@ public class UserController {
         return u;
     }
 
-    @RequestMapping(value = "/user/byUsername/{username}", method = RequestMethod.GET)
+    @RequestMapping(value = "/system/user/byUsername/{username}", method = RequestMethod.GET)
     public User findUserByUsername(@PathVariable String username) {
         User u = userDao.findByUsername(username);
 
@@ -86,14 +86,14 @@ public class UserController {
         return u;
     }
     
-    @RequestMapping(value = "/user/byRole/{role}", method = RequestMethod.GET)
+    @RequestMapping(value = "/system/user/byRole/{role}", method = RequestMethod.GET)
     public List<User> findUserByRole(@PathVariable String role) {
         List<User> result = userDao.findByRoleName(role);
 
         return result;
     }
 
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/system/user/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable String id) {
         User u = userDao.findOne(id);
         if (u != null) {
@@ -101,14 +101,14 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/user", method = RequestMethod.POST)
+    @RequestMapping(value = "/system/user", method = RequestMethod.POST)
     public void create(@RequestBody User user, HttpServletRequest request, HttpServletResponse response) {
         user.setPassword(encoder.encode(user.getPassword()));
         user.setUserPassword(new UserPassword(user, user.getPassword()));
         userDao.save(user);
     }
 
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/system/user/{id}", method = RequestMethod.PUT)
     public void update(@PathVariable String id, @RequestBody User x) {
         User user = userDao.findOne(id);
         if(user == null){
@@ -143,7 +143,7 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/user/validate/password", method = RequestMethod.POST)
+    @RequestMapping(value = "/system/user/validate/password", method = RequestMethod.POST)
     @Transactional(readOnly = true)
     public Boolean validateCurrentPassword(@RequestBody String password) {
         try {

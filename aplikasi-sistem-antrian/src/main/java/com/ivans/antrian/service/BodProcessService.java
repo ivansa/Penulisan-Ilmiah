@@ -66,7 +66,7 @@ public class BodProcessService {
         try {
             Date date = new Date();
             Iterable<JadwalDokter> listDokters = dokterDao.findAll();
-
+            createRecordKuotaFarmasi(date);
             for (JadwalDokter dokter : listDokters) {
                 LOGGER.info("GENERATE KUOTA [{}]", dokter.getCode());
                 createRecordKuota(date, dokter);
@@ -101,6 +101,25 @@ public class BodProcessService {
 
                 kuotaDao.save(currentKuota);
             }
+        }
+
+    }
+    
+    public void createRecordKuotaFarmasi(Date date) throws BodException {
+
+        Kuota currentKuota = kuotaDao.findByCodeDokterAndKuotaDate("F", date);
+        if (currentKuota == null) {
+                LOGGER.info("New Kuota => F");
+                currentKuota = new Kuota();
+                currentKuota.setCurrentKuota(0);
+                currentKuota.setMaximumKuota(999);
+                currentKuota.setNamaDokter("FARMASI");
+                currentKuota.setCodeDokter("F");
+                currentKuota.setDescriptionDokter("Kuota Antrian Farmasi");
+                currentKuota.setPoli(null);
+                currentKuota.setKuotaDate(date);
+
+                kuotaDao.save(currentKuota);
         }
 
     }

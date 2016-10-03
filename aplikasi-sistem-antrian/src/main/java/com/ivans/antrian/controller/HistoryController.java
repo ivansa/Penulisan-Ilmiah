@@ -13,6 +13,7 @@ import com.ivans.antrian.service.HistoryObatDao;
 import com.ivans.antrian.service.HistoryPasienDao;
 import com.ivans.antrian.service.PasienDao;
 import java.util.Date;
+import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
@@ -54,7 +55,9 @@ public class HistoryController {
     public Pasien savePasien(@RequestBody @Valid Pasien pasien, HttpServletRequest request, HttpServletResponse response) {
         Pasien p = pasienDao.findByNoPasien(pasien.getNoPasien());
         if(p != null) pasien.setId(p.getId());
+        if(pasien.getNoPasien() == null) pasien.setNoPasien(UUID.randomUUID().toString());
         pasien.setUpdatedDate(new Date());
+        pasien.setValidate(Boolean.FALSE);
         pasienDao.save(pasien);
         
         return pasienDao.findByNoPasien(pasien.getNoPasien());

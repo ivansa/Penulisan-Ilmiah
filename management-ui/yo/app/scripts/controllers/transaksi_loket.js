@@ -15,6 +15,7 @@ angular.module('managementUiApp')
     $scope.pollingInterval = null;
     $scope.pageHistory = "SEARCH";
     $scope.titleHistory = "Form Pasien";
+    $scope.statusCall = false;
 
     $scope.getLoket = function () {
       TransaksiLoketService.getLoketByUserActive().success(function (data) {
@@ -105,7 +106,7 @@ angular.module('managementUiApp')
           $scope.nextAntrian = data.F.content[0];
         }
         $scope.currentAntrian = data.current.content[0];
-        $scope.statusCall = data.pemanggilan;
+        //$scope.statusCall = data.pemanggilan;
         $scope.totalAntrian = data.totalAntrian;
         $timeout(function () {
           $scope.runPolling();
@@ -116,8 +117,9 @@ angular.module('managementUiApp')
     $scope.take = function () {
       TransaksiLoketService.takeAntrian($scope.nextAntrian.nomorAntrian, $scope.loket.nomorLoket).success(function (data) {
         if (data.number) {
-
+          $scope.currentSearch = data.nomorPasien;
           $scope.setPemanggilan(data);
+	  $scope.search();
         }
       });
     };

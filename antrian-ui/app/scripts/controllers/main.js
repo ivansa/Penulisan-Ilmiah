@@ -9,7 +9,7 @@
  */
 angular.module('antrianUiApp')
   .controller('MainCtrl', function ($scope, MainService) {
-    $scope.formStatus = "CATEGORY";
+    $scope.formStatus = "-";
     $scope.listCategory = [];
     $scope.listPoli = [];
     $scope.listDokter = [];
@@ -25,8 +25,8 @@ angular.module('antrianUiApp')
     $scope.checkBod = function () {
       MainService.checkBod().success(function (data) {
         if (data.isBod) {
-          $scope.title = "Select Category";
-          $scope.formStatus = "CATEGORY";
+          $scope.title = "Menu Pendaftaran";
+          $scope.formStatus = "SEARCH";
           $scope.codeCategory = null;
           $scope.reloadData();
         } else {
@@ -36,12 +36,49 @@ angular.module('antrianUiApp')
     };
     $scope.checkBod();
 
-    $scope.categorySelect = function (x) {
-      if (x == "F") {
-        //$scope.currentAntrian.category = 
-      } else {
+    $scope.search = function () {
+      MainService.findByNomorPasien($scope.currentSearch).success(function (data) {
+        if (data) {
+          $scope.userSelect(data.noPasien);
+        }else{
+          $scope.currentSearch = null;
+          bootbox.alert("Nomor Belum Terdaftar");
+        }
 
-        $scope.codeCategory = x;
+      });
+    };
+
+    $scope.savePasein = function () {
+      $scope.currentPasien.noPasien = null;
+      MainService.savePasien($scope.currentPasien).success(function (data) {
+        if (data) {
+          $scope.userSelect(data.noPasien);
+        }else{
+          $scope.currentSearch = null;
+          bootbox.alert("Pendaftaran gagal");
+        }
+      });
+    };
+
+
+    $scope.daftarBaru = function () {
+      $scope.title = "Menu Pendaftaran";
+      $scope.formStatus = "PENDAFTARAN";
+    };
+
+    $scope.userSelect = function (x) {
+      $scope.codePasien = x;
+      $scope.formStatus = "CATEGORY";
+      $scope.title = "Select Category";
+      $scope.codeCategory = null;
+      $scope.reloadData();
+    };
+
+    $scope.categorySelect = function (x) {
+      $scope.codeCategory = x;
+      if (x == "F") {
+        $scope.saveAntrian(x); 
+      } else {
         $scope.formStatus = "POLI";
         $scope.title = "Select Poli";
         $scope.getDataPoli();
@@ -70,6 +107,10 @@ angular.module('antrianUiApp')
       if ($scope.formStatus == "DOKTER") {
         $scope.categorySelect($scope.codePoli);
       } else if ($scope.formStatus == "POLI") {
+        $scope.userSelect($scope.codePasien);
+      } else if ($scope.formStatus == "CATEGORY") {
+        $scope.checkBod();
+      } else if ($scope.formStatus == "PENDAFTARAN"){
         $scope.checkBod();
       }
     };
@@ -78,6 +119,8 @@ angular.module('antrianUiApp')
       var param = {};
       param.idKuota = x;
       param.categoryCode = $scope.codeCategory;
+      param.nomorPasien = $scope.codePasien;
+console.log(param);
       MainService.save(param).success(function (data) {
         $scope.print(data);
       });

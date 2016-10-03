@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
+\lyxformat 545
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -113,8 +113,8 @@ dan sudah menjelaskan dari permasalahan, pembahasan dan penutup.}
 \topmargin 3cm
 \rightmargin 3cm
 \bottommargin 3cm
-\secnumdepth 3
-\tocdepth 3
+\secnumdepth 5
+\tocdepth 5
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
@@ -135,8 +135,6 @@ dan sudah menjelaskan dari permasalahan, pembahasan dan penutup.}
 status open
 
 \begin_layout Plain Layout
-
-
 \backslash
 input{made-hypen-2010.tex} 
 \end_layout
@@ -1216,7 +1214,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/single_channel _single_phase.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/bab2/single_channel _single_phase.png
 
 \end_inset
 
@@ -1258,12 +1256,12 @@ Single Channel – Multi Phase
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/single_channel _multi_phase.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/bab2/single_channel _multi_phase.png
 
 \end_inset
 
@@ -1302,12 +1300,12 @@ Multi Channel – Single Phase
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/multi_channel_single_phase.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/bab2/multi_channel_single_phase.png
 
 \end_inset
 
@@ -1353,7 +1351,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/multi_channel_multi_phase.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/bab2/multi_channel_multi_phase.png
 
 \end_inset
 
@@ -1563,10 +1561,6 @@ Struktur navigasi adalah urutan alur informasi dari suatu aplikasi multimedia.
 
 \begin_layout Subsection
 Struktur Navigasi Admin
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1579,7 +1573,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_admin.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi/struktur_navigasi_admin.png
+	width 65page%
 
 \end_inset
 
@@ -1614,7 +1609,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_loket.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi/struktur_navigasi_loket.png
+	width 40page%
 
 \end_inset
 
@@ -1649,7 +1645,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_tv.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi/struktur_navigasi_tv.png
+	width 40page%
 
 \end_inset
 
@@ -1684,7 +1681,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi/struktur_navigasi_pendaftaran.png
+	width 60page%
 
 \end_inset
 
@@ -1705,27 +1703,32 @@ Struktur Navigasi Admin
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Rancangan Tampilan
 \end_layout
 
 \begin_layout Standard
-Struktur navigasi adalah urutan alur informasi dari suatu aplikasi multimedia.
- Dengan menggunakan struktur navigasi yang tepat maka suatu aplikasi mempunyai
- suatu pedoman dan arah informasi yang jelas.
- Dalam proses pembuatan aplikasi ini penulis menggunakan struktur navigasi
- hirarki.
- Karena dalam beberapa menu terdapat percabangan atau sub menu pada menu
- utama.
+Rancangan tampilan aplikasi merupakan hal yang sangat penting untuk kemudahan
+ para pengguna saat berinteraksi dengan sebuah aplikasi dan kemudahan mendapatka
+n informasi yang dibutuhkan dengan cepat dan efisien.
+\end_layout
+
+\begin_layout Standard
+Dengan memberikan deskripsi ini, penulis berharap sebelum tahap penjelasan
+ proses pembuatan, aplikasi ini sudah dapat dipandang secara utuh dengan
+ kata lain dapat dipahami secara jelas apa yang akan dibahas pada proses
+ pembuatan aplikasi ini.
 \end_layout
 
 \begin_layout Subsection
 Rancangan Halaman Login
-\end_layout
-
-\begin_layout Standard
-Pada rancangan halaman login terdapat 2 textfield yaitu untuk input username
- dan password.
 \end_layout
 
 \begin_layout Standard
@@ -1738,7 +1741,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/rancangan/rancangan_login.png
+	width 65page%
 
 \end_inset
 
@@ -1746,7 +1750,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Struktur Navigasi Admin
+Rancangan Login
 \end_layout
 
 \end_inset
@@ -1756,11 +1760,47 @@ Struktur Navigasi Admin
 
 \end_inset
 
-
+ Pada rancangan halaman login terdapat 2 textfield yaitu untuk input username
+ dan password.
 \end_layout
 
 \begin_layout Subsection
 Rancangan Halaman System dan Master.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/rancangan/rancangan_master.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rancangan Halaman System Dan Master
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Pada rancangan halaman master dan system terdapat proses CRUD (Create,
+ Read, Update dan Delete), dimana yang di tampilkan pada halaman hanya list/tabl
+e nya saja, untuk form input/update dibuatkan modal yang akan terbuka jika
+ button input/edit di klik.
 \end_layout
 
 \begin_layout Subsection
@@ -1777,7 +1817,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/rancangan/rancangan_loket.png
+	width 65page%
 
 \end_inset
 
@@ -1785,7 +1826,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Struktur Navigasi Admin
+Rancangan Halaman Loket
 \end_layout
 
 \end_inset
@@ -1795,7 +1836,12 @@ Struktur Navigasi Admin
 
 \end_inset
 
-.
+ Pada rancangan halaman loket terdapat 2 panel utama, panel pertama/form
+ antrian digunakan untuk menampilkan informasi antrian seperti no antrian
+ sekarang, no antrian berikutnya, button pemanggilan dan button panggil
+ ulang.
+ Sedangkan panel kedua/form history pasien digunakan untuk mendaftarkan
+ pasien dan menambahkan history pendaftaran pasien.
 \end_layout
 
 \begin_layout Subsection
@@ -1812,7 +1858,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/rancangan/rancangan_monitor.png
+	width 65page%
 
 \end_inset
 
@@ -1820,7 +1867,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Struktur Navigasi Admin
+Rancangan Halaman Screen Information
 \end_layout
 
 \end_inset
@@ -1830,7 +1877,8 @@ Struktur Navigasi Admin
 
 \end_inset
 
-.
+ Pada rancangan halaman ini digunakan untuk menampilkan no antrian yang
+ sedang di proses oleh masing masing loket, dengan urutan kategori-loket-nomor.
 \end_layout
 
 \begin_layout Subsection
@@ -1847,7 +1895,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/rancangan/rancangan_pendaftaran.png
+	width 65page%
 
 \end_inset
 
@@ -1855,7 +1904,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Struktur Navigasi Admin
+Rancangan Halaman Pendaftaran
 \end_layout
 
 \end_inset
@@ -1865,7 +1914,10 @@ Struktur Navigasi Admin
 
 \end_inset
 
-.
+ Pada rancangan halaman pendaftaran terdapat 3 form dinamis, yang pertama
+ form kategori, setelah kategori dipilih akan muncul form poli sesuai dengan
+ kategori yang dipilih, dan form terakhir yaitu form untuk memilih dokter
+ yang tersedia dengan poli yang sudah di pilih 
 \end_layout
 
 \begin_layout Subsection
@@ -1882,7 +1934,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/struktur_navigasi_pendaftaran.png
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/rancangan/rancangan_report.png
+	width 65page%
 
 \end_inset
 
@@ -1890,7 +1943,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Struktur Navigasi Admin
+Rancangan Halaman Report
 \end_layout
 
 \end_inset
@@ -1900,13 +1953,979 @@ Struktur Navigasi Admin
 
 \end_inset
 
+ Pada rancangan halaman report terdapat 3 komponen utama yaitu 
+\end_layout
+
+\begin_layout Enumerate
+Filter/Form search untuk memudahkan user mencari data.
+\end_layout
+
+\begin_layout Enumerate
+Table/List untuk menampilkan data.
+\end_layout
+
+\begin_layout Enumerate
+Pagination 
+\end_layout
+
+\begin_layout Section
+Implementasi Aplikasi
+\end_layout
+
+\begin_layout Standard
+Pada pembuatan aplikasi sistem antrian rumah sakit berbasis web ini penulis
+ menggunakan sistem operasi Linux Ubuntu 16.04 dengan Java versi "1.8.0_91".
+\end_layout
+
+\begin_layout Subsection
+Instalasi Java Runtime Environment (JRE) dan Java Development Kit (JDK)
+\end_layout
+
+\begin_layout Standard
+Java Runtime Environment dan Java Development Kit harus sudah terinstall
+ karena aplikasi yang akan dibuat menggunakan pemprograman java.
+ Langkah-langkah installasinya adalah :
+\end_layout
+
+\begin_layout Enumerate
+Download JDK di http://www.oracle.com/ 
+\end_layout
+
+\begin_layout Enumerate
+Extract file JDK yang sudah di download
+\end_layout
+
+\begin_layout Enumerate
+Open terminal
+\end_layout
+
+\begin_layout Enumerate
+Open file /etc/profile dengan perintah 
+\begin_inset Quotes eld
+\end_inset
+
+$ sudo nano /etc/profile
+\begin_inset Quotes erd
+\end_inset
+
 
 \end_layout
 
+\begin_layout Enumerate
+Export JDK pada /etc/profile dengan menambahkan : 
+\begin_inset Quotes eld
+\end_inset
+
+export PATH=$PATH:/lokasi_jdk/bin
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Restart, dan untuk mengetahui apakah java sudah terinstall dengan perintah
+ 
+\begin_inset Quotes eld
+\end_inset
+
+$ java -version
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Instalasi Maven
+\end_layout
+
+\begin_layout Standard
+Maven harus sudah terinstall karena aplikasi akan di jalankan menggunakan
+ aplikasi ini.
+ Langkah-langkah installasinya adalah :
+\end_layout
+
+\begin_layout Enumerate
+Open terminal
+\end_layout
+
+\begin_layout Enumerate
+Install Mysql dengan perintah 
+\begin_inset Quotes eld
+\end_inset
+
+$ sudo apt-get install maven
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Restart, dan untuk mengetahui apakah maven sudah terinstall dengan perintah
+ 
+\begin_inset Quotes eld
+\end_inset
+
+$ mvn -version
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Instalasi Mysql
+\end_layout
+
+\begin_layout Standard
+Sebelum aplikasi ini berjalan DBMS Mysql harus sudah terinstall, Langkah-langkah
+ installasinya :
+\end_layout
+
+\begin_layout Enumerate
+Open terminal
+\end_layout
+
+\begin_layout Enumerate
+Install Mysql dengan perintah 
+\begin_inset Quotes eld
+\end_inset
+
+$ sudo apt-get install mysql-server-5.6
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Setelah instalasi selesai, open Mysql dengan perintah 
+\begin_inset Quotes eld
+\end_inset
+
+$ mysql -uroot -p
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Buat database baru untuk penyimpanan data antrian dengan perintah 
+\begin_inset Quotes eld
+\end_inset
+
+create database antrian_development
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Implementasi Webapp
+\end_layout
+
+\begin_layout Standard
+Berikutnya penulis akan menampilkan desain dari tampilan webapp sistem antrian
+ ini.
+ Untuk lebih jelas nya berikut ini adalah beberapa tampilan nya:
+\end_layout
+
+\begin_layout Enumerate
+Halaman Login 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/login.png
+	width 50page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Login 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Sebelum masuk kedalam web utama, user akan login melalui halaman ini.
+ Dalam halaman ini hanya terdapat field username dan password yang harus
+ di isi untuk divalidasi apakah sudah benar dengan data yang ada di database.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Permission 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/permission.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Permission 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Pada halaman ini digunakan oleh admin untuk mempermudah dalam mengatur
+ permission yang akan di gunakan aplikasi.
+ Pada list yang ditampilkan terdapat 
+\series bold
+label
+\series default
+ sebagai penamaan dan 
+\series bold
+value
+\series default
+ sebagai nilai yang digunakan oleh aplikasi dalam menentukan permission
+ aplikasi.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Role 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/role.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Role 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Pada halaman ini digunakan oleh admin untuk membuat role dan menambahkan
+ hak akses/permission yang boleh digunakan oleh user dengan role tersebut.
+ Pada list yang ditampilkan terdapat 
+\series bold
+name
+\series default
+ sebagai nama role, 
+\series bold
+description
+\series default
+ sebagai keterangan tambahan dan 
+\series bold
+total permissions 
+\series default
+yaitu total permission yang di miliki role tersebut.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman User 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/user.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman User 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Pada halaman ini digunakan oleh admin untuk managemen user.
+ Pada list yang ditampilkan terdapat 
+\series bold
+username
+\series default
+, 
+\series bold
+fullname
+\series default
+, 
+\series bold
+email
+\series default
+, 
+\series bold
+role
+\series default
+ dan 
+\series bold
+loket
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Master Kategori 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/kategory.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Master Kategori 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Pada halaman ini digunakan oleh admin untuk managemen kategori loket.
+ Pada list yang ditampilkan terdapat 
+\series bold
+code
+\series default
+, 
+\series bold
+name
+\series default
+ dan 
+\series bold
+title.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Master Poli 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/poli.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Master Poli 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Pada halaman ini digunakan oleh admin untuk managemen poli.
+ Pada list yang ditampilkan terdapat 
+\series bold
+code 
+\series default
+dan 
+\series bold
+name
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Master Dokter 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/dokter.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Master Dokter 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Pada halaman ini digunakan oleh admin untuk managemen dokter, mengatur jadwal
+ praktek dan kuota pasien.
+ Pada list yang ditampilkan terdapat 
+\series bold
+code
+\series default
+, 
+\series bold
+name
+\series default
+ dan
+\series bold
+ poli
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Master Loket 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/loket.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Master Loket 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Pada halaman ini digunakan oleh admin untuk managemen nomor loket dan jenis
+ kategori loket tersebut.
+ Pada list yang ditampilkan terdapat 
+\series bold
+nomor
+\series default
+ dan 
+\series bold
+kategori
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Generate Kuota Harian
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/generate.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Generate Kuota 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Pada halaman ini hanya ada 1 button yaitu 
+\series bold
+generate kuota
+\series default
+ yang digunakan admin untuk generate data kuota.
+ Data ini digunakan sebagai penanda apakah loket libur atau tidak, data
+ kuota di ambil dari master dokter.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Report Kuota
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/report_kuota.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Report Kuota 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Pada halaman report ini menampilkan maximum dan jumlah kuota yang telah
+ digunakan pada setiap dokter, pada report tersebut terdapat 2 filter yaitu
+ berdasarkan tanggal dan dokter.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Report Antian
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/report_antrian.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Report Antrian 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Pada halaman report ini menampilkan data pendaftar nomor antiran, pada report
+ tersebut terdapat 2 filter yaitu berdasarkan tanggal dan nomor antrian.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Loket
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/loket_page.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Loket
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Halaman loket ini merupakan halaman transaksi utama.
+ Pada bagian kiri terdapat form antian yang digunakan untuk menampilkan
+ nomor antian yang sedang di proses, nomor antrian berikutnya dan total
+ antrian.
+ Dan bagian kanan merupakan form yang digunakan untuk menyimpan dan mencari
+ history pasien tersebut.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Information Monitor
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/screen.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Information Monitor 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Halaman ini digunakan untuk menampilkan informasi tentang nomor antrian
+ yang sedang di proses pada setiap loket, pada box biru merupakan kategori
+ loket yang berisi loket-loket yang merupakan bagian dari kategori tersebut.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Halaman Pendaftaran
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/select_category.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Pemilihan Kategori 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Halaman awal pendaftaaran terdapat button - button yang merupakan kategori
+ loket yang ingin di pilih.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/select_poli.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Pemilihan Poli 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Setelah memilih kategori user akan berpindah form dengan button - button
+ yang merupakan poli yang ingin di pilih.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/select_dokter.png
+	width 65page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Pemilihan dokter 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Setelah memilih poli user akan berpindah form dengan button - button yang
+ merupakan dokter yang ingin di pilih.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/ivans/Workspace/ivans/penulisan-ilmiah/document/images/screenshot/print.png
+	width 40page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tiket Pendaftaran
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Setelah memilih dokter makan user akan langsung mencetak tiket pendaftaran
+ loket
+\end_layout
+
+\end_deeper
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "1"
 key "key-1"
 
 \end_inset
@@ -1919,7 +2938,10 @@ Simulasi Teori dan Aplikasinya
 .
  Andi Publisher.
  Yogyakarta:2007.
- 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -1941,6 +2963,10 @@ Buku Pertama Belajar Pemrograman Java Untuk Pemula
  Mediakom.
  Yogyakarta:2013.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -1957,6 +2983,10 @@ Febrian, Rully.
  (2014, Agustus).
  Apa Itu AngularJS.
  Retrieved from http://www.dumetschool.com/
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography

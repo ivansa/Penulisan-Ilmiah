@@ -58,11 +58,22 @@ public class Pasien {
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
     private Date dateOfBirth;
+    
+    @Column(nullable = false)
+    private Boolean validate = Boolean.FALSE;
 
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
     private Date updatedDate;
 
+    public Boolean getValidate() {
+        return validate;
+    }
+
+    public void setValidate(Boolean validate) {
+        this.validate = validate;
+    }
+    
     public String getIdentityType() {
         return identityType;
     }

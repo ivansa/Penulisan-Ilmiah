@@ -48,6 +48,9 @@ public class Antrian {
     
     @Column(nullable = false)
     private Boolean status = Boolean.FALSE;
+    
+    @Column(name="nomor_pasien", nullable = false)
+    private String nomorPasien;
     //===========================================================
     @Column(name="nomor_loket", nullable = true)
     private int nomorLoket;
@@ -56,6 +59,14 @@ public class Antrian {
     @Column(name="updated_date")
     private Date updatedDate;
 
+    public String getNomorPasien() {
+        return nomorPasien;
+    }
+
+    public void setNomorPasien(String nomorPasien) {
+        this.nomorPasien = nomorPasien;
+    }
+    
     public String getAntrianDate() {
         return antrianDate;
     }

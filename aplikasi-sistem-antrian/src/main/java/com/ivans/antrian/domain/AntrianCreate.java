@@ -12,7 +12,7 @@ package com.ivans.antrian.domain;
 public class AntrianCreate {
     private String categoryCode;
     private String idKuota;
-
+    private String nomorPasien;
     public String getCategoryCode() {
         return categoryCode;
     }
@@ -27,6 +27,14 @@ public class AntrianCreate {
 
     public void setIdKuota(String idKuota) {
         this.idKuota = idKuota;
+    }
+
+    public String getNomorPasien() {
+        return nomorPasien;
+    }
+
+    public void setNomorPasien(String nomorPasien) {
+        this.nomorPasien = nomorPasien;
     }
     
     

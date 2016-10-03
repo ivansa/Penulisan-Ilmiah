@@ -1,26 +1,149 @@
 <div class="header">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1 class="col-sm-6">{{title}}</h1>
-      <button ng-show="formStatus != 'CATEGORY'" type="button" class="btn btn-error btn-danger btn-back" ng-click="back()">Back</button>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="col-sm-6">{{title}}</h1>
+            <button ng-show="formStatus != 'SEARCH' && formStatus != '-'" type="button" class="btn btn-error btn-danger btn-back" ng-click="back()">Back</button>
+        </div>
     </div>
-  </div>
-  <hr />
+    <hr />
+</div>
+<div class="row" ng-show="formStatus == 'SEARCH'">
+    <div class="col-md-6 col-md-offset-3">
+        <form name="formSearch" class="form-horizontal">
+            <div class="form-group" ng-class="{'has-error':formSearch.noPasien.$invalid, 'has-success':formSearch.noPasien.$valid}">
+                <div class="col-md-4">
+                    <label for="noPasien" class="control-label">No.Pasien </label>
+                </div>
+                <div class="col-md-8">
+                    <input name="noPasien" type="text" class="form-control" ng-model="currentSearch" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-8 text-left">
+                    <button class="btn btn-primary" ng-click="search()" ng-disabled="formSearch.$invalid">Search</button>
+                    <button class="btn btn-info" ng-click="daftarBaru()">Daftar Baru</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row" ng-show="formStatus == 'PENDAFTARAN'">
+    <form name="formPasien" class="form-horizontal">
+        <div class="col-sm-6">
+            <!--<div class="form-group" ng-class="{'has-error':formPasien.noPasien.$invalid, 'has-success':formPasien.noPasien.$valid}">
+                <div class="col-md-4">
+                    <label for="noPasien" class="control-label">No.Pasien </label>
+                </div>
+                <div class="col-md-8">
+                    <input name="noPasien" type="text" class="form-control" ng-model="currentPasien.noPasien" required />
+                </div>
+            </div>-->
+            <div class="form-group" ng-class="{'has-error':formPasien.identityType.$invalid, 'has-success':formPasien.identityType.$valid}">
+                <div class="col-md-4">
+                    <label for="identityType" class="control-label">Jenis ID </label>
+                </div>
+                <div class="col-md-8">
+                    <select name="identityType" class="form-control" ng-model="currentPasien.identityType" required>
+                                    <option value="KTP">KTP</option>
+                                    <option value="SIM">SIM</option>
+                                    <option value="KARTU_PELAJAR">Kartu Pelajar</option>
+                                    <option value="ETC">Lainnya</option>
+                                </select>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{'has-error':formPasien.identityNumber.$invalid, 'has-success':formPasien.identityNumber.$valid}">
+                <div class="col-md-4">
+                    <label for="identityNumber" class="control-label">No.ID </label>
+                </div>
+                <div class="col-md-8">
+                    <input name="identityNumber" type="text" class="form-control" ng-model="currentPasien.identityNumber" required />
+                </div>
+            </div>
+            <div class="form-group" ng-class="{'has-error':formPasien.name.$invalid, 'has-success':formPasien.name.$valid}">
+                <div class="col-md-4">
+                    <label for="name" class="control-label">Nama </label>
+                </div>
+                <div class="col-md-8">
+                    <input name="name" type="text" class="form-control" ng-model="currentPasien.name" required />
+                </div>
+            </div>
+            <div class="form-group" ng-class="{'has-error':formPasien.dateOfBirth.$invalid, 'has-success':formPasien.dateOfBirth.$valid}">
+                <div class="col-md-4">
+                    <label for="dateOfBirth" class="control-label">Tgl Lahir </label>
+                </div>
+                <div class="col-md-8">
+                    <input name="dateOfBirth" type="date" class="form-control" ng-model="currentPasien.dateOfBirth" required />
+                </div>
+            </div>
+            <div class="form-group" ng-class="{'has-error':formPasien.address.$invalid, 'has-success':formPasien.address.$valid}">
+                <div class="col-md-4">
+                    <label for="address" class="control-label">Alamat </label>
+                </div>
+                <div class="col-md-8">
+                    <textarea name="address" class="form-control" ng-model="currentPasien.address" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group" ng-class="{'has-error':formPasien.phone.$invalid, 'has-success':formPasien.phone.$valid}">
+                <div class="col-md-4">
+                    <label for="phone" class="control-label">No. Telp </label>
+                </div>
+                <div class="col-md-8">
+                    <input name="phone" type="text" class="form-control" ng-model="currentPasien.phone" required />
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error':formPasien.weight.$invalid, 'has-success':formPasien.weight.$valid}">
+                <div class="col-md-4">
+                    <label for="weight" class="control-label">Berat </label>
+                </div>
+                <div class="col-md-8">
+                    <input name="weight" type="number" class="form-control" ng-model="currentPasien.weight" required />
+                </div>
+            </div>
+            <div class="form-group" ng-class="{'has-error':formPasien.height.$invalid, 'has-success':formPasien.height.$valid}">
+                <div class="col-md-4">
+                    <label for="height" class="control-label">Tinggi </label>
+                </div>
+                <div class="col-md-8">
+                    <input name="height" type="number" class="form-control" ng-model="currentPasien.height" required />
+                </div>
+            </div>
+            <div class="form-group" ng-class="{'has-error':formPasien.bloodType.$invalid, 'has-success':formPasien.bloodType.$valid}">
+                <div class="col-md-4">
+                    <label for="bloodType" class="control-label">Golongan Darah </label>
+                </div>
+                <div class="col-md-8">
+                    <input name="bloodType" type="text" class="form-control" ng-model="currentPasien.bloodType" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-8 text-left">
+                    <button class="btn btn-primary" ng-click="savePasein()" ng-disabled="formPasien.$invalid">Simpan</button>
+                    <button class="btn btn-danger" ng-click="clear()">Cancel</button>
+                </div>
+            </div>
+        </div>
+</div>
+</form>
 </div>
 <div class="row" ng-show="formStatus == 'CATEGORY'">
-  <div class="col-sm-4" ng-repeat="x in listCategory">
-    <button type="button" class="btn btn-primary btn-category" ng-click="categorySelect(x.code)">{{x.title}}</button>
-  </div>
+    <div class="col-sm-4" ng-repeat="x in listCategory">
+        <button type="button" class="btn btn-primary btn-category" ng-click="categorySelect(x.code)">{{x.title}}</button>
+    </div>
 </div>
 
 <div class="row" ng-show="formStatus == 'POLI'">
-  <div class="col-sm-2" ng-repeat="x in listPoli">
-    <button type="button" class="btn btn-primary btn-poli" ng-click="poliSelect(x.id)">{{x.name}}</button>
-  </div>
+    <div class="col-sm-2" ng-repeat="x in listPoli">
+        <button type="button" class="btn btn-primary btn-poli" ng-click="poliSelect(x.id)">{{x.name}}</button>
+    </div>
 </div>
 
 <div class="row" ng-show="formStatus == 'DOKTER'">
-  <div class="col-sm-2" ng-repeat="x in listDokter">
-    <button type="button" ng-disabled="x.currentKuota >= x.maximumKuota" class="btn btn-primary btn-dokter" ng-click="saveAntrian(x.id)">{{x.namaDokter}}<br />({{x.descriptionDokter}})</button>
-  </div>
+    <div class="col-sm-2" ng-repeat="x in listDokter">
+        <button type="button" ng-disabled="x.currentKuota >= x.maximumKuota" class="btn btn-primary btn-dokter" ng-click="saveAntrian(x.id)">{{x.namaDokter}}<br />({{x.descriptionDokter}})</button>
+    </div>
 </div>

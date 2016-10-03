@@ -5,6 +5,7 @@ INSERT INTO `c_security_permission` (`id`, `permission_label`, `permission_value
 ('REPORT', 'Page Report', 'ROLE_REPORT'),
 ('PENDAFTARAN', 'Page Pendaftaran', 'ROLE_PENDAFTARAN'),
 ('SCREEN_TV', 'Page Screen Tv', 'ROLE_SCREEN_TV'),
+('USER_LOGGED_IN', 'Get User Logged In Data', 'ROLE_USER_LOGGED_IN'),
 ('GENERATE', 'Page Report', 'ROLE_GENERATE');
 
 INSERT INTO `c_security_role` (`id`, `description`, `name`) VALUES
@@ -16,10 +17,13 @@ INSERT INTO `c_security_role` (`id`, `description`, `name`) VALUES
 INSERT INTO `c_security_role_permission` (`id_role`, `id_permission`) VALUES
 ('ADMINISTRATOR', 'SYSTEM'),
 ('ADMINISTRATOR', 'MASTER'),
-('ADMINISTRATOR', 'LOKET'),
 ('ADMINISTRATOR', 'REPORT'),
 ('ADMINISTRATOR', 'GENERATE'),
-('ADMINISTRATOR', 'SCREEN_TV'),
+('ADMINISTRATOR', 'USER_LOGGED_IN'),
+('USER_LOKET', 'LOKET'),
+('USER_LOKET', 'USER_LOGGED_IN'),
+('SCREEN_MONITOR', 'SCREEN_TV'),
+('SCREEN_MONITOR', 'USER_LOGGED_IN'),
 ('PENDAFTARAN', 'PENDAFTARAN');
 
 

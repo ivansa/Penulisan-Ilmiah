@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS `t_pasien` (
   `phone` varchar(255) NOT NULL,
   `updated_date` date NOT NULL,
   `weight` int(11) NOT NULL,
+  `validate` bit(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_k4dckuj5tynq9x1bq70kwpjtd` (`identity_number`),
   UNIQUE KEY `UK_3jcb93l2vg225lcqxty99kpv4` (`no_pasien`)

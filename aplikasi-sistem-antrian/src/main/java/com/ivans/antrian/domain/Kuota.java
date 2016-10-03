@@ -40,7 +40,7 @@ public class Kuota {
     private String codeDokter;
     
     @ManyToOne
-    @JoinColumn(name = "id_poli", nullable = false)
+    @JoinColumn(name = "id_poli", nullable = true)
     private Poli poli;
     
     @Column(name = "maximum_kuota", nullable = false)

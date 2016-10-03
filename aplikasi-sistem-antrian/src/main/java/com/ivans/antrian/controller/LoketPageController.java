@@ -80,7 +80,7 @@ public class LoketPageController {
 
         result.put(category, antrianPage);
         result.put("current", current);
-        result.put("pemanggilan", status);
+        result.put("pemanggilan", !status);
         result.put("totalAntrian", totalAntrian);
         return result;
     }
@@ -102,6 +102,7 @@ public class LoketPageController {
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("number", antrian.getNomorAntrian());
         result.put("loket", antrian.getNomorLoket());
+        result.put("nomorPasien", antrian.getNomorPasien());
 
         return result;
     }

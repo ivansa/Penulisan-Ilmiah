@@ -54,13 +54,13 @@ public class PendaftaranContoller {
 
     @Autowired
     private KuotaDao kuotaDao;
-    
+
     @Autowired
     private BodDao bodDao;
-    
+
     @Autowired
     private AntrianDao antrianDao;
-    
+
     @Autowired
     private RunningNumberService runnService;
 
@@ -68,12 +68,12 @@ public class PendaftaranContoller {
     public Iterable<KategoriAntrian> findAllCategory() {
         return categoryDao.findAll();
     }
-    
+
     @RequestMapping(value = "/get/poli", method = RequestMethod.GET)
     public Iterable<Poli> findAllPoli() {
         return poliDao.findAll();
     }
-    
+
     @RequestMapping(value = "/get/dokter/{idPoli}", method = RequestMethod.GET)
     public List<Kuota> findAllDokter(@PathVariable String idPoli) {
         return kuotaDao.findByPoliIdAndKuotaDate(idPoli, new Date());
@@ -83,25 +83,30 @@ public class PendaftaranContoller {
     public Map checkBod() {
         Map<String, Boolean> result = new HashMap<String, Boolean>();
         BodProcess bod = bodDao.findByGenerateDate(new Date());
-        if(bod != null){
+        if (bod != null) {
             result.put("isBod", Boolean.TRUE);
-        }else{
+        } else {
             result.put("isBod", Boolean.FALSE);
         }
-        
+
         return result;
     }
-    
-    @RequestMapping(value="/create", method = RequestMethod.POST)
+
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
     public AntrianPrint create(@RequestBody AntrianCreate param, HttpServletRequest request, HttpServletResponse response) {
-        Kuota kuota = kuotaDao.findOne(param.getIdKuota());
-        
+        Kuota kuota;
+        if (param.getCategoryCode().equals("F")) {
+            kuota = kuotaDao.findByCodeDokterAndKuotaDate("F", new Date());
+        } else {
+            kuota = kuotaDao.findOne(param.getIdKuota());
+        }
+
         String tiketNumber = runnService.getNumberAndUpdate(new Date(), param.getCategoryCode());
 
         if (!StringUtils.hasText(tiketNumber)) {
             throw new AntrianServerException("Gagal Dalam Membuat Ticket Number");
         }
-        
+
         String today = DateHelper.dateToString(new Date(), "yyyy-MM-dd");
         Antrian antrian = new Antrian();
         antrian.setDokter(kuota);
@@ -110,7 +115,8 @@ public class PendaftaranContoller {
         antrian.setAntrianDate(today);
         antrian.setTimestamp(new Date());
         antrian.setJenisLoket(param.getCategoryCode());
-        
+        antrian.setNomorPasien(param.getNomorPasien());
+
         kuota.setCurrentKuota(kuota.getCurrentKuota() + 1);
         antrianDao.save(antrian);
         kuotaDao.save(kuota);
@@ -120,6 +126,5 @@ public class PendaftaranContoller {
         result.setDescription(kuota.getDescriptionDokter());
         return result;
     }
-    
-    
+
 }
