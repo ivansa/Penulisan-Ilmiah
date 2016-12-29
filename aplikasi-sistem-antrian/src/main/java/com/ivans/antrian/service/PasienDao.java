@@ -16,4 +16,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PasienDao extends PagingAndSortingRepository<Pasien, String>{
     Pasien findByNoPasien(String noPasien);
+    Pasien findByIdentityNumber(String noPasien);
 }

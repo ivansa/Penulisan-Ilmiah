@@ -76,6 +76,8 @@ angular.module('antrianUiApp')
 
     $scope.categorySelect = function (x) {
       $scope.codeCategory = x;
+      console.log(x);
+      console.log($scope.codeCategory);
       if (x == "F") {
         $scope.saveAntrian(x); 
       } else {
@@ -105,7 +107,7 @@ angular.module('antrianUiApp')
 
     $scope.back = function () {
       if ($scope.formStatus == "DOKTER") {
-        $scope.categorySelect($scope.codePoli);
+        $scope.categorySelect($scope.codeCategory);
       } else if ($scope.formStatus == "POLI") {
         $scope.userSelect($scope.codePasien);
       } else if ($scope.formStatus == "CATEGORY") {
@@ -120,7 +122,7 @@ angular.module('antrianUiApp')
       param.idKuota = x;
       param.categoryCode = $scope.codeCategory;
       param.nomorPasien = $scope.codePasien;
-console.log(param);
+      console.log(param);
       MainService.save(param).success(function (data) {
         $scope.print(data);
       });

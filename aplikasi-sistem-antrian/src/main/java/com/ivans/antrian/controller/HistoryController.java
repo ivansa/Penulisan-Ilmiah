@@ -48,7 +48,12 @@ public class HistoryController {
 
     @RequestMapping(value = "/pasien/{no}", method = RequestMethod.GET)
     public Pasien findByPasien(@PathVariable String no) {
-        return pasienDao.findByNoPasien(no);
+        Pasien p = pasienDao.findByNoPasien(no);
+        if(p == null){
+            p = pasienDao.findByIdentityNumber(no);
+        }
+        
+        return p;
     }
 
     @RequestMapping(value = "/pasien/save", method = RequestMethod.POST)
